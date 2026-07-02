@@ -43,11 +43,11 @@
       --muted: #56616d;
       --line: #dfece7;
       --soft: #f2fbf7;
-      --shadow: 0 14px 34px rgba(27, 74, 54, 0.08);
+      --shadow: 0 1px 0 rgba(27, 74, 54, 0.06);
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: auto; }
     body {
       margin: 0;
       min-width: 320px;
@@ -61,7 +61,7 @@
     img { display: block; max-width: 100%; }
 
     .topbar {
-      position: sticky;
+      position: relative;
       top: 0;
       z-index: 10;
       height: 70px;
@@ -145,22 +145,11 @@
 
     .hero-shell {
       position: relative;
-      overflow: hidden;
+      overflow: visible;
       background: linear-gradient(180deg, #ffffff 0%, #ffffff 58%, #f2fbf7 100%);
     }
 
-    .hero-shell::before {
-      content: "";
-      position: absolute;
-      left: -18vw;
-      right: -18vw;
-      top: clamp(410px, 51vh, 480px);
-      height: 250px;
-      z-index: 0;
-      border-top: 1px solid rgba(202, 229, 218, 0.76);
-      background: linear-gradient(166deg, rgba(255, 255, 255, 0) 0%, rgba(237, 249, 244, 0.82) 39%, rgba(222, 244, 234, 0.74) 100%);
-      transform: skewY(-6deg);
-    }
+    .hero-shell::before { display: none; }
 
     .hero {
       position: relative;
@@ -242,7 +231,7 @@
       border-radius: 10px;
       font-size: 17px;
       font-weight: 800;
-      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
     }
 
     .button img {
@@ -253,26 +242,24 @@
     .button-primary {
       color: #fff;
       background: var(--green);
-      box-shadow: 0 13px 28px rgba(8, 157, 85, 0.25);
+      box-shadow: none;
     }
 
     .button-primary:hover {
       background: var(--green-deep);
-      box-shadow: 0 15px 32px rgba(8, 157, 85, 0.28);
-      transform: translateY(-1px);
+      box-shadow: none;
     }
 
     .button-secondary {
       color: #1d252f;
       background: #fff;
       border: 1px solid #d9e5df;
-      box-shadow: 0 8px 22px rgba(27, 74, 54, 0.06);
+      box-shadow: none;
     }
 
     .button-secondary:hover {
       border-color: rgba(18, 183, 103, 0.36);
-      box-shadow: 0 12px 28px rgba(27, 74, 54, 0.09);
-      transform: translateY(-1px);
+      box-shadow: none;
     }
 
     .support {
@@ -417,7 +404,7 @@
       border: 1px solid #dfece7;
       border-radius: 14px;
       background: #fff;
-      box-shadow: 0 10px 28px rgba(27, 74, 54, 0.055);
+      box-shadow: none;
     }
 
     .detail-card {
