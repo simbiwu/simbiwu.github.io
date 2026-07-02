@@ -392,6 +392,10 @@
       line-height: 1.65;
     }
 
+    .section-lead-nowrap {
+      max-width: none;
+    }
+
     .detail-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -512,6 +516,12 @@
       .scene-grid,
       .safety-layout {
         grid-template-columns: 1fr;
+      }
+    }
+
+    @media (min-width: 1181px) {
+      .section-lead-nowrap {
+        white-space: nowrap;
       }
     }
 
@@ -648,7 +658,7 @@
         <div class="section-head">
           <p class="section-kicker">功能</p>
           <h2>围绕个人离机保护设计的核心能力</h2>
-          <p class="section-lead">超级看门狗将本地保险箱、可信设备触发和快速保护动作组合到一起，帮助个人用户减少临时离开电脑时的隐私暴露。</p>
+          <p class="section-lead section-lead-nowrap">超级看门狗将本地保险箱、可信设备触发和快速保护动作组合到一起，帮助个人用户减少临时离开电脑时的隐私暴露。</p>
         </div>
         <div class="detail-grid">
           <article class="detail-card">
