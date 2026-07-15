@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SuperWatchDog - Local Privacy Vault and Away Protection for Windows</title>
+  <meta name="description" content="SuperWatchDog is a local Windows privacy tool with encrypted vaults, trusted device triggers, quick lock actions, and clear privacy boundaries.">
+  <link rel="canonical" href="https://simbiwu.github.io/en.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://simbiwu.github.io/">
+  <link rel="alternate" hreflang="en-US" href="https://simbiwu.github.io/en.html">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SuperWatchDog">
+  <meta property="og:description" content="Local privacy vault and away protection for Windows 10/11.">
+  <meta property="og:image" content="https://simbiwu.github.io/assets/og-cover.png">
+  <meta property="og:url" content="https://simbiwu.github.io/en.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SuperWatchDog",
+    "operatingSystem": "Windows 10/11 64-bit",
+    "applicationCategory": "SecurityApplication",
+    "description": "A local Windows privacy tool with encrypted vaults, trusted device triggers, and quick away protection.",
+    "downloadUrl": "https://github.com/simbiwu/SuperWatchDog-InstallerAssets/releases/latest/download/SuperWatchDogSetup.exe",
+    "inLanguage": "en-US",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --green: #12b767;
+      --green-deep: #079653;
+      --text: #171c23;
+      --muted: #56616d;
+      --line: #dfece7;
+      --soft: #f2fbf7;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: auto; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--text);
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #fff;
+      letter-spacing: 0;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    .wrap { width: min(100% - 112px, 1480px); margin: 0 auto; }
+    .topbar {
+      height: 70px;
+      border-bottom: 1px solid #e2ece8;
+      background: rgba(255, 255, 255, 0.96);
+    }
+    .topbar-inner {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 0;
+    }
+    .brand img { width: 46px; height: 46px; object-fit: contain; }
+    .brand strong {
+      color: #1a2028;
+      font-size: 32px;
+      line-height: 1;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      color: #202833;
+      font-size: 16px;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+    .nav a { padding: 8px 0; }
+    .nav a:hover { color: var(--green-deep); }
+    .language {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      color: #59636e;
+    }
+    .language strong { color: var(--green); font-weight: 850; }
+    .language i { width: 1px; height: 18px; background: #cbd8d3; }
+    .hero-shell {
+      background: linear-gradient(180deg, #ffffff 0%, #ffffff 58%, #f2fbf7 100%);
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(400px, 0.72fr) minmax(640px, 1.28fr);
+      align-items: center;
+      gap: 40px;
+      min-height: clamp(445px, 58vh, 540px);
+      padding-top: clamp(12px, 1.6vh, 20px);
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 42px;
+      padding: 0 18px;
+      border: 1px solid rgba(18, 183, 103, 0.34);
+      border-radius: 999px;
+      color: var(--green-deep);
+      background: #fff;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .windows-mark {
+      width: 18px;
+      height: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 2px;
+    }
+    .windows-mark span { background: var(--green); border-radius: 1px; }
+    h1 {
+      margin: 24px 0 16px;
+      color: #1a1f28;
+      font-size: clamp(44px, 4vw, 62px);
+      line-height: 1.12;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+    h1 .accent { color: var(--green-deep); }
+    .lead {
+      max-width: 620px;
+      margin: 0 0 22px;
+      color: #4f5a66;
+      font-size: 16px;
+      line-height: 1.68;
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .button {
+      min-width: 178px;
+      height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 850;
+    }
+    .button img { width: 21px; height: 21px; }
+    .button-primary { color: #fff; background: var(--green); }
+    .button-primary:hover { background: var(--green-deep); }
+    .button-secondary { color: #1d252f; background: #fff; border: 1px solid #d9e5df; }
+    .support { color: #66717d; font-size: 14px; font-weight: 650; }
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      min-width: 0;
+    }
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      left: 17%;
+      right: 3%;
+      bottom: 12px;
+      height: 42px;
+      border-radius: 999px;
+      background: rgba(36, 83, 61, 0.08);
+      z-index: -1;
+    }
+    .product-shot { width: min(100%, 790px); height: auto; }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      padding-bottom: 18px;
+    }
+    .summary-card {
+      min-height: 96px;
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      align-items: center;
+      gap: 18px;
+      padding: 16px 24px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.96);
+    }
+    .summary-card img { width: 64px; height: 64px; }
+    .summary-card h2,
+    .summary-card h3 {
+      margin: 0 0 6px;
+      color: #1a2028;
+      font-size: 21px;
+      line-height: 1.2;
+      font-weight: 850;
+    }
+    .summary-card p { margin: 0; color: #606b77; font-size: 15px; line-height: 1.45; }
+    .section { padding: 58px 0; scroll-margin-top: 88px; }
+    .section-soft {
+      background: #f6fbf8;
+      border-top: 1px solid #e5f0eb;
+      border-bottom: 1px solid #e5f0eb;
+    }
+    .section-head { max-width: 760px; margin-bottom: 24px; }
+    .section-kicker { margin: 0 0 10px; color: var(--green-deep); font-size: 14px; font-weight: 850; }
+    .section h2 { margin: 0 0 10px; color: #171c23; font-size: 31px; line-height: 1.2; font-weight: 880; }
+    .section-lead { margin: 0; color: #56616d; font-size: 15px; line-height: 1.65; }
+    .detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .scene-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .safety-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .detail-card,
+    .scene-card,
+    .safety-card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+      padding: 20px;
+    }
+    .detail-card img { width: 38px; height: 38px; margin-bottom: 12px; }
+    .detail-card h3,
+    .scene-card h3,
+    .safety-card h3 {
+      margin: 0 0 8px;
+      color: #1a2028;
+      font-size: 18px;
+      line-height: 1.3;
+      font-weight: 850;
+    }
+    .detail-card p,
+    .scene-card p,
+    .safety-card p,
+    .safety-card li { color: #56616d; font-size: 14px; line-height: 1.64; }
+    .detail-card p,
+    .scene-card p { margin: 0; }
+    .safety-card ul { margin: 0; padding-left: 20px; }
+    .download-panel {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+    }
+    .download-panel p { margin: 8px 0 0; color: #56616d; line-height: 1.6; }
+    footer {
+      padding: 28px 0 32px;
+      color: #6d7781;
+      background: #fff;
+      border-top: 1px solid #e5f0eb;
+      font-size: 13px;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-inner a:hover { color: var(--green-deep); }
+    @media (max-width: 1180px) {
+      .wrap { width: min(100% - 44px, 980px); }
+      .hero { grid-template-columns: 1fr; gap: 22px; }
+      .hero-visual { justify-content: center; }
+      .summary-grid,
+      .detail-grid,
+      .scene-grid,
+      .safety-layout,
+      .download-panel { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .topbar { height: auto; }
+      .topbar-inner { align-items: flex-start; flex-direction: column; padding: 14px 0; gap: 14px; }
+      .brand img { width: 40px; height: 40px; }
+      .brand strong { font-size: 23px; }
+      .nav { width: 100%; flex-wrap: wrap; gap: 14px 22px; font-size: 14px; }
+      h1 { font-size: 38px; }
+      .button { width: 100%; }
+      .summary-card { grid-template-columns: 60px 1fr; padding: 18px; }
+      .summary-card img { width: 54px; height: 54px; }
+      .section { padding: 42px 0; }
+      .section h2 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner wrap">
+      <a class="brand" href="en.html" aria-label="SuperWatchDog home">
+        <img src="assets/logo.png" alt="SuperWatchDog logo">
+        <strong>SuperWatchDog</strong>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#scenes">Use cases</a>
+        <a href="#security">Security</a>
+        <a href="#download">Download</a>
+        <span class="language" aria-label="Language">
+          <a href="index.html">中文</a>
+          <i aria-hidden="true"></i>
+          <strong>EN</strong>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero-shell">
+      <div class="hero wrap">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="windows-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+            Windows 10/11 local privacy protection
+          </div>
+          <h1>Step away from your PC.<br><span class="accent">Keep private files protected.</span></h1>
+          <p class="lead">SuperWatchDog helps protect local private files with encrypted vaults, trusted USB or Bluetooth device triggers, quick lock actions, and clear recovery responsibilities.</p>
+          <div class="actions">
+            <a class="button button-primary" href="https://github.com/simbiwu/SuperWatchDog-InstallerAssets/releases/latest/download/SuperWatchDogSetup.exe">
+              <img src="assets/icons/download.svg" alt="" aria-hidden="true">
+              Download
+            </a>
+            <a class="button button-secondary" href="#features">Explore Features</a>
+          </div>
+          <div class="support">Latest release · Windows 10/11 64-bit</div>
+        </div>
+        <div class="hero-visual">
+          <img class="product-shot" src="assets/hero-product-showcase.png" alt="SuperWatchDog Windows privacy protection interface showing vaults, trusted devices, and protection status.">
+        </div>
+      </div>
+
+      <div class="summary-grid wrap" aria-label="Core benefits">
+        <article class="summary-card">
+          <img src="assets/icons/vault.svg" alt="" aria-hidden="true">
+          <div>
+            <h2>Encrypted Vaults</h2>
+            <p>Keep private files in local .dogvault vaults.</p>
+          </div>
+        </article>
+        <article class="summary-card">
+          <img src="assets/icons/usb-bluetooth.svg" alt="" aria-hidden="true">
+          <div>
+            <h3>Device Triggers</h3>
+            <p>React when trusted USB or Bluetooth devices disconnect.</p>
+          </div>
+        </article>
+        <article class="summary-card">
+          <img src="assets/icons/one-key.svg" alt="" aria-hidden="true">
+          <div>
+            <h3>Quick Protection</h3>
+            <p>Lock the PC, hide windows, and protect vaults quickly.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Features</p>
+          <h2>Built around personal away protection</h2>
+          <p class="section-lead">SuperWatchDog combines local vaults, trusted device signals, and immediate protection actions for people who need to leave a Windows PC temporarily without exposing private files.</p>
+        </div>
+        <div class="detail-grid">
+          <article class="detail-card">
+            <img src="assets/icons/vault.svg" alt="" aria-hidden="true">
+            <h3>Local .dogvault files</h3>
+            <p>Vault files are managed on your own PC. You remain responsible for the BitLocker password and recovery materials.</p>
+          </article>
+          <article class="detail-card">
+            <img src="assets/icons/usb-bluetooth.svg" alt="" aria-hidden="true">
+            <h3>USB and Bluetooth signals</h3>
+            <p>Trusted devices can help decide when protection should run, reducing the chance that you forget to lock manually.</p>
+          </article>
+          <article class="detail-card">
+            <img src="assets/icons/one-key.svg" alt="" aria-hidden="true">
+            <h3>One-click protection</h3>
+            <p>When you need to leave immediately, run the configured protection actions without walking through every window.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="scenes">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Use Cases</p>
+          <h2>Designed for everyday personal computers</h2>
+          <p class="section-lead">This is not an employee monitoring system or an enterprise DLP suite. It is a focused local tool for personal privacy protection.</p>
+        </div>
+        <div class="scene-grid">
+          <article class="scene-card">
+            <h3>Leaving a shared space</h3>
+            <p>Use quick protection before stepping away in offices, dorms, labs, or shared work areas.</p>
+          </article>
+          <article class="scene-card">
+            <h3>Protecting private files</h3>
+            <p>Keep documents, photos, contracts, and personal materials out of casual view.</p>
+          </article>
+          <article class="scene-card">
+            <h3>Trusted device presence</h3>
+            <p>Use USB or Bluetooth device state as an extra signal for whether you are near the PC.</p>
+          </article>
+          <article class="scene-card">
+            <h3>Fast lock workflow</h3>
+            <p>Run basic protection with one action when closing every window manually is not practical.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="security">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="section-kicker">Security Boundaries</p>
+          <h2>Local by design, with explicit recovery responsibility</h2>
+          <p class="section-lead">SuperWatchDog should be used on devices and files you are authorized to manage. It is not an anti-forensics tool, bypass tool, or offensive security product.</p>
+        </div>
+        <div class="safety-layout">
+          <article class="safety-card">
+            <h3>What it does not upload</h3>
+            <ul>
+              <li>No user files, file lists, vault contents, or local paths are uploaded by the website or core app.</li>
+              <li>Camera-based presence detection is local when enabled; frames are not uploaded by the core design.</li>
+              <li>The website does not embed third-party analytics, ads, or tracking scripts.</li>
+            </ul>
+          </article>
+          <article class="safety-card">
+            <h3>What you must keep</h3>
+            <ul>
+              <li>Keep your BitLocker password and recovery materials yourself.</li>
+              <li>If you forget the password and lose recovery materials, vault contents may be unrecoverable.</li>
+              <li>SuperWatchDog does not save plaintext BitLocker passwords and cannot decrypt a vault for you.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="download">
+      <div class="wrap">
+        <div class="download-panel">
+          <div>
+            <p class="section-kicker">Download</p>
+            <h2>Download SuperWatchDog</h2>
+            <p>Download the Windows installer from the official GitHub Release. Online updates use the release index and SHA-256 verification before launching the installer.</p>
+          </div>
+          <a class="button button-primary" href="https://github.com/simbiwu/SuperWatchDog-InstallerAssets/releases/latest/download/SuperWatchDogSetup.exe">
+            <img src="assets/icons/download.svg" alt="" aria-hidden="true">
+            Download Setup
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner wrap">
+      <span><a href="privacy-en.html">Privacy</a></span>
+      <span><a href="terms-en.html">Terms</a></span>
+      <span><a href="contact-en.html">Contact</a></span>
+      <span><a href="mailto:simbi@live.com">simbi@live.com</a></span>
+      <span><a href="index.html">中文</a></span>
+      <span>Copyright 2026 SuperWatchDog</span>
+    </div>
+  </footer>
+</body>
+</html>
