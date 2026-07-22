@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>超级看门狗 SuperWatchDog - Windows 文件保险箱与离机保护工具</title>
-  <meta name="description" content="超级看门狗 SuperWatchDog 是一款 Windows 个人隐私与离机保护工具，支持文件保险箱隐藏加密、USB 拔出或蓝牙断开触发保护、一键锁定电脑和最小化窗口，适合临时离开电脑时保护私人文件与重要数据。">
+  <meta name="description" content="超级看门狗 SuperWatchDog 是 Windows 10/11 个人隐私与离机保护工具，提供本地文件保险箱，并支持 USB 设备拔出、蓝牙断开、摄像头离席检测、手势和一键操作触发保护。">
   <link rel="canonical" href="https://simbiwu.github.io/">
   <link rel="alternate" hreflang="zh-CN" href="https://simbiwu.github.io/">
   <link rel="alternate" hreflang="en-US" href="https://simbiwu.github.io/en.html">
@@ -12,13 +12,15 @@
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <meta property="og:type" content="website">
   <meta property="og:title" content="超级看门狗 SuperWatchDog - Windows 文件保险箱与离机保护工具">
-  <meta property="og:description" content="离开电脑时，自动守住你的隐私。适用于 Windows 10/11 的个人隐私与离机保护工具。">
+  <meta property="og:description" content="本地文件保险箱，配合 USB 设备、蓝牙、离席检测、手势与一键操作，在离开电脑时及时启动隐私保护。">
   <meta property="og:image" content="https://simbiwu.github.io/assets/og-cover.png">
+  <meta property="og:image:alt" content="超级看门狗 Windows 文件保险箱与离机保护功能展示">
   <meta property="og:url" content="https://simbiwu.github.io/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="超级看门狗 SuperWatchDog">
-  <meta name="twitter:description" content="Windows 个人隐私与离机保护工具。">
+  <meta name="twitter:description" content="支持文件保险箱、USB 设备与蓝牙触发、离席检测、手势触发和一键保护。">
   <meta name="twitter:image" content="https://simbiwu.github.io/assets/og-cover.png">
+  <meta name="twitter:image:alt" content="超级看门狗 Windows 文件保险箱与离机保护功能展示">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -26,7 +28,8 @@
     "name": "超级看门狗 SuperWatchDog",
     "operatingSystem": "Windows 10/11 64-bit",
     "applicationCategory": "SecurityApplication",
-    "description": "Windows 个人隐私与离机保护工具，支持文件保险箱隐藏加密、USB/蓝牙断开触发保护、一键锁定电脑和最小化窗口。",
+    "description": "Windows 10/11 个人隐私与离机保护工具，支持本地文件保险箱、USB 设备拔出、蓝牙断开、摄像头离席检测、手势触发和一键保护。",
+    "featureList": ["本地文件保险箱", "USB 设备拔出保护", "蓝牙断开保护", "一键守护", "离席自动保护", "手势触发保护"],
     "downloadUrl": "https://github.com/simbiwu/SuperWatchDog-InstallerAssets/releases/latest/download/SuperWatchDogSetup.exe",
     "inLanguage": "zh-CN",
     "offers": {
@@ -355,6 +358,39 @@
       line-height: 1.45;
     }
 
+    .hero-scenes {
+      padding: 4px 0 32px;
+      scroll-margin-top: 88px;
+    }
+
+    .hero-scenes-head {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
+      align-items: end;
+      gap: 32px;
+      margin-bottom: 18px;
+    }
+
+    .hero-scenes h2 {
+      margin: 0;
+      color: #171c23;
+      font-size: 29px;
+      line-height: 1.2;
+      font-weight: 880;
+    }
+
+    .feature-summary {
+      margin-bottom: 28px;
+      padding-bottom: 0;
+    }
+
+    .feature-detail-label {
+      margin: 0 0 14px;
+      color: var(--green-deep);
+      font-size: 14px;
+      font-weight: 850;
+    }
+
     .section {
       padding: 58px 0;
       scroll-margin-top: 88px;
@@ -413,7 +449,8 @@
     }
 
     .detail-card {
-      padding: 20px;
+      min-height: 190px;
+      padding: 24px;
     }
 
     .detail-card img {
@@ -513,10 +550,18 @@
         justify-content: center;
       }
       .summary-grid,
-      .detail-grid,
-      .scene-grid,
       .safety-layout {
         grid-template-columns: 1fr;
+      }
+      .hero-scenes-head {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+      .scene-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .detail-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -566,6 +611,15 @@
         width: 54px;
         height: 54px;
       }
+      .detail-grid {
+        grid-template-columns: 1fr;
+      }
+      .scene-grid {
+        grid-template-columns: 1fr;
+      }
+      .detail-card {
+        min-height: auto;
+      }
       .section {
         padding: 42px 0;
       }
@@ -589,8 +643,8 @@
         <strong>超级看门狗</strong>
       </a>
       <nav class="nav" aria-label="主导航">
-        <a href="#features">功能</a>
         <a href="#scenes">场景</a>
+        <a href="#features">功能</a>
         <a href="#security">安全</a>
         <span class="language" aria-label="语言">
           <strong>中文</strong>
@@ -609,8 +663,8 @@
             <span class="windows-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
             Windows 个人隐私与离机保护工具
           </div>
-          <h1>离开电脑时，<br>自动<span class="accent">守住你的隐私</span></h1>
-          <p class="lead">当 USB 拔出或蓝牙断开时，自动隐藏并加密文件、锁定电脑、最小化窗口等，守护你的个人隐私与重要数据。</p>
+          <h1>紧急时刻，<br><span class="accent">快速守住你的隐私</span></h1>
+          <p class="lead">通过本地文件保险箱、USB 设备拔出、蓝牙断开、离席检测、手势和一键保护，帮助你在离开电脑时及时守住重要文件与窗口隐私。</p>
           <div class="actions">
             <a class="button button-primary" href="https://github.com/simbiwu/SuperWatchDog-InstallerAssets/releases/latest/download/SuperWatchDogSetup.exe">
               <img src="assets/icons/download.svg" alt="" aria-hidden="true">
@@ -625,32 +679,36 @@
         </div>
 
         <div class="hero-visual">
-          <img class="product-shot" src="assets/hero-product-showcase.png" alt="超级看门狗 Windows 离机保护工具界面，显示文件保险箱、关联设备、USB 与蓝牙触发保护状态。">
+          <img class="product-shot" src="assets/hero-product-showcase.png" alt="超级看门狗 Windows 主界面，展示文件保险箱、关联 USB 设备和触发保护状态。">
         </div>
       </div>
 
-      <div class="summary-grid wrap" aria-label="核心卖点">
-        <article class="summary-card">
-          <img src="assets/icons/vault.svg" alt="" aria-hidden="true">
+      <div class="hero-scenes wrap" id="scenes">
+        <div class="hero-scenes-head">
           <div>
-            <h2>文件保险箱</h2>
-            <p>隐藏并加密重要文件</p>
+            <p class="section-kicker">场景</p>
+            <h2>真实使用中的四个关键时刻</h2>
           </div>
-        </article>
-        <article class="summary-card">
-          <img src="assets/icons/usb-bluetooth.svg" alt="" aria-hidden="true">
-          <div>
-            <h3>触发保护</h3>
-            <p>USB / 蓝牙断开自动执行</p>
-          </div>
-        </article>
-        <article class="summary-card">
-          <img src="assets/icons/one-key.svg" alt="" aria-hidden="true">
-          <div>
-            <h3>一键守护</h3>
-            <p>锁定电脑、最小化窗口等</p>
-          </div>
-        </article>
+          <p class="section-lead">从有人突然靠近到必须马上离开，超级看门狗帮助你更快保护屏幕上的内容和本地私密文件。</p>
+        </div>
+        <div class="scene-grid">
+          <article class="scene-card">
+            <h3>突然有人靠近</h3>
+            <p>同事、室友或访客临时进入房间时，一键或通过支持的手势启动保护，减少敏感窗口继续暴露。</p>
+          </article>
+          <article class="scene-card">
+            <h3>紧急起身离开</h3>
+            <p>接到电话、临时开会或有事必须马上离开时，可通过关联设备或离席检测按设置启动保护。</p>
+          </article>
+          <article class="scene-card">
+            <h3>电脑借用送修</h3>
+            <p>电脑需要临时借给他人、送修或共同使用时，让合同、照片和个人资料继续锁在本地保险箱中。</p>
+          </article>
+          <article class="scene-card">
+            <h3>共享空间使用</h3>
+            <p>在办公室、宿舍、实验室或共享工位使用电脑时，多种触发方式帮助你应对频繁而短暂的离席。</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -659,51 +717,62 @@
         <div class="section-head">
           <p class="section-kicker">功能</p>
           <h2>围绕个人离机保护设计的核心能力</h2>
-          <p class="section-lead section-lead-nowrap">超级看门狗将本地保险箱、可信设备触发和快速保护动作组合到一起，帮助个人用户减少临时离开电脑时的隐私暴露。</p>
+          <p class="section-lead">三类核心能力覆盖文件存放、设备触发与视觉感知，再通过六项具体功能应对不同的离机保护需求。</p>
         </div>
+        <div class="summary-grid feature-summary" aria-label="三类核心能力">
+          <article class="summary-card">
+            <img src="assets/icons/vault.svg" alt="" aria-hidden="true">
+            <div>
+              <h3>文件保险箱</h3>
+              <p>隐藏并加密重要文件</p>
+            </div>
+          </article>
+          <article class="summary-card">
+            <img src="assets/icons/usb-bluetooth.svg" alt="" aria-hidden="true">
+            <div>
+              <h3>设备触发保护</h3>
+              <p>USB 设备拔出或蓝牙断开时自动执行</p>
+            </div>
+          </article>
+          <article class="summary-card">
+            <img src="assets/icons/privacy.svg" alt="" aria-hidden="true">
+            <div>
+              <h3>离席与手势</h3>
+              <p>离开电脑或识别手势时触发保护</p>
+            </div>
+          </article>
+        </div>
+        <p class="feature-detail-label">六项具体功能</p>
         <div class="detail-grid">
           <article class="detail-card">
-            <img src="assets/icons/vault.svg" alt="" aria-hidden="true">
-            <h3>文件保险箱隐藏加密</h3>
-            <p>将私密文件放入本地保险箱中保存，保险箱由你主动创建和管理。</p>
+            <img src="assets/icons/vault.svg" alt="私密文件保护图标">
+            <h3>私密文件保护</h3>
+            <p>把合同、照片和个人资料放入本地保险箱；设备临时借用、送修或与他人共用时，重要文件可以继续保持锁定。</p>
           </article>
           <article class="detail-card">
-            <img src="assets/icons/usb-bluetooth.svg" alt="" aria-hidden="true">
-            <h3>USB / 蓝牙触发保护</h3>
-            <p>可信设备离开或断开时，可以自动触发保护策略，减少忘记手动锁定的风险。</p>
+            <img src="assets/icons/usb.svg" alt="USB 设备拔出保护图标">
+            <h3>USB 设备拔出保护</h3>
+            <p>需要立即离开工位时，拔出已关联的 USB 设备即可启动预设保护，适合来不及逐个关闭文件和窗口的情况。</p>
           </article>
           <article class="detail-card">
-            <img src="assets/icons/one-key.svg" alt="" aria-hidden="true">
+            <img src="assets/icons/bluetooth.svg" alt="蓝牙断开保护图标">
+            <h3>蓝牙断开保护</h3>
+            <p>带着手机匆忙离开办公室或宿舍时，蓝牙断开后可自动启动保护，避免电脑停留在未保护状态。</p>
+          </article>
+          <article class="detail-card">
+            <img src="assets/icons/local.svg" alt="一键守护图标">
             <h3>一键守护</h3>
-            <p>需要立即离开时，一键执行锁定电脑、最小化窗口等保护动作。</p>
+            <p>同事突然靠近、临时有人进入房间或屏幕出现敏感内容时，一键启动保护，不必逐个整理窗口。</p>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-soft" id="scenes">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="section-kicker">场景</p>
-          <h2>适合个人电脑的日常隐私保护</h2>
-          <p class="section-lead">它不是企业监控系统，也不是复杂安全平台，而是面向个人电脑使用场景的轻量保护工具。</p>
-        </div>
-        <div class="scene-grid">
-          <article class="scene-card">
-            <h3>临时离开座位</h3>
-            <p>在办公室、宿舍、共享空间临时离开时，快速进入保护状态。</p>
+          <article class="detail-card">
+            <img src="assets/icons/privacy.svg" alt="离席自动保护图标">
+            <h3>离席自动保护</h3>
+            <p>接到紧急通知起身离开、忘记手动锁定时，离席检测可按设置启动保护，降低电脑无人看管时的暴露风险。</p>
           </article>
-          <article class="scene-card">
-            <h3>保护私密文件</h3>
-            <p>用于个人文档、照片、合同、资料等不希望被随意看到的文件。</p>
-          </article>
-          <article class="scene-card">
-            <h3>可信设备辅助判断</h3>
-            <p>通过 USB 或蓝牙设备状态辅助判断你是否离开电脑。</p>
-          </article>
-          <article class="scene-card">
-            <h3>快速进入守护状态</h3>
-            <p>不想逐个关闭窗口或手动整理时，用一个动作完成基础保护。</p>
+          <article class="detail-card">
+            <img src="assets/icons/one-key.svg" alt="手势触发保护图标">
+            <h3>手势触发保护</h3>
+            <p>有人突然靠近或不方便触碰键盘时，用支持的手势快速触发预设保护，让私密内容尽快进入保护状态。</p>
           </article>
         </div>
       </div>
