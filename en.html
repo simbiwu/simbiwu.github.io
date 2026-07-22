@@ -196,7 +196,11 @@
       background: rgba(36, 83, 61, 0.08);
       z-index: -1;
     }
-    .product-shot { width: min(100%, 790px); height: auto; }
+    .product-shot {
+      width: min(100%, 790px);
+      height: auto;
+      display: block;
+    }
     .summary-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -273,6 +277,52 @@
     .safety-card li { color: #56616d; font-size: 14px; line-height: 1.64; }
     .detail-card p,
     .scene-card p { margin: 0; }
+    .scene-card {
+      position: relative;
+      min-height: 224px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 22px;
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+    }
+    .scene-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 3px;
+      background: linear-gradient(90deg, var(--green), #8adbb7);
+    }
+    .scene-card:hover {
+      transform: translateY(-3px);
+      border-color: #bfe4d3;
+      box-shadow: 0 12px 26px rgba(25, 90, 61, 0.09);
+    }
+    .scene-card-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+    .scene-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border: 1px solid #d8eee4;
+      border-radius: 50%;
+      background: #eefaf5;
+    }
+    .scene-icon img { width: 28px; height: 28px; }
+    .scene-number { color: rgba(34, 184, 121, 0.16); font-size: 34px; line-height: 1; font-weight: 900; letter-spacing: -1px; }
+    .scene-card p { flex: 1; }
+    .scene-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 16px; }
+    .scene-tag {
+      padding: 4px 9px;
+      border: 1px solid #d8eee4;
+      border-radius: 999px;
+      color: #247252;
+      background: #f1faf6;
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 750;
+    }
     .safety-card ul { margin: 0; padding-left: 20px; }
     footer {
       padding: 28px 0 32px;
@@ -314,6 +364,10 @@
       .detail-card { min-height: auto; }
       .section { padding: 42px 0; }
       .section h2 { font-size: 28px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scene-card { transition: none; }
+      .scene-card:hover { transform: none; }
     }
   </style>
 </head>
@@ -357,7 +411,7 @@
           <div class="support">Latest release · Windows 10/11 64-bit</div>
         </div>
         <div class="hero-visual">
-          <img class="product-shot" src="assets/hero-product-showcase.png" alt="SuperWatchDog Windows interface showing a file vault, a linked USB device, and protection status.">
+          <img class="product-shot" src="assets/hero-product-showcase-en.png?v=20260722-2" alt="SuperWatchDog Windows interface showing private files, away detection, and away-protection status.">
         </div>
       </div>
 
@@ -371,20 +425,40 @@
         </div>
         <div class="scene-grid">
           <article class="scene-card">
+            <div class="scene-card-top">
+              <span class="scene-icon"><img src="assets/icons/local.svg" alt="" aria-hidden="true"></span>
+              <span class="scene-number" aria-hidden="true">01</span>
+            </div>
             <h3>Someone Approaches</h3>
-            <p>If a colleague, roommate, or visitor enters unexpectedly, use one click or a supported gesture to protect sensitive windows quickly.</p>
+            <p>If a colleague, roommate, or visitor enters unexpectedly, protect sensitive windows quickly.</p>
+            <div class="scene-tags" aria-label="Related features"><span class="scene-tag">One click</span><span class="scene-tag">Gesture</span></div>
           </article>
           <article class="scene-card">
+            <div class="scene-card-top">
+              <span class="scene-icon"><img src="assets/icons/privacy.svg" alt="" aria-hidden="true"></span>
+              <span class="scene-number" aria-hidden="true">02</span>
+            </div>
             <h3>Leaving in a Hurry</h3>
-            <p>If a call, meeting, or urgent task pulls you away, linked-device or away detection can start protection using your settings.</p>
+            <p>If a call, meeting, or urgent task pulls you away, there is no need to close every file first.</p>
+            <div class="scene-tags" aria-label="Related features"><span class="scene-tag">USB device</span><span class="scene-tag">Bluetooth</span><span class="scene-tag">Away detection</span></div>
           </article>
           <article class="scene-card">
+            <div class="scene-card-top">
+              <span class="scene-icon"><img src="assets/icons/vault.svg" alt="" aria-hidden="true"></span>
+              <span class="scene-number" aria-hidden="true">03</span>
+            </div>
             <h3>Sharing or Servicing a PC</h3>
-            <p>When a PC is lent, shared, or sent for repair, contracts, photos, and personal documents can remain locked in a local vault.</p>
+            <p>When a PC is lent, shared, or sent for repair, private documents can remain locked.</p>
+            <div class="scene-tags" aria-label="Related features"><span class="scene-tag">File vault</span></div>
           </article>
           <article class="scene-card">
+            <div class="scene-card-top">
+              <span class="scene-icon"><img src="assets/icons/usb-bluetooth.svg" alt="" aria-hidden="true"></span>
+              <span class="scene-number" aria-hidden="true">04</span>
+            </div>
             <h3>Working in Shared Spaces</h3>
-            <p>In offices, dorms, labs, and shared work areas, multiple trigger options help with frequent short periods away from the PC.</p>
+            <p>Handle frequent short periods away in offices, dorms, and shared work areas.</p>
+            <div class="scene-tags" aria-label="Related features"><span class="scene-tag">Multiple triggers</span><span class="scene-tag">Automatic protection</span></div>
           </article>
         </div>
       </div>

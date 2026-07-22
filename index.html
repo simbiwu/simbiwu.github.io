@@ -313,6 +313,7 @@
     .product-shot {
       width: min(100%, 790px);
       height: auto;
+      display: block;
     }
 
     .summary-grid {
@@ -486,8 +487,81 @@
     }
 
     .scene-card {
-      min-height: 132px;
-      padding: 20px;
+      position: relative;
+      min-height: 224px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 22px;
+      transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+    }
+
+    .scene-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 3px;
+      background: linear-gradient(90deg, var(--green), #8adbb7);
+    }
+
+    .scene-card:hover {
+      transform: translateY(-3px);
+      border-color: #bfe4d3;
+      box-shadow: 0 12px 26px rgba(25, 90, 61, 0.09);
+    }
+
+    .scene-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .scene-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border: 1px solid #d8eee4;
+      border-radius: 50%;
+      background: #eefaf5;
+    }
+
+    .scene-icon img {
+      width: 28px;
+      height: 28px;
+    }
+
+    .scene-number {
+      color: rgba(34, 184, 121, 0.16);
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .scene-card p {
+      flex: 1;
+    }
+
+    .scene-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 16px;
+    }
+
+    .scene-tag {
+      padding: 4px 9px;
+      border: 1px solid #d8eee4;
+      border-radius: 999px;
+      color: #247252;
+      background: #f1faf6;
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 750;
     }
 
     .safety-layout {
@@ -633,6 +707,15 @@
         display: none;
       }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scene-card {
+        transition: none;
+      }
+      .scene-card:hover {
+        transform: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -679,7 +762,7 @@
         </div>
 
         <div class="hero-visual">
-          <img class="product-shot" src="assets/hero-product-showcase.png" alt="超级看门狗 Windows 主界面，展示文件保险箱、关联 USB 设备和触发保护状态。">
+          <img class="product-shot" src="assets/hero-product-showcase-zh.png?v=20260722-2" alt="超级看门狗 Windows 主界面，展示私密文件、离开检测和离开后保护状态。">
         </div>
       </div>
 
@@ -693,20 +776,40 @@
         </div>
         <div class="scene-grid">
           <article class="scene-card">
+            <div class="scene-card-top">
+              <span class="scene-icon"><img src="assets/icons/local.svg" alt="" aria-hidden="true"></span>
+              <span class="scene-number" aria-hidden="true">01</span>
+            </div>
             <h3>突然有人靠近</h3>
-            <p>同事、室友或访客临时进入房间时，一键或通过支持的手势启动保护，减少敏感窗口继续暴露。</p>
+            <p>同事、室友或访客突然进入房间时，快速保护当前窗口。</p>
+            <div class="scene-tags" aria-label="适用功能"><span class="scene-tag">一键守护</span><span class="scene-tag">手势触发</span></div>
           </article>
           <article class="scene-card">
+            <div class="scene-card-top">
+              <span class="scene-icon"><img src="assets/icons/privacy.svg" alt="" aria-hidden="true"></span>
+              <span class="scene-number" aria-hidden="true">02</span>
+            </div>
             <h3>紧急起身离开</h3>
-            <p>接到电话、临时开会或有事必须马上离开时，可通过关联设备或离席检测按设置启动保护。</p>
+            <p>接到电话、临时开会或必须马上离开时，无需逐个关闭文件。</p>
+            <div class="scene-tags" aria-label="适用功能"><span class="scene-tag">USB 设备</span><span class="scene-tag">蓝牙</span><span class="scene-tag">离席检测</span></div>
           </article>
           <article class="scene-card">
+            <div class="scene-card-top">
+              <span class="scene-icon"><img src="assets/icons/vault.svg" alt="" aria-hidden="true"></span>
+              <span class="scene-number" aria-hidden="true">03</span>
+            </div>
             <h3>电脑借用送修</h3>
-            <p>电脑需要临时借给他人、送修或共同使用时，让合同、照片和个人资料继续锁在本地保险箱中。</p>
+            <p>电脑临时借给他人、送修或共同使用时，让私密资料继续保持锁定。</p>
+            <div class="scene-tags" aria-label="适用功能"><span class="scene-tag">文件保险箱</span></div>
           </article>
           <article class="scene-card">
+            <div class="scene-card-top">
+              <span class="scene-icon"><img src="assets/icons/usb-bluetooth.svg" alt="" aria-hidden="true"></span>
+              <span class="scene-number" aria-hidden="true">04</span>
+            </div>
             <h3>共享空间使用</h3>
-            <p>在办公室、宿舍、实验室或共享工位使用电脑时，多种触发方式帮助你应对频繁而短暂的离席。</p>
+            <p>在办公室、宿舍或共享工位，应对频繁而短暂的离席。</p>
+            <div class="scene-tags" aria-label="适用功能"><span class="scene-tag">多种触发</span><span class="scene-tag">自动保护</span></div>
           </article>
         </div>
       </div>
