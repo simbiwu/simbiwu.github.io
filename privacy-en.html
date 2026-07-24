@@ -31,6 +31,7 @@
     footer { padding: 26px 0; color: #7a858f; text-align: center; font-size: 13px; }
     @media (max-width: 640px) { .top { align-items: flex-start; flex-direction: column; padding: 14px 0; } article { padding: 24px; } }
   </style>
+  <script src="language.js"></script>
 </head>
 <body>
   <header>
@@ -45,7 +46,7 @@
   <main class="wrap">
     <article>
       <h1>Privacy Notice</h1>
-      <p class="meta">Last updated: July 24, 2026</p>
+      <p class="meta">Last updated: July 25, 2026</p>
       <p>SuperWatchDog is a personal privacy protection tool for Windows PCs. This notice explains how the website, installer, and Windows client handle data related to you.</p>
 
       <h2>Scope</h2>
@@ -67,13 +68,13 @@
       <p>A diagnostic report is sent or exported only after you confirm. Small crash dumps are excluded by default and require a separate selection; a dump may contain a small amount of memory near the failing thread. Reports do not collect vault contents, file lists, passwords, recovery keys, camera frames, screenshots, or window contents.</p>
 
       <h2>Downloads and Updates</h2>
-      <p>The website may provide installer download links. When downloading an installer, your browser communicates with the relevant download host. Updates verify the installer before it runs.</p>
+      <p>The website may provide installer download links. The download endpoint sets a random first-party identifier that contains no identity, account, device, or IP information. It is used to distinguish unique download starts from repeated requests by browser and calendar day; only a hash of the identifier is stored, and recognized search crawlers are excluded from unique-download counts. Your language choice is stored only in the current browser. Updates verify the installer before it runs, and the website does not embed third-party analytics, advertising, or tracking scripts.</p>
 
       <h2>Timed Pro License Connection</h2>
       <p>Free and permanent licenses do not need an online license-term check. A timed Pro license periodically uses an encrypted connection to confirm that its term remains valid. The request does not send a device identity, license ID, vault information, device list, or usage statistics.</p>
 
       <h2>Anonymous Usage Statistics</h2>
-      <p>The software may send a random installation identifier, app version, download channel, and app-start record to understand installations, usage trends, and version distribution. The identifier is not derived from hardware or a Windows account. No vault information, device list, file path, or camera frame is included. Data is sent only through encrypted connections, and failure does not affect product features.</p>
+      <p>The software may send a random installation identifier, app version, release channel, Windows version and build, system architecture, interface language, and app-start record to measure installations, activity trends, retention, and version or system distribution. When an installer is downloaded or an app-start record is submitted, the server locally converts the request IP into country- and province-level geography for aggregate download and installation reporting. Raw IP addresses, cities, and precise locations are not written to the operations database. The identifier is not derived from hardware or a Windows account, and no vault information, device list, file path, or camera frame is included. Data is sent only through encrypted connections, and failure does not affect product features.</p>
 
       <h2>Your Responsibility</h2>
       <p class="note">Keep your vault files, BitLocker password, and recovery materials safe. If you forget the password and lose recovery materials, vault contents may be unrecoverable. SuperWatchDog does not save plaintext BitLocker passwords and cannot decrypt a vault for you.</p>
