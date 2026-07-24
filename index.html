@@ -441,8 +441,7 @@
     }
 
     .detail-card,
-    .scene-card,
-    .safety-card {
+    .scene-card {
       border: 1px solid #dfece7;
       border-radius: 14px;
       background: #fff;
@@ -461,8 +460,7 @@
     }
 
     .detail-card h3,
-    .scene-card h3,
-    .safety-card h3 {
+    .scene-card h3 {
       margin: 0 0 8px;
       color: #1a2028;
       font-size: 18px;
@@ -472,7 +470,6 @@
 
     .detail-card p,
     .scene-card p,
-    .safety-card p,
     .footer-note {
       margin: 0;
       color: #56616d;
@@ -564,24 +561,6 @@
       font-weight: 750;
     }
 
-    .safety-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .safety-card {
-      padding: 20px;
-    }
-
-    .safety-card ul {
-      margin: 0;
-      padding-left: 20px;
-      color: #56616d;
-      font-size: 14px;
-      line-height: 1.68;
-    }
-
     footer {
       padding: 28px 0 32px;
       color: #6d7781;
@@ -623,8 +602,7 @@
       .hero-visual {
         justify-content: center;
       }
-      .summary-grid,
-      .safety-layout {
+      .summary-grid {
         grid-template-columns: 1fr;
       }
       .hero-scenes-head {
@@ -728,7 +706,6 @@
       <nav class="nav" aria-label="主导航">
         <a href="#scenes">场景</a>
         <a href="#features">功能</a>
-        <a href="#security">安全</a>
         <span class="language" aria-label="语言">
           <strong>中文</strong>
           <i aria-hidden="true"></i>
@@ -876,36 +853,6 @@
             <img src="assets/icons/one-key.svg" alt="手势触发保护图标">
             <h3>手势触发保护</h3>
             <p>有人突然靠近或不方便触碰键盘时，用支持的手势快速触发预设保护，让私密内容尽快进入保护状态。</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="security">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="section-kicker">隐私与安全</p>
-          <h2>私密内容留在本机，联网用途清晰可查</h2>
-          <p class="section-lead">保险箱内容、文件列表和摄像头画面不会上传；下载、更新、限时授权确认和匿名使用统计均通过加密连接完成。</p>
-        </div>
-        <div class="safety-layout">
-          <article class="safety-card">
-            <h3>本地保护</h3>
-            <ul>
-              <li>文件保险箱和设备触发在你的 Windows 电脑上处理。</li>
-              <li>基础保护功能不依赖远程账户或云端服务。</li>
-              <li>不上传用户文件、文件列表、保险箱内容或本地路径。</li>
-              <li>启用摄像头检测时，画面仍在本机处理，不会上传。</li>
-            </ul>
-          </article>
-          <article class="safety-card">
-            <h3>联网与恢复</h3>
-            <ul>
-              <li>诊断报告仅在你确认后发送；崩溃转储需要单独选择。</li>
-              <li>匿名使用统计不包含保险箱信息、设备列表或文件路径。</li>
-              <li>请自行妥善保存 BitLocker 密码和恢复材料。</li>
-              <li>密码和恢复材料同时遗失时，保险箱内容可能无法恢复。</li>
-            </ul>
           </article>
         </div>
       </div>

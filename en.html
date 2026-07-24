@@ -251,10 +251,8 @@
     .section-lead { margin: 0; color: #56616d; font-size: 15px; line-height: 1.65; }
     .detail-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .scene-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .safety-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
     .detail-card,
-    .scene-card,
-    .safety-card {
+    .scene-card {
       border: 1px solid var(--line);
       border-radius: 14px;
       background: #fff;
@@ -263,8 +261,7 @@
     .detail-card { min-height: 190px; padding: 24px; }
     .detail-card img { width: 38px; height: 38px; margin-bottom: 12px; }
     .detail-card h3,
-    .scene-card h3,
-    .safety-card h3 {
+    .scene-card h3 {
       margin: 0 0 8px;
       color: #1a2028;
       font-size: 18px;
@@ -272,9 +269,7 @@
       font-weight: 850;
     }
     .detail-card p,
-    .scene-card p,
-    .safety-card p,
-    .safety-card li { color: #56616d; font-size: 14px; line-height: 1.64; }
+    .scene-card p { color: #56616d; font-size: 14px; line-height: 1.64; }
     .detail-card p,
     .scene-card p { margin: 0; }
     .scene-card {
@@ -323,7 +318,6 @@
       line-height: 1.2;
       font-weight: 750;
     }
-    .safety-card ul { margin: 0; padding-left: 20px; }
     footer {
       padding: 28px 0 32px;
       color: #6d7781;
@@ -343,8 +337,7 @@
       .wrap { width: min(100% - 44px, 980px); }
       .hero { grid-template-columns: 1fr; gap: 22px; }
       .hero-visual { justify-content: center; }
-      .summary-grid,
-      .safety-layout { grid-template-columns: 1fr; }
+      .summary-grid { grid-template-columns: 1fr; }
       .hero-scenes-head { grid-template-columns: 1fr; gap: 10px; }
       .scene-grid { grid-template-columns: repeat(2, 1fr); }
       .detail-grid { grid-template-columns: repeat(2, 1fr); }
@@ -381,7 +374,6 @@
       <nav class="nav" aria-label="Main navigation">
         <a href="#scenes">Use cases</a>
         <a href="#features">Features</a>
-        <a href="#security">Security</a>
         <span class="language" aria-label="Language">
           <a href="index.html">中文</a>
           <i aria-hidden="true"></i>
@@ -525,36 +517,6 @@
             <img src="assets/icons/one-key.svg" alt="Gesture-triggered protection icon">
             <h3>Gesture-triggered Protection</h3>
             <p>If someone approaches suddenly or reaching the keyboard is inconvenient, use a supported gesture to start protection and secure private content quickly.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="security">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="section-kicker">Privacy &amp; Security</p>
-          <h2>Private content stays local, with clear online data use</h2>
-          <p class="section-lead">Vault contents, file lists, and camera frames are not uploaded. Downloads, updates, timed-license checks, and anonymous usage statistics use encrypted connections.</p>
-        </div>
-        <div class="safety-layout">
-          <article class="safety-card">
-            <h3>Local protection</h3>
-            <ul>
-              <li>Vault and device-triggered actions are processed on your Windows PC.</li>
-              <li>Basic protection does not depend on a remote account or cloud service.</li>
-              <li>User files, file lists, vault contents, and local paths are not uploaded.</li>
-              <li>When camera detection is enabled, frames stay on the PC and are not uploaded.</li>
-            </ul>
-          </article>
-          <article class="safety-card">
-            <h3>Online use &amp; recovery</h3>
-            <ul>
-              <li>Diagnostic reports are sent only after confirmation; crash dumps require a separate selection.</li>
-              <li>Anonymous usage statistics exclude vault information, device lists, and file paths.</li>
-              <li>Keep your BitLocker password and recovery materials safe.</li>
-              <li>If both are lost, vault contents may be unrecoverable.</li>
-            </ul>
           </article>
         </div>
       </div>
