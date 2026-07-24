@@ -45,11 +45,11 @@
   <main class="wrap">
     <article>
       <h1>Privacy Notice</h1>
-      <p class="meta">Last updated: July 23, 2026</p>
-      <p>SuperWatchDog is a local Windows privacy protection tool. Its core features are built around local vault files, trusted device triggers, and away protection actions. This notice explains the privacy boundaries for the website, installer, and Windows client.</p>
+      <p class="meta">Last updated: July 24, 2026</p>
+      <p>SuperWatchDog is a personal privacy protection tool for Windows PCs. This notice explains how the website, installer, and Windows client handle data related to you.</p>
 
       <h2>Scope</h2>
-      <p>This notice applies to the SuperWatchDog website, installer, and Windows client features related to personal privacy protection. If future versions add account services, cloud services, or new online capabilities, those will require additional notice.</p>
+      <p>This notice applies to the SuperWatchDog website, installer, and Windows client. We will update it if related services or data-handling practices change.</p>
 
       <h2>What We Do Not Collect</h2>
       <ul>
@@ -60,20 +60,20 @@
       </ul>
 
       <h2>Local Processing</h2>
-      <p>Vault operations, trusted device state, and protection policy actions are designed to be processed locally on your Windows PC. Basic protection features do not depend on a remote account or cloud service.</p>
+      <p>Vault operations, trusted device state, and protection actions are processed on your Windows PC. Basic protection features do not depend on a remote account or cloud service.</p>
 
       <h2>Local Logs and Diagnostics</h2>
       <p>The software may write essential local status, error, and diagnostic logs. After an unexpected exit, it may also save an error code, app version, redacted logs, and a limited number of small crash dumps locally.</p>
       <p>A diagnostic report is sent or exported only after you confirm. Small crash dumps are excluded by default and require a separate selection; a dump may contain a small amount of memory near the failing thread. Reports do not collect vault contents, file lists, passwords, recovery keys, camera frames, screenshots, or window contents.</p>
 
       <h2>Downloads and Updates</h2>
-      <p>The website may provide installer download links. When downloading installer packages, your browser communicates with the relevant download host. Online update checks use a release index and installer hash verification before launching the installer.</p>
+      <p>The website may provide installer download links. When downloading an installer, your browser communicates with the relevant download host. Updates verify the installer before it runs.</p>
 
-      <h2>Timed License Time Check</h2>
-      <p>Free and permanent licenses do not perform license time checks. A timed Pro license periodically retrieves the current UTC time over an encrypted connection to evaluate its term. The request does not send a machine code, license ID, vault information, device list, or operational metrics. If the official domain is temporarily unavailable, the software may use the encrypted IP address of the same official server.</p>
+      <h2>Timed Pro License Connection</h2>
+      <p>Free and permanent licenses do not need an online license-term check. A timed Pro license periodically uses an encrypted connection to confirm that its term remains valid. The request does not send a device identity, license ID, vault information, device list, or usage statistics.</p>
 
-      <h2>Anonymous Operational Data</h2>
-      <p>Release builds may submit a random installation identifier, app version, release channel, and app-start event to measure installations, activity trends, and version distribution. The identifier is not derived from the machine GUID, hardware serial number, or Windows account. No vault information, device list, file path, or camera frame is included. Submission uses encrypted connections only, and failure does not affect product features.</p>
+      <h2>Anonymous Usage Statistics</h2>
+      <p>The software may send a random installation identifier, app version, download channel, and app-start record to understand installations, usage trends, and version distribution. The identifier is not derived from hardware or a Windows account. No vault information, device list, file path, or camera frame is included. Data is sent only through encrypted connections, and failure does not affect product features.</p>
 
       <h2>Your Responsibility</h2>
       <p class="note">Keep your vault files, BitLocker password, and recovery materials safe. If you forget the password and lose recovery materials, vault contents may be unrecoverable. SuperWatchDog does not save plaintext BitLocker passwords and cannot decrypt a vault for you.</p>
