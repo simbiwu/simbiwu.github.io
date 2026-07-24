@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://simbiwu.github.io/sitemap.xml
+Sitemap: https://superwatchdog.me/sitemap.xml

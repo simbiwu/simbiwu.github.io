@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Notice - SuperWatchDog</title>
   <meta name="description" content="SuperWatchDog privacy notice: local processing; no upload of user files, file lists, vault contents, passwords, recovery keys, or camera frames; diagnostic reports require confirmation.">
-  <link rel="canonical" href="https://simbiwu.github.io/privacy-en.html">
-  <link rel="alternate" hreflang="zh-CN" href="https://simbiwu.github.io/privacy.html">
-  <link rel="alternate" hreflang="en-US" href="https://simbiwu.github.io/privacy-en.html">
+  <link rel="canonical" href="https://superwatchdog.me/privacy-en.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://superwatchdog.me/privacy.html">
+  <link rel="alternate" hreflang="en-US" href="https://superwatchdog.me/privacy-en.html">
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <style>
@@ -45,7 +45,7 @@
   <main class="wrap">
     <article>
       <h1>Privacy Notice</h1>
-      <p class="meta">Last updated: July 16, 2026</p>
+      <p class="meta">Last updated: July 23, 2026</p>
       <p>SuperWatchDog is a local Windows privacy protection tool. Its core features are built around local vault files, trusted device triggers, and away protection actions. This notice explains the privacy boundaries for the website, installer, and Windows client.</p>
 
       <h2>Scope</h2>
@@ -69,6 +69,12 @@
       <h2>Downloads and Updates</h2>
       <p>The website may provide installer download links. When downloading installer packages, your browser communicates with the relevant download host. Online update checks use a release index and installer hash verification before launching the installer.</p>
 
+      <h2>Timed License Time Check</h2>
+      <p>Free and permanent licenses do not perform license time checks. A timed Pro license periodically retrieves the current UTC time over an encrypted connection to evaluate its term. The request does not send a machine code, license ID, vault information, device list, or operational metrics. If the official domain is temporarily unavailable, the software may use the encrypted IP address of the same official server.</p>
+
+      <h2>Anonymous Operational Data</h2>
+      <p>Release builds may submit a random installation identifier, app version, release channel, and app-start event to measure installations, activity trends, and version distribution. The identifier is not derived from the machine GUID, hardware serial number, or Windows account. No vault information, device list, file path, or camera frame is included. Submission uses encrypted connections only, and failure does not affect product features.</p>
+
       <h2>Your Responsibility</h2>
       <p class="note">Keep your vault files, BitLocker password, and recovery materials safe. If you forget the password and lose recovery materials, vault contents may be unrecoverable. SuperWatchDog does not save plaintext BitLocker passwords and cannot decrypt a vault for you.</p>
 
@@ -76,6 +82,9 @@
       <p>For privacy questions, contact <a href="mailto:simbi@live.com">simbi@live.com</a>.</p>
     </article>
   </main>
-  <footer>Copyright 2026 SuperWatchDog</footer>
+  <footer>
+    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026102063号</a>
+    <span> · Copyright 2026 SuperWatchDog</span>
+  </footer>
 </body>
 </html>
