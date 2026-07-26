@@ -25,6 +25,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://superwatchdog.me/product-facts.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/product-facts-en.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://superwatchdog.me/privacy.html</loc>
     <priority>0.5</priority>
   </url>
