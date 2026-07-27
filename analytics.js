@@ -11,11 +11,24 @@
     return;
   }
 
+  var parameters = new URLSearchParams(window.location.search);
+  var source = (parameters.get("utm_source") || "").trim().toLowerCase();
+  var campaign = (parameters.get("utm_campaign") || "").trim().toLowerCase();
+  var knownSources = /^(baidu|360|sogou|bing|google|github|csdn|zhihu|jianshu|juejin|oschina|tencent-cloud|aliyun|sohu|smzdm|51cto)$/;
+  if (!knownSources.test(source)) {
+    source = "";
+  }
+  if (!/^[a-z0-9][a-z0-9._-]{0,63}$/.test(campaign)) {
+    campaign = "";
+  }
+
   var basePayload = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     page: window.location.pathname || "/",
     culture: window.navigator.language || "unknown",
-    referrer: document.referrer || ""
+    referrer: document.referrer || "",
+    source: source,
+    campaign: campaign
   };
   var pageViewAccepted = false;
   var engagementSent = false;
@@ -33,6 +46,8 @@
         page: basePayload.page,
         culture: basePayload.culture,
         referrer: eventType === "page_view" ? basePayload.referrer : "",
+        source: eventType === "page_view" ? basePayload.source : "",
+        campaign: eventType === "page_view" ? basePayload.campaign : "",
         eventType: eventType
       }),
       keepalive: true
