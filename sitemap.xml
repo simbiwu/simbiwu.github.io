@@ -33,6 +33,46 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://superwatchdog.me/trigger-method-comparison.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/trigger-method-comparison-en.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/bluetooth-disconnect-protection.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/bluetooth-disconnect-protection-en.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/usb-removal-protection.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/usb-removal-protection-en.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/gesture-away-detection.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/gesture-away-detection-en.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/windows-file-vault.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/windows-file-vault-en.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://superwatchdog.me/privacy.html</loc>
     <priority>0.5</priority>
   </url>
