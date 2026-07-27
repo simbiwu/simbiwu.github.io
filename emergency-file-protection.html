@@ -8,6 +8,11 @@
   <link rel="canonical" href="https://superwatchdog.me/emergency-file-protection.html">
   <link rel="alternate" hreflang="zh-CN" href="https://superwatchdog.me/emergency-file-protection.html">
   <link rel="alternate" hreflang="en-US" href="https://superwatchdog.me/emergency-file-protection-en.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="有人突然靠近电脑，来不及操作时如何保护隐私">
+  <meta property="og:description" content="按真实场景选择手势、一键、快捷键或 USB 触发，并提前设置需要执行的保护动作。">
+  <meta property="og:url" content="https://superwatchdog.me/emergency-file-protection.html">
+  <meta property="og:image" content="https://superwatchdog.me/assets/og-cover.png">
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="guide.css">
@@ -21,6 +26,7 @@
     "dateModified": "2026-07-27",
     "inLanguage": "zh-CN",
     "mainEntityOfPage": "https://superwatchdog.me/emergency-file-protection.html",
+    "image": "https://superwatchdog.me/assets/og-cover.png",
     "publisher": {
       "@type": "Organization",
       "name": "超级看门狗",
@@ -44,61 +50,174 @@
   </header>
 
   <main class="wrap">
-    <article>
-      <p class="eyebrow">场景指南 · 紧急保护</p>
-      <h1>有人突然靠近电脑，来不及操作时如何保护隐私</h1>
-      <p class="lead">同事走到工位旁、室友突然进入房间，或者访客来到电脑前时，你可能来不及切换窗口，也不方便明显地操作键盘鼠标。真正有用的保护，需要在这种情况发生前设置好触发方式和保护动作。</p>
+    <article class="visual-guide">
+      <section class="guide-hero">
+        <div class="guide-hero-copy">
+          <p class="eyebrow">场景指南 · 紧急保护</p>
+          <h1>有人突然靠近，来不及切窗口怎么办？</h1>
+          <p class="lead">有时候不是忘记锁屏，而是当下根本不方便操作电脑。把触发方式和保护动作提前设好，紧急时只做一个最自然的动作。</p>
+          <div class="actions">
+            <a class="button" href="https://github.com/simbiwu/SuperWatchDog-InstallerAssets/releases/latest/download/SuperWatchDogSetup.exe">立即下载</a>
+            <a class="button button-secondary" href="#triggers">看看怎么选</a>
+          </div>
+        </div>
+        <div class="guide-hero-visual" aria-label="从触发到保护文件的流程示意">
+          <div class="visual-stack-card visual-stack-trigger">
+            <img src="assets/icons/one-key.svg" alt="" aria-hidden="true">
+            <span>启动触发</span>
+          </div>
+          <div class="visual-stack-arrow" aria-hidden="true">↓</div>
+          <div class="visual-stack-card">
+            <img src="assets/icons/privacy.svg" alt="" aria-hidden="true">
+            <span>执行保护动作</span>
+          </div>
+          <div class="visual-stack-arrow" aria-hidden="true">↓</div>
+          <div class="visual-stack-card">
+            <img src="assets/icons/vault.svg" alt="" aria-hidden="true">
+            <span>锁定文件保险箱</span>
+          </div>
+        </div>
+      </section>
 
-      <h2>现实中的困难不只是“忘记锁屏”</h2>
-      <div class="scene-grid">
-        <section class="scene">
-          <h3>来不及逐个关闭</h3>
-          <p>屏幕上可能同时打开聊天、合同、照片或客户资料，临时整理窗口往往已经太迟。</p>
-        </section>
-        <section class="scene">
-          <h3>不方便正常操作</h3>
-          <p>突然移动鼠标、按下组合键或合上电脑可能显得刻意，有时双手也不在键盘附近。</p>
-        </section>
-      </div>
+      <section class="guide-section">
+        <div class="section-heading">
+          <p class="eyebrow">真实场景</p>
+          <h2>问题不只是“忘记锁屏”</h2>
+        </div>
+        <div class="visual-scene-grid">
+          <section class="visual-card">
+            <span class="visual-number" aria-hidden="true">01</span>
+            <h3>人突然走到旁边</h3>
+            <p>聊天、照片或工作资料还开着，逐个关闭已经来不及。</p>
+          </section>
+          <section class="visual-card">
+            <span class="visual-number" aria-hidden="true">02</span>
+            <h3>当下不方便操作</h3>
+            <p>手不在键盘旁，或者明显切换窗口反而更加尴尬。</p>
+          </section>
+          <section class="visual-card">
+            <span class="visual-number" aria-hidden="true">03</span>
+            <h3>必须马上起身</h3>
+            <p>没有时间重新配置，只能依靠平时准备好的触发方式。</p>
+          </section>
+        </div>
+      </section>
 
-      <h2>提前选择一个最顺手的快速触发方式</h2>
-      <table class="guide-table">
-        <thead>
-          <tr><th>当时的情况</th><th>可选择的方式</th><th>为什么适合</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>不方便触碰键盘或鼠标</td><td>手势触发</td><td>摄像头可用且功能已提前启用时，用受支持的手势启动预设保护。</td></tr>
-          <tr><td>鼠标仍在手边</td><td>一键守护</td><td>不必逐个关闭窗口，用一次明确操作启动已经设置好的保护动作。</td></tr>
-          <tr><td>双手正在键盘附近</td><td>快捷键</td><td>无需寻找窗口或菜单，适合能够进行一次键盘操作的情况。</td></tr>
-          <tr><td>不仅要保护，还必须马上离开</td><td>拔出关联USB设备</td><td>离开时顺手带走设备，以明确的拔出动作触发保护。</td></tr>
-        </tbody>
-      </table>
+      <section class="guide-section guide-section-soft" id="triggers">
+        <div class="section-heading">
+          <p class="eyebrow">智能触发</p>
+          <h2>按当时能做的动作来选</h2>
+          <p>不用全部启用，选择最符合自己习惯的一种即可。</p>
+        </div>
+        <div class="trigger-grid">
+          <section class="trigger-card">
+            <span class="trigger-icon"><img src="assets/icons/privacy.svg" alt="" aria-hidden="true"></span>
+            <h3>手势</h3>
+            <p>不方便触碰键盘或鼠标时。</p>
+          </section>
+          <section class="trigger-card">
+            <span class="trigger-icon"><img src="assets/icons/one-key.svg" alt="" aria-hidden="true"></span>
+            <h3>一键保护</h3>
+            <p>鼠标仍在手边时。</p>
+          </section>
+          <section class="trigger-card">
+            <span class="trigger-icon trigger-key" aria-hidden="true">⌨</span>
+            <h3>快捷键</h3>
+            <p>双手正在键盘附近时。</p>
+          </section>
+          <section class="trigger-card">
+            <span class="trigger-icon"><img src="assets/icons/usb.svg" alt="" aria-hidden="true"></span>
+            <h3>USB 拔出</h3>
+            <p>需要带着设备马上离开时。</p>
+          </section>
+        </div>
+        <div class="helper-strip">
+          <img src="assets/icons/bluetooth.svg" alt="" aria-hidden="true">
+          <p><strong>已经离开或忘记操作？</strong>蓝牙断开和离席检测更适合作为补充触发方式。</p>
+        </div>
+      </section>
 
-      <h2>文件保险箱解决长期存放，快速触发处理眼前情况</h2>
-      <div class="scene-grid">
-        <section class="scene">
-          <h3>长期需要保护的文件</h3>
-          <p>合同、照片和个人资料等内容可提前放入本地文件保险箱。保险箱关闭后，相关文件保持锁定。</p>
-        </section>
-        <section class="scene">
-          <h3>屏幕上正在显示的内容</h3>
-          <p>触发后由超级看门狗按照用户预先选择的保护动作进行处理，不需要在紧急时刻重新配置。</p>
-        </section>
-      </div>
+      <section class="guide-section">
+        <div class="section-heading">
+          <p class="eyebrow">保护流程</p>
+          <h2>触发一次，执行您提前选好的动作</h2>
+        </div>
+        <div class="protection-flow">
+          <section class="flow-step">
+            <span>1</span>
+            <img src="assets/icons/one-key.svg" alt="" aria-hidden="true">
+            <h3>启动触发</h3>
+            <p>使用已经启用的方式。</p>
+          </section>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <section class="flow-step">
+            <span>2</span>
+            <img src="assets/icons/privacy.svg" alt="" aria-hidden="true">
+            <h3>保护当前内容</h3>
+            <p>隐藏界面、锁屏等动作按设置执行。</p>
+          </section>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <section class="flow-step">
+            <span>3</span>
+            <img src="assets/icons/vault.svg" alt="" aria-hidden="true">
+            <h3>锁定保险箱</h3>
+            <p>再次打开需要密码。</p>
+          </section>
+        </div>
+      </section>
 
-      <h2>只需提前做好三项准备</h2>
-      <ol>
-        <li>把长期需要保护的本地文件放入文件保险箱。</li>
-        <li>选择手势、一键守护或快捷键中的一种作为主要快速触发方式。</li>
-        <li>在自己的电脑上实际试用，确认动作、倒计时和触发时机符合使用习惯。</li>
-      </ol>
+      <section class="guide-section guide-section-soft">
+        <div class="section-heading">
+          <p class="eyebrow">文件保险箱</p>
+          <h2>眼前的屏幕和长期文件，分开保护</h2>
+        </div>
+        <div class="compare-grid">
+          <section class="compare-card">
+            <img src="assets/icons/privacy.svg" alt="" aria-hidden="true">
+            <div>
+              <h3>屏幕上正在显示的内容</h3>
+              <p>通过预先选择的保护动作处理当前窗口和桌面。</p>
+            </div>
+          </section>
+          <section class="compare-card">
+            <img src="assets/icons/vault.svg" alt="" aria-hidden="true">
+            <div>
+              <h3>长期需要保护的私密文件</h3>
+              <p>提前放入文件保险箱，锁定后需要密码才能再次打开。</p>
+            </div>
+          </section>
+        </div>
+      </section>
 
-      <p class="note">手势功能需要可用摄像头并由用户主动启用。蓝牙断开和离席检测更适合作为忘记操作或已经离开后的补充方式。涉及未保存内容的保护动作应谨慎选择；文件保险箱的密码和恢复材料需要由用户妥善保管。</p>
-
-      <div class="actions">
-        <a class="button" href="index.html#features">查看超级看门狗功能</a>
-        <a class="button button-secondary" href="away-file-protection.html">了解忘记操作后的补充保护</a>
-      </div>
+      <section class="guide-section">
+        <div class="section-heading">
+          <p class="eyebrow">开始使用</p>
+          <h2>提前准备三步</h2>
+        </div>
+        <ol class="prepare-steps">
+          <li><strong>放好文件</strong><span>将长期需要保护的本地文件放入保险箱。</span></li>
+          <li><strong>选好触发</strong><span>确定一种最顺手的主要触发方式。</span></li>
+          <li><strong>实际试用</strong><span>确认动作、倒计时和触发时机符合习惯。</span></li>
+        </ol>
+        <div class="note-grid">
+          <details>
+            <summary>手势功能需要什么？</summary>
+            <p>需要可用摄像头，并由用户主动启用后才能使用。</p>
+          </details>
+          <details>
+            <summary>保护动作会影响未保存内容吗？</summary>
+            <p>可能关闭窗口、锁屏或重启的动作应按实际需要选择，并在使用前试用确认。</p>
+          </details>
+          <details>
+            <summary>忘记保险箱密码怎么办？</summary>
+            <p>请妥善保存密码和恢复材料，以便在需要时完成恢复。</p>
+          </details>
+        </div>
+        <div class="actions actions-center">
+          <a class="button" href="https://github.com/simbiwu/SuperWatchDog-InstallerAssets/releases/latest/download/SuperWatchDogSetup.exe">下载超级看门狗</a>
+          <a class="button button-secondary" href="away-file-protection.html">了解离开后的补充保护</a>
+        </div>
+      </section>
     </article>
   </main>
 
