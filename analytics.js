@@ -14,7 +14,7 @@
   var parameters = new URLSearchParams(window.location.search);
   var source = (parameters.get("utm_source") || "").trim().toLowerCase();
   var campaign = (parameters.get("utm_campaign") || "").trim().toLowerCase();
-  var knownSources = /^(baidu|360|sogou|bing|google|github|csdn|zhihu|jianshu|juejin|oschina|tencent-cloud|aliyun|sohu|smzdm|51cto)$/;
+  var knownSources = /^(baidu|360|sogou|bing|google|github|csdn|zhihu|jianshu|juejin|oschina|tencent-cloud|aliyun|sohu|smzdm|51cto|eefocus|sina)$/;
   if (!knownSources.test(source)) {
     source = "";
   }
