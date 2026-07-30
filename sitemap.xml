@@ -102,10 +102,22 @@
   </url>
   <url>
     <loc>https://superwatchdog.me/contact.html</loc>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/contact-en.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/about.html</loc>
+    <lastmod>2026-07-30</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/about-en.html</loc>
+    <lastmod>2026-07-30</lastmod>
     <priority>0.5</priority>
   </url>
 </urlset>
