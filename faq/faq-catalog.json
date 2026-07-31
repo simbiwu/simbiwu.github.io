@@ -1,0 +1,538 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-31T23:30:00+08:00",
+  "categories": [
+    {
+      "id": "emergency",
+      "slug": "emergency",
+      "zh": { "title": "紧急屏幕隐私", "description": "有人突然靠近、暂时无法操作电脑或需要快速收起当前内容时，先判断最合适的保护动作。" },
+      "en": { "title": "Emergency screen privacy", "description": "Choose a practical first action when someone approaches, you cannot reach the computer, or current content must be covered quickly." }
+    },
+    {
+      "id": "triggers",
+      "slug": "triggers",
+      "zh": { "title": "触发方式选择", "description": "比较快捷键、手势、U 盘和蓝牙设备触发，理解不同方式适合的距离与环境。" },
+      "en": { "title": "Choosing a trigger", "description": "Compare shortcuts, gestures, USB removal, and Bluetooth triggers for different distances and environments." }
+    },
+    {
+      "id": "file-privacy",
+      "slug": "file-privacy",
+      "zh": { "title": "私密文件保护", "description": "从屏幕遮挡延伸到文件保护、借机送修和保险箱访问边界。" },
+      "en": { "title": "Private file protection", "description": "Go beyond covering the screen to file protection, lending or repairing a PC, and vault access boundaries." }
+    },
+    {
+      "id": "setup",
+      "slug": "setup",
+      "zh": { "title": "安装与设备条件", "description": "确认 Windows 版本、BitLocker 条件和摄像头隐私，再选择能够实际使用的功能。" },
+      "en": { "title": "Setup and device requirements", "description": "Check Windows, BitLocker, and camera privacy requirements before choosing features you can actually use." }
+    },
+    {
+      "id": "troubleshooting",
+      "slug": "troubleshooting",
+      "zh": { "title": "故障排查与注意事项", "description": "处理触发失败、蓝牙误断连、强制动作和忘记密码等高影响问题。" },
+      "en": { "title": "Troubleshooting and safety", "description": "Handle missed triggers, Bluetooth false disconnects, forceful actions, and forgotten vault passwords." }
+    }
+  ],
+  "questions": [
+    {
+      "id": "someone-approaches-pc",
+      "category": "emergency",
+      "slug": "someone-approaches-pc",
+      "zh": {
+        "title": "有人突然靠近电脑时，应该先做什么？",
+        "description": "有人突然靠近 Windows 电脑时，如何按距离和紧急程度选择隐藏窗口、锁屏或文件保护。",
+        "shortAnswer": "先执行最容易成功、对当前工作影响最小的动作：人在电脑前可用快捷键隐藏或锁屏；已经离开电脑时，再依赖事先配置好的设备或摄像头触发。",
+        "sections": [
+          { "heading": "先按距离选择动作", "paragraphs": ["如果手还在键盘附近，快捷键通常最直接。只是需要暂时遮住内容时，可先隐藏或最小化窗口；对方可能接触电脑时，应优先锁定 Windows。", "如果您已经离开座位，临时再设置触发来不及。U 盘拔出、蓝牙断开或离席检测都需要提前配置和试用，不能把第一次使用留到紧急时刻。"], "bullets": ["短暂遮挡：隐藏或最小化当前窗口", "阻止继续操作：锁定 Windows", "涉及私密文件：同时使用已锁定的保险箱"] }
+        ]
+      },
+      "en": {
+        "title": "What should I do first when someone suddenly approaches my PC?",
+        "description": "Choose between hiding windows, locking Windows, and protecting files when someone approaches a PC.",
+        "shortAnswer": "Use the fastest reliable action with the least impact: hide windows or lock Windows when you are at the keyboard; rely on a preconfigured device or camera trigger only after you have stepped away.",
+        "sections": [
+          { "heading": "Choose by distance first", "paragraphs": ["A shortcut is usually the quickest option while your hand is near the keyboard. Hide or minimize windows for brief visual cover; lock Windows if the other person may touch the PC.", "Once you are away, it is too late to configure a trigger. USB removal, Bluetooth disconnect, and away detection should be set up and tried before an urgent moment."], "bullets": ["Brief visual cover: hide or minimize current windows", "Prevent further use: lock Windows", "Sensitive files: keep them in a locked vault as well"] }
+        ]
+      },
+      "related": [
+        { "path": "/emergency-file-protection.html", "zh": "紧急保护场景指南", "en": "Emergency protection scenario guide" },
+        { "path": "/product-facts.html", "zh": "产品能力与边界", "en": "Product capabilities and boundaries" }
+      ]
+    },
+    {
+      "id": "cannot-reach-keyboard",
+      "category": "emergency",
+      "slug": "cannot-reach-keyboard",
+      "zh": {
+        "title": "来不及碰键盘和鼠标时，怎样保护电脑隐私？",
+        "description": "无法立刻操作键盘和鼠标时，使用可信设备或摄像头触发 Windows 隐私保护的准备方法。",
+        "shortAnswer": "只能依靠提前启用并验证过的远距离触发，例如拔出随身 U 盘、蓝牙设备离开连接范围或摄像头手势；没有预先配置时，软件无法替您判断现场意图。",
+        "sections": [
+          { "heading": "远距离触发必须提前准备", "paragraphs": ["U 盘适合能顺手拔走设备的情况，蓝牙适合人和随身设备一起离开，摄像头手势适合仍在镜头范围但不方便触碰电脑的情况。", "任何自动方式都可能受到设备连接、遮挡、距离和环境影响。设置后应在安全场景中多次试用，并保留一个手动快捷键作为备用。"], "bullets": ["不要同时启用过多未经验证的触发", "先使用隐藏或锁屏等可恢复动作", "把重启、关机等高影响动作保持为关闭"] }
+        ]
+      },
+      "en": {
+        "title": "How can I protect privacy when I cannot reach the keyboard or mouse?",
+        "description": "Prepare device or camera triggers for moments when the keyboard and mouse are out of reach.",
+        "shortAnswer": "You need a trigger that was enabled and tested in advance, such as removing a USB device, moving a Bluetooth device out of range, or using a camera gesture. Without prior setup, software cannot infer your intent in the moment.",
+        "sections": [
+          { "heading": "Prepare remote triggers before you need them", "paragraphs": ["USB removal works when you can take the device with you. Bluetooth suits leaving with a wearable or phone. A camera gesture can help while you remain visible but cannot touch the PC.", "Automatic triggers depend on connection quality, distance, visibility, and the environment. Try the setup several times in a safe situation and retain a manual shortcut as a fallback."], "bullets": ["Avoid enabling many untested triggers at once", "Start with reversible actions such as hiding or locking", "Keep restart and shutdown actions disabled unless truly needed"] }
+        ]
+      },
+      "related": [
+        { "path": "/trigger-method-comparison.html", "zh": "设备触发保护指南", "en": "Device-triggered protection guide" },
+        { "path": "/gesture-away-detection.html", "zh": "摄像头手势保护指南", "en": "Camera gesture protection guide" }
+      ]
+    },
+    {
+      "id": "lock-screen-or-hide-windows",
+      "category": "emergency",
+      "slug": "lock-screen-or-hide-windows",
+      "zh": {
+        "title": "紧急时应该锁屏，还是只隐藏窗口？",
+        "description": "比较 Windows 锁屏与隐藏窗口在紧急隐私保护中的用途和限制。",
+        "shortAnswer": "只需要短暂遮挡屏幕内容时可隐藏窗口；只要存在他人继续操作电脑的可能，就应锁屏。两者都不能替代私密文件本身的加密保护。",
+        "sections": [
+          { "heading": "两种动作解决不同问题", "paragraphs": ["隐藏窗口对当前工作打断较小，但电脑仍处于可操作状态，熟悉电脑的人也可能重新找到窗口。Windows 锁屏会要求重新登录，更适合离开座位或有人可能接触设备的情况。", "如果担心的是文件在磁盘上被打开或复制，还需要把文件放入受保护的保险箱，并在离开前确认保险箱已锁定。"], "bullets": ["隐藏窗口：快、影响小，但不是访问控制", "Windows 锁屏：阻止当前登录会话被直接使用", "保险箱锁定：保护其中的文件访问"] }
+        ]
+      },
+      "en": {
+        "title": "In an urgent moment, should I lock Windows or only hide windows?",
+        "description": "Compare Windows lock and window hiding for emergency privacy protection.",
+        "shortAnswer": "Hide windows for brief visual cover. Lock Windows whenever someone might continue using the PC. Neither action replaces encryption for sensitive files.",
+        "sections": [
+          { "heading": "The actions solve different problems", "paragraphs": ["Hiding windows interrupts work less, but the PC remains usable and another person may find the windows again. Windows lock requires signing in again and is better when you leave or someone may touch the device.", "If your concern is opening or copying files from storage, keep those files in a protected vault and confirm that the vault is locked before leaving."], "bullets": ["Hide windows: fast and low-impact, but not access control", "Lock Windows: prevents direct use of the current session", "Lock the vault: protects access to files inside it"] }
+        ]
+      },
+      "related": [
+        { "path": "/emergency-file-protection.html", "zh": "紧急保护动作怎样分层", "en": "How emergency actions are layered" },
+        { "path": "/product-facts.html", "zh": "保险箱公开资料", "en": "Public vault facts" }
+      ]
+    },
+    {
+      "id": "protect-unsaved-work",
+      "category": "emergency",
+      "slug": "protect-unsaved-work",
+      "zh": {
+        "title": "保护隐私时，怎样尽量不丢失未保存的工作？",
+        "description": "配置紧急隐私动作时，如何优先保护未保存工作并避免高影响操作。",
+        "shortAnswer": "把隐藏窗口或 Windows 锁屏作为第一层动作，先关闭可能导致数据丢失的强制关闭、重启和关机；重要文档仍应依赖应用自身的保存与恢复能力。",
+        "sections": [
+          { "heading": "从可恢复动作开始", "paragraphs": ["隐藏和锁屏通常不会主动结束应用，更适合作为默认保护动作。锁定保险箱前，应保存正在编辑且位于保险箱中的文件，并关闭占用这些文件的应用。", "强制关闭应用、强制锁定或卸载、重启和关机都可能让未保存内容丢失。只有明确接受后果时才启用，并先用不重要的测试文件验证自己的流程。"], "bullets": ["养成频繁保存和启用自动保存的习惯", "先关闭保险箱中文件，再锁定保险箱", "高影响动作默认保持关闭"] }
+        ]
+      },
+      "en": {
+        "title": "How can I protect privacy without losing unsaved work?",
+        "description": "Prioritize unsaved work and avoid high-impact actions when configuring emergency privacy protection.",
+        "shortAnswer": "Use window hiding or Windows lock as the first layer, and leave force-close, restart, and shutdown actions disabled. Important documents should still rely on the application's save and recovery features.",
+        "sections": [
+          { "heading": "Start with reversible actions", "paragraphs": ["Hiding and locking normally leave applications running, so they are safer defaults. Before locking a vault, save files being edited inside it and close applications that are using those files.", "Force-closing applications, force-locking or unmounting, restarting, and shutting down can lose unsaved content. Enable them only when you accept that consequence, and first test your workflow with unimportant files."], "bullets": ["Save frequently and enable application autosave", "Close files stored in the vault before locking it", "Leave high-impact actions disabled by default"] }
+        ]
+      },
+      "related": [
+        { "path": "/emergency-file-protection.html", "zh": "紧急保护的风险与准备", "en": "Emergency protection risks and preparation" },
+        { "path": "/terms.html", "zh": "使用条款与重要提示", "en": "Terms and important notices" }
+      ]
+    },
+    {
+      "id": "choose-trigger-method",
+      "category": "triggers",
+      "slug": "choose-trigger-method",
+      "zh": {
+        "title": "快捷键、U 盘、蓝牙和摄像头触发，应该怎样选？",
+        "description": "按距离、可靠性和环境条件选择 Windows 紧急隐私保护触发方式。",
+        "shortAnswer": "人在电脑前首选快捷键；能随手带走设备可选 U 盘；随身设备会和人一起离开可考虑蓝牙；仍在镜头前但手不方便时可用手势。",
+        "sections": [
+          { "heading": "先确定最常见的真实场景", "paragraphs": ["触发方式不是越多越好。快捷键路径最短，适合作为基础；设备和摄像头触发解决的是手够不到电脑或已经离开的情况，但会增加环境变量。", "建议先配置一个手动方式和一个最符合日常习惯的自动方式。连续使用一段时间，确认没有漏触发或误触发后，再考虑增加其他方式。"], "bullets": ["电脑前：快捷键", "带走实物设备：U 盘", "人与随身设备离开：蓝牙", "镜头范围内免接触：手势"] }
+        ]
+      },
+      "en": {
+        "title": "Should I use a shortcut, USB, Bluetooth, or a camera trigger?",
+        "description": "Choose an emergency privacy trigger by distance, reliability, and environment.",
+        "shortAnswer": "Use a shortcut while at the PC, USB when you can take a device with you, Bluetooth when a personal device leaves with you, and a gesture when you remain in view but cannot use your hands.",
+        "sections": [
+          { "heading": "Start with your most common real situation", "paragraphs": ["More triggers are not automatically better. A shortcut has the shortest path and makes a good baseline. Device and camera triggers help when the PC is out of reach, but introduce more environmental variables.", "Configure one manual method and one automatic method that fits your routine. Use them for a while and check for missed or false triggers before adding another."], "bullets": ["At the PC: shortcut", "Taking a physical device: USB", "Leaving with a personal device: Bluetooth", "Hands-free while visible: gesture"] }
+        ]
+      },
+      "related": [
+        { "path": "/emergency-file-protection.html", "zh": "快速触发场景", "en": "Quick-trigger scenario" },
+        { "path": "/trigger-method-comparison.html", "zh": "设备触发场景", "en": "Device-triggered scenario" }
+      ]
+    },
+    {
+      "id": "shortcut-or-gesture",
+      "category": "triggers",
+      "slug": "shortcut-or-gesture",
+      "zh": {
+        "title": "快捷键和摄像头手势，哪一种更适合紧急触发？",
+        "description": "比较键盘快捷键与摄像头手势在紧急隐私保护中的可靠性和使用条件。",
+        "shortAnswer": "能碰到键盘时优先快捷键；手被占用、键盘较远但人仍在镜头范围时，手势更有价值。两者可以互为备用，但都应提前练习。",
+        "sections": [
+          { "heading": "可靠性来自匹配场景", "paragraphs": ["快捷键不依赖光线和镜头视野，通常更可预测，但要求您能迅速碰到键盘并记住按键。手势不需要接触设备，却会受到光线、遮挡、站位和摄像头状态影响。", "不要把复杂动作链绑定到尚未熟悉的手势。先使用隐藏窗口或锁屏等容易恢复的结果，确认识别稳定后再日常使用。"], "bullets": ["快捷键适合近距离", "手势适合免接触但仍可见", "始终保留另一种手动退出方式"] }
+        ]
+      },
+      "en": {
+        "title": "Which is better for urgent triggering: a shortcut or a camera gesture?",
+        "description": "Compare keyboard shortcuts and camera gestures for emergency privacy protection.",
+        "shortAnswer": "Prefer a shortcut when the keyboard is within reach. A gesture is useful when your hands are occupied or the keyboard is farther away while you remain in camera view. Practice both before relying on them.",
+        "sections": [
+          { "heading": "Reliability comes from matching the situation", "paragraphs": ["A shortcut does not depend on lighting or camera view and is usually more predictable, but you must reach the keyboard and remember the keys. A gesture is touch-free but depends on lighting, occlusion, position, and camera availability.", "Do not bind a complex action chain to an unfamiliar gesture. Start with a reversible result such as hiding windows or locking Windows, then use it routinely after recognition is stable."], "bullets": ["Shortcuts suit close range", "Gestures suit touch-free use while visible", "Keep another manual way to recover"] }
+        ]
+      },
+      "related": [
+        { "path": "/gesture-away-detection.html", "zh": "摄像头手势指南", "en": "Camera gesture guide" },
+        { "path": "/trigger-method-comparison.html", "zh": "快捷触发指南", "en": "Shortcut trigger guide" }
+      ]
+    },
+    {
+      "id": "usb-removal-trigger",
+      "category": "triggers",
+      "slug": "usb-removal-trigger",
+      "zh": {
+        "title": "拔出 U 盘触发保护，适合什么场景？",
+        "description": "了解 U 盘拔出触发 Windows 隐私保护的适用场景、准备方法和限制。",
+        "shortAnswer": "它适合把指定 U 盘当作随身触发物的人：离开时拔走设备即可执行预设保护。它不是 U 盘文件加密，也不代表任何 U 盘拔出都会触发。",
+        "sections": [
+          { "heading": "把设备和行为绑定", "paragraphs": ["选择一个稳定、不会经常用于传输文件的 U 盘作为可信设备。日常离开时把它带走，可以形成明确动作，比依赖记忆点击按钮更自然。", "突然松动、接口供电或集线器问题也可能表现为设备断开。重要工作中应避免把高影响动作直接绑定到 U 盘拔出，并定期确认指定设备仍能被识别。"], "bullets": ["使用专门且稳定的设备", "不要在写入 U 盘时直接拔出", "默认先绑定锁屏等低影响动作"] }
+        ]
+      },
+      "en": {
+        "title": "When is USB removal a useful privacy trigger?",
+        "description": "Understand suitable scenarios, preparation, and limitations for USB-removal privacy triggers.",
+        "shortAnswer": "It suits people who use one designated USB device as a physical trigger: take it when leaving to run the selected protection. It does not encrypt files on that USB device, and removing an arbitrary USB device does not trigger protection.",
+        "sections": [
+          { "heading": "Bind a device to a routine", "paragraphs": ["Choose a stable USB device that is not frequently used for file transfer. Taking it whenever you leave creates a clear physical habit and can be easier than remembering to click a button.", "Loose connections, power issues, and hubs may also look like removal. Avoid binding disruptive actions directly to USB removal during important work, and periodically confirm that the designated device is still recognized."], "bullets": ["Use a dedicated, stable device", "Do not remove it while data is being written", "Start with a low-impact action such as Windows lock"] }
+        ]
+      },
+      "related": [
+        { "path": "/usb-removal-protection.html", "zh": "设备触发保护的完整说明", "en": "Complete device-triggered protection guide" },
+        { "path": "/product-facts.html", "zh": "可信设备公开边界", "en": "Trusted-device public boundaries" }
+      ]
+    },
+    {
+      "id": "bluetooth-disconnect-trigger",
+      "category": "triggers",
+      "slug": "bluetooth-disconnect-trigger",
+      "zh": {
+        "title": "蓝牙设备断开触发保护，怎样减少误触发？",
+        "description": "配置蓝牙断开隐私保护时，通过设备选择、延迟和动作分层减少误触发。",
+        "shortAnswer": "选择连接稳定、确实随人离开的设备，给短暂波动留出确认时间，并先绑定锁屏等可恢复动作；不要用偶尔休眠的耳机直接触发重启或关机。",
+        "sections": [
+          { "heading": "蓝牙断开不一定等于人已离开", "paragraphs": ["耳机省电、手机系统限制、无线干扰和距离变化都可能造成短暂断连。先观察设备在办公环境中的连接表现，再决定它是否适合作为触发依据。", "如果环境经常波动，应增加合理延迟或改用 U 盘、快捷键。触发记录可以帮助区分真实离开与连接不稳定，但不要为了追求灵敏而牺牲日常工作的可用性。"], "bullets": ["优先选择稳定且随身的设备", "允许短暂断连恢复", "误触发期间不要启用高影响动作"] }
+        ]
+      },
+      "en": {
+        "title": "How can I reduce false triggers from Bluetooth disconnects?",
+        "description": "Reduce Bluetooth false triggers through device choice, confirmation delay, and layered actions.",
+        "shortAnswer": "Choose a stable device that actually leaves with you, allow time for brief connection drops, and start with a reversible action such as Windows lock. Do not let occasionally sleeping headphones directly restart or shut down the PC.",
+        "sections": [
+          { "heading": "A disconnect does not always mean you left", "paragraphs": ["Headphone power saving, phone restrictions, radio interference, and distance changes can all cause a brief disconnect. Observe the device in your normal environment before treating it as a reliable presence signal.", "If the environment is unstable, use a reasonable delay or switch to USB or a shortcut. Trigger history can help distinguish leaving from connection trouble, but responsiveness should not make everyday work unreliable."], "bullets": ["Prefer a stable device that stays with you", "Allow brief disconnects to recover", "Keep high-impact actions disabled while tuning"] }
+        ]
+      },
+      "related": [
+        { "path": "/bluetooth-disconnect-protection.html", "zh": "蓝牙离开保护指南", "en": "Bluetooth away-protection guide" },
+        { "path": "/trigger-method-comparison.html", "zh": "设备触发方式比较", "en": "Compare device triggers" }
+      ]
+    },
+    {
+      "id": "gesture-or-away-detection",
+      "category": "triggers",
+      "slug": "gesture-or-away-detection",
+      "zh": {
+        "title": "摄像头手势和离席检测有什么区别？",
+        "description": "区分主动摄像头手势与自动离席检测在 Windows 隐私保护中的用途。",
+        "shortAnswer": "手势是您主动发出明确指令，适合人在镜头前；离席检测根据持续无人状态自动执行，适合忘记手动保护，但需要更保守的时间设置。",
+        "sections": [
+          { "heading": "主动信号与自动判断", "paragraphs": ["手势由您决定触发时机，通常更符合紧急场景。离席检测减少了遗忘，但它只能根据画面状态判断，并不知道您是否只是短暂侧身、被遮挡或仍在附近。", "两类摄像头能力默认关闭。启用后先确认镜头范围、光线和等待时间，自动离席只绑定锁屏等低影响动作更稳妥。"], "bullets": ["需要即时决定：手势", "担心忘记保护：离席检测", "环境不稳定：使用快捷键或设备触发"] }
+        ]
+      },
+      "en": {
+        "title": "What is the difference between a camera gesture and away detection?",
+        "description": "Distinguish an intentional camera gesture from automatic away detection for Windows privacy.",
+        "shortAnswer": "A gesture is an explicit command while you are in view. Away detection acts after continued absence and helps when you forget, but it needs more conservative timing.",
+        "sections": [
+          { "heading": "Intentional signal versus automatic judgment", "paragraphs": ["You choose the moment for a gesture, which often fits urgent situations better. Away detection reduces reliance on memory, but it sees only the camera state and cannot know whether you briefly turned, were occluded, or remain nearby.", "Both camera features are disabled by default. After enabling one, check camera view, lighting, and timing. It is safer to bind automatic away detection to a low-impact action such as Windows lock."], "bullets": ["Need an immediate decision: gesture", "Concerned about forgetting: away detection", "Unstable environment: shortcut or device trigger"] }
+        ]
+      },
+      "related": [
+        { "path": "/gesture-away-detection.html", "zh": "主动手势保护", "en": "Intentional gesture protection" },
+        { "path": "/away-file-protection.html", "zh": "自动离席保护", "en": "Automatic away protection" }
+      ]
+    },
+    {
+      "id": "screen-hiding-vs-file-protection",
+      "category": "file-privacy",
+      "slug": "screen-hiding-vs-file-protection",
+      "zh": {
+        "title": "隐藏屏幕内容，为什么不能代替私密文件保护？",
+        "description": "理解屏幕遮挡、Windows 锁屏与 BitLocker 保险箱保护的是不同层面。",
+        "shortAnswer": "隐藏窗口只改变当下看到的内容，文件仍可能存在于磁盘和最近记录中；私密文件需要单独放入受 BitLocker 保护的保险箱，并在不用时锁定。",
+        "sections": [
+          { "heading": "屏幕隐私与文件隐私是两层", "paragraphs": ["窗口隐藏适合处理突然有人看向屏幕的瞬间，Windows 锁屏用于阻止继续操作当前会话。它们不会自动把已经存放在普通文件夹中的文件迁移或加密。", "保险箱更适合照片、证件扫描件和工作资料等长期敏感内容。打开时它会像磁盘一样供应用使用；离开前保存并关闭文件，再锁定保险箱。"], "bullets": ["屏幕层：隐藏或锁屏", "存储层：加密保险箱", "日常层：减少普通目录中的副本和导出文件"] }
+        ]
+      },
+      "en": {
+        "title": "Why does hiding the screen not replace private file protection?",
+        "description": "Understand how visual cover, Windows lock, and a BitLocker vault protect different layers.",
+        "shortAnswer": "Hiding windows changes only what is visible now; files may still remain on storage or in recent history. Sensitive files need their own BitLocker-protected vault, locked when not in use.",
+        "sections": [
+          { "heading": "Screen privacy and file privacy are separate layers", "paragraphs": ["Window hiding handles the instant someone looks at the screen, while Windows lock prevents use of the current session. Neither automatically moves or encrypts files already stored in normal folders.", "A vault is more suitable for long-term sensitive content such as photos, identity scans, and work documents. While open, it is available to applications like a drive; save and close files before locking it."], "bullets": ["Screen layer: hide or lock", "Storage layer: encrypted vault", "Daily practice: reduce copies and exports in ordinary folders"] }
+        ]
+      },
+      "related": [
+        { "path": "/computer-lending-repair-privacy.html", "zh": "共用电脑的文件隐私", "en": "File privacy on a shared PC" },
+        { "path": "/product-facts.html", "zh": "保险箱如何使用", "en": "How the vault is used" }
+      ]
+    },
+    {
+      "id": "photos-and-id-scans",
+      "category": "file-privacy",
+      "slug": "photos-and-id-scans",
+      "zh": {
+        "title": "照片、证件扫描件和合同，应该怎样存放？",
+        "description": "在 Windows 电脑上分层管理照片、证件扫描件、合同等敏感文件。",
+        "shortAnswer": "把需要长期保密的原件集中放入加密保险箱，普通目录只保留确实需要的副本；使用结束后关闭文件并锁定保险箱，同时单独保管恢复材料。",
+        "sections": [
+          { "heading": "先减少散落副本", "paragraphs": ["敏感文件常从下载目录、聊天软件和扫描工具产生。移动到保险箱后，还要检查是否在桌面、最近导出位置或同步目录留下副本。", "保险箱不是备份。重要资料仍需要符合您安全要求的独立备份，密码和恢复材料也不要与保险箱文件放在同一位置。"], "bullets": ["集中原件，减少普通目录副本", "关闭预览和编辑程序后再锁定", "为重要资料准备独立备份"] }
+        ]
+      },
+      "en": {
+        "title": "How should I store photos, identity scans, and contracts?",
+        "description": "Use layered storage for sensitive photos, identity scans, and contracts on Windows.",
+        "shortAnswer": "Keep long-term sensitive originals together in an encrypted vault and retain only necessary copies in normal folders. Close files and lock the vault after use, and store recovery material separately.",
+        "sections": [
+          { "heading": "Reduce scattered copies first", "paragraphs": ["Sensitive files often originate in Downloads, messaging applications, and scanning tools. After moving them into the vault, check whether copies remain on the desktop, in recent export locations, or in synchronized folders.", "A vault is not a backup. Important material still needs an independent backup that meets your security needs, and passwords or recovery material should not be stored beside the vault file."], "bullets": ["Centralize originals and reduce normal-folder copies", "Close viewers and editors before locking", "Maintain an independent backup for important material"] }
+        ]
+      },
+      "related": [
+        { "path": "/computer-lending-repair-privacy.html", "zh": "家庭共用电脑隐私指南", "en": "Shared family PC privacy guide" },
+        { "path": "/privacy.html", "zh": "隐私说明", "en": "Privacy notice" }
+      ]
+    },
+    {
+      "id": "lending-or-repairing-pc",
+      "category": "file-privacy",
+      "slug": "lending-or-repairing-pc",
+      "zh": {
+        "title": "电脑借给别人或送修前，应该检查什么？",
+        "description": "Windows 电脑临时借用或送修前的隐私文件、账号和保险箱检查清单。",
+        "shortAnswer": "先保存工作并锁定保险箱，确认敏感文件没有散落在桌面、下载和同步目录，再退出不需要暴露的账号；送修仍应按最小数据原则准备。",
+        "sections": [
+          { "heading": "不要只关闭窗口", "paragraphs": ["借机和送修时间更长，对方可能有充分时间浏览普通目录。应先检查文件副本、浏览器下载、聊天软件缓存和云同步状态，再确认保险箱处于锁定状态。", "如果维修不需要原系统数据，优先使用厂商建议的数据备份与送修方案。无法移除的数据应有可恢复备份，且不要向无关人员提供保险箱密码或恢复材料。"], "bullets": ["保存并关闭正在使用的敏感文件", "锁定保险箱并退出敏感账号", "备份重要资料，遵循最小数据原则"] }
+        ]
+      },
+      "en": {
+        "title": "What should I check before lending or repairing my PC?",
+        "description": "A privacy checklist for files, accounts, and vaults before lending or repairing a Windows PC.",
+        "shortAnswer": "Save work and lock the vault, check that sensitive files are not scattered across Desktop, Downloads, or sync folders, and sign out of accounts that need not be exposed. Prepare repairs using data minimization.",
+        "sections": [
+          { "heading": "Do more than close windows", "paragraphs": ["A borrower or technician may have plenty of time to browse normal folders. Check file copies, browser downloads, messaging caches, and cloud synchronization, then confirm the vault is locked.", "If repair does not require your original data, follow the manufacturer's recommended backup and service preparation. Maintain recoverable backups for data that remains, and do not give unrelated people the vault password or recovery material."], "bullets": ["Save and close sensitive files in use", "Lock the vault and sign out of sensitive accounts", "Back up important data and minimize what remains"] }
+        ]
+      },
+      "related": [
+        { "path": "/computer-lending-repair-privacy.html", "zh": "共用电脑隐私准备", "en": "Shared-PC privacy preparation" },
+        { "path": "/terms.html", "zh": "数据备份提示", "en": "Data backup notice" }
+      ]
+    },
+    {
+      "id": "trusted-device-and-password",
+      "category": "file-privacy",
+      "slug": "trusted-device-and-password",
+      "zh": {
+        "title": "有可信设备，为什么打开保险箱还要输入密码？",
+        "description": "解释可信设备与 BitLocker 密码在保险箱访问中的不同作用。",
+        "shortAnswer": "可信设备只是判断是否允许进入打开流程的条件，不是保险箱密码。设备在场后仍需输入 BitLocker 密码，避免仅拿到设备就能直接读取文件。",
+        "sections": [
+          { "heading": "设备和密码各自证明一部分条件", "paragraphs": ["可信设备适合表达“这个设备是否在场”，密码用于解锁加密保险箱。把两者分开，可以降低设备遗失或被临时拿走时直接暴露文件的风险。", "不要把密码保存在电脑上的普通文档、脚本或备注中。恢复材料用于忘记密码等恢复场景，应放在与电脑和保险箱文件分离的安全位置。"], "bullets": ["可信设备不保存或替代密码", "打开时由用户输入密码", "恢复材料与保险箱分开保管"] }
+        ]
+      },
+      "en": {
+        "title": "Why is a password still required when a trusted device is present?",
+        "description": "Understand the different roles of a trusted device and a BitLocker password in vault access.",
+        "shortAnswer": "A trusted device is only a condition for entering the open flow; it is not the vault password. You still enter the BitLocker password so possession of the device alone does not reveal files.",
+        "sections": [
+          { "heading": "The device and password prove different conditions", "paragraphs": ["A trusted device indicates that a selected device is present, while the password unlocks the encrypted vault. Keeping them separate reduces exposure if the device is lost or briefly taken.", "Do not store the password in an ordinary document, script, or note on the PC. Recovery material is for recovery scenarios and should be kept somewhere separate from both the computer and vault file."], "bullets": ["A trusted device does not store or replace the password", "The user enters the password when opening", "Keep recovery material separate from the vault"] }
+        ]
+      },
+      "related": [
+        { "path": "/product-facts.html", "zh": "可信设备和保险箱事实", "en": "Trusted-device and vault facts" },
+        { "path": "/privacy.html", "zh": "凭据隐私说明", "en": "Credential privacy notice" }
+      ]
+    },
+    {
+      "id": "supported-windows-versions",
+      "category": "setup",
+      "slug": "supported-windows-versions",
+      "zh": {
+        "title": "支持哪些 Windows 版本？家庭版能用吗？",
+        "description": "SuperWatchDog 1.0.0 的 Windows 版本、系统架构和 BitLocker 功能条件。",
+        "shortAnswer": "1.0.0 面向 Windows 10/11 64 位系统，推荐专业版、企业版或教育版。家庭版可使用基础触发与锁屏能力，但通常无法使用依赖系统 BitLocker 的保险箱创建与保护。",
+        "sections": [
+          { "heading": "先区分基础保护与保险箱", "paragraphs": ["快捷触发、窗口处理和 Windows 锁屏属于基础保护。加密保险箱依赖系统提供的 BitLocker 能力，因此实际可用性取决于 Windows 版本和设备配置。", "Windows 7、8 和 8.1 不在支持范围内。安装或购买前先查看系统版本与架构；如果目标是使用保险箱，还应确认系统能够使用 BitLocker。"], "bullets": ["支持：Windows 10/11 64 位", "推荐：专业版、企业版、教育版", "家庭版：以基础触发和锁屏能力为主"] }
+        ]
+      },
+      "en": {
+        "title": "Which Windows versions are supported, and does Home edition work?",
+        "description": "Windows version, architecture, and BitLocker requirements for SuperWatchDog 1.0.0.",
+        "shortAnswer": "Version 1.0.0 targets 64-bit Windows 10 and 11, with Pro, Enterprise, or Education recommended. Home can use basic triggers and Windows lock, but normally cannot use vault creation and protection that depend on system BitLocker.",
+        "sections": [
+          { "heading": "Separate basic protection from the vault", "paragraphs": ["Quick triggers, window handling, and Windows lock are basic protection. The encrypted vault depends on BitLocker supplied by Windows, so availability varies with the Windows edition and device configuration.", "Windows 7, 8, and 8.1 are not supported. Check the Windows edition and architecture before installing or buying; if the vault is your goal, also confirm that BitLocker is available."], "bullets": ["Supported: 64-bit Windows 10 and 11", "Recommended: Pro, Enterprise, or Education", "Home: primarily basic triggers and Windows lock"] }
+        ]
+      },
+      "related": [
+        { "path": "/product-facts.html", "zh": "完整系统要求", "en": "Complete system requirements" },
+        { "path": "/windows-file-vault.html", "zh": "保险箱系统条件", "en": "Vault system requirements" }
+      ]
+    },
+    {
+      "id": "bitlocker-unavailable",
+      "category": "setup",
+      "slug": "bitlocker-unavailable",
+      "zh": {
+        "title": "系统没有可用的 BitLocker，还能做什么？",
+        "description": "Windows 缺少 BitLocker 时可使用的基础隐私保护能力和不能使用的保险箱能力。",
+        "shortAnswer": "仍可使用快捷键、设备或摄像头触发的基础窗口与锁屏保护，但不能创建或依赖 BitLocker 保险箱来保护私密文件。",
+        "sections": [
+          { "heading": "不要把基础锁屏当作文件加密", "paragraphs": ["基础保护能减少他人直接看到屏幕或继续操作当前会话的机会，适合突发场景。它不会把普通文件夹变成加密存储，也不会补充系统缺少的 BitLocker 功能。", "如果保险箱是主要需求，应升级到具备 BitLocker 的受支持 Windows 版本或选择符合自身安全要求的其他加密方案。不要使用来源不明的系统修改工具强行开启功能。"], "bullets": ["可用：触发、隐藏窗口、Windows 锁屏", "不可用：BitLocker 保险箱创建与锁定保护", "先确认系统版本再决定方案"] }
+        ]
+      },
+      "en": {
+        "title": "What can I do when BitLocker is unavailable?",
+        "description": "Basic privacy features available without BitLocker and vault features that are not available.",
+        "shortAnswer": "You can still use shortcut, device, or camera triggers for basic window and Windows-lock protection, but you cannot create or rely on a BitLocker vault for sensitive files.",
+        "sections": [
+          { "heading": "Do not treat basic locking as file encryption", "paragraphs": ["Basic protection reduces the chance of someone immediately seeing the screen or using the current session. It does not turn an ordinary folder into encrypted storage or supply BitLocker when Windows lacks it.", "If the vault is your main requirement, upgrade to a supported Windows edition with BitLocker or choose another encryption solution that meets your needs. Avoid unknown system modification tools that claim to force unsupported features on."], "bullets": ["Available: triggers, window hiding, Windows lock", "Unavailable: BitLocker vault creation and locking", "Confirm the Windows edition before choosing a solution"] }
+        ]
+      },
+      "related": [
+        { "path": "/product-facts.html", "zh": "BitLocker 前置条件", "en": "BitLocker prerequisites" },
+        { "path": "/windows-file-vault.html", "zh": "Windows 保险箱说明", "en": "Windows vault guide" }
+      ]
+    },
+    {
+      "id": "camera-privacy",
+      "category": "setup",
+      "slug": "camera-privacy",
+      "zh": {
+        "title": "摄像头检测会保存或上传画面吗？",
+        "description": "SuperWatchDog 摄像头手势与离席检测的本地处理、默认状态和隐私边界。",
+        "shortAnswer": "不会。摄像头检测在本机处理，不做人脸识别，不保存、录制或上传画面；相关功能默认关闭，只有用户主动开启后才使用。",
+        "sections": [
+          { "heading": "只在需要时启用", "paragraphs": ["手势和离席检测需要读取摄像头画面来判断动作或在场状态，但产品不把画面作为照片或视频保存，也不用于识别人是谁。", "如果您不希望软件使用摄像头，保持相关功能关闭即可；快捷键、U 盘和蓝牙触发不依赖摄像头。还可以在 Windows 隐私设置中查看和管理摄像头权限。"], "bullets": ["本机处理", "不做人脸识别", "不保存、录制或上传画面", "功能默认关闭"] }
+        ]
+      },
+      "en": {
+        "title": "Does camera detection save or upload images?",
+        "description": "Local processing, default state, and privacy boundaries for camera gesture and away detection.",
+        "shortAnswer": "No. Camera detection is processed locally, does not identify faces, and does not save, record, or upload images. Camera features are disabled by default and operate only after the user enables them.",
+        "sections": [
+          { "heading": "Enable it only when needed", "paragraphs": ["Gesture and away detection read camera frames to estimate an action or presence state, but the product does not retain those frames as photos or video and does not use them to identify who a person is.", "If you do not want the application to use the camera, leave those features disabled. Shortcut, USB, and Bluetooth triggers do not require a camera. You can also review camera permissions in Windows privacy settings."], "bullets": ["Processed locally", "No face identification", "No image saving, recording, or uploading", "Disabled by default"] }
+        ]
+      },
+      "related": [
+        { "path": "/privacy.html", "zh": "完整隐私说明", "en": "Complete privacy notice" },
+        { "path": "/gesture-away-detection.html", "zh": "摄像头手势的使用条件", "en": "Camera gesture requirements" }
+      ]
+    },
+    {
+      "id": "trigger-did-not-work",
+      "category": "troubleshooting",
+      "slug": "trigger-did-not-work",
+      "zh": {
+        "title": "触发后没有执行保护，应该先检查什么？",
+        "description": "Windows 隐私保护触发未生效时的基础排查顺序。",
+        "shortAnswer": "先确认对应触发已启用、目标设备或摄像头当前可用，再用手动立即保护验证动作本身；随后查看应用中的触发记录和可理解的错误提示。",
+        "sections": [
+          { "heading": "把触发问题和动作问题分开", "paragraphs": ["如果手动立即保护能够正常执行，问题通常在快捷键冲突、设备识别、蓝牙连接或摄像头条件。若手动动作也失败，应先按页面提示处理 Windows 权限、登录状态或保险箱占用。", "排查期间不要立即改用强制重启等更激烈的动作。先使用锁屏或隐藏窗口确认基本链路，并记录发生时间、选择的触发和屏幕上显示的错误码，便于后续支持。"], "bullets": ["确认功能开关与目标设备", "先测试手动保护", "查看触发记录和错误码", "一次只调整一个条件"] }
+        ]
+      },
+      "en": {
+        "title": "What should I check first when a trigger does not protect the PC?",
+        "description": "A basic troubleshooting order when a Windows privacy trigger does not act.",
+        "shortAnswer": "Confirm that the trigger is enabled and its device or camera is available, then use manual Protect Now to test the action itself. Review the in-app trigger history and understandable error message afterward.",
+        "sections": [
+          { "heading": "Separate the trigger from the action", "paragraphs": ["If manual protection works, investigate shortcut conflicts, device recognition, Bluetooth connectivity, or camera conditions. If the manual action also fails, follow the page guidance for Windows permissions, sign-in state, or files still in use.", "Do not immediately switch to a forceful restart while troubleshooting. Verify the basic flow with Windows lock or window hiding, and note the time, selected trigger, and displayed error code for support."], "bullets": ["Confirm the feature switch and target device", "Test manual protection first", "Review trigger history and error code", "Change one condition at a time"] }
+        ]
+      },
+      "related": [
+        { "path": "/contact.html", "zh": "支持与排查入口", "en": "Support and troubleshooting" },
+        { "path": "/contact.html", "zh": "联系技术支持", "en": "Contact support" }
+      ]
+    },
+    {
+      "id": "bluetooth-false-disconnect",
+      "category": "troubleshooting",
+      "slug": "bluetooth-false-disconnect",
+      "zh": {
+        "title": "蓝牙设备还在身边，为什么会被判断为断开？",
+        "description": "解释蓝牙省电、无线干扰和距离变化造成的短暂断连，并给出调整方向。",
+        "shortAnswer": "蓝牙在设备休眠、手机后台限制、无线干扰或信号边缘时都可能短暂断开。先查看断开发生规律，再增加确认时间或更换更稳定的设备。",
+        "sections": [
+          { "heading": "先判断是不是连接质量问题", "paragraphs": ["耳机尤其容易因省电进入休眠，因此不一定适合判断人在不在。手机和手环也可能受系统策略影响，应在您实际使用的距离和环境中观察。", "调整期间把保护结果限制为锁屏等容易恢复的动作。如果短暂断开频繁出现，即使延迟后仍不稳定，也应改用 U 盘或快捷键，而不是不断提高触发灵敏度。"], "bullets": ["更新设备电量并减少无线遮挡", "允许短暂断连恢复", "必要时更换触发设备或方式"] }
+        ]
+      },
+      "en": {
+        "title": "Why is a nearby Bluetooth device reported as disconnected?",
+        "description": "Understand brief disconnects caused by power saving, interference, and range, and how to tune the trigger.",
+        "shortAnswer": "Bluetooth can briefly disconnect because of device sleep, phone background restrictions, radio interference, or the edge of signal range. Observe the pattern, then allow more confirmation time or choose a more stable device.",
+        "sections": [
+          { "heading": "Check connection quality first", "paragraphs": ["Headphones commonly sleep to save power and may be poor presence indicators. Phones and wearables can also be affected by operating-system policies, so observe them at your real working distance and location.", "While tuning, limit the result to an easily recoverable action such as Windows lock. If brief disconnects remain common even with a delay, use USB or a shortcut instead of continually increasing sensitivity."], "bullets": ["Keep the device charged and reduce radio obstruction", "Allow a brief disconnect to recover", "Change the device or trigger method if needed"] }
+        ]
+      },
+      "related": [
+        { "path": "/bluetooth-disconnect-protection.html", "zh": "蓝牙保护设置指南", "en": "Bluetooth protection setup guide" },
+        { "path": "/contact.html", "zh": "常见问题支持", "en": "Common issue support" }
+      ]
+    },
+    {
+      "id": "force-actions-unsaved-work",
+      "category": "troubleshooting",
+      "slug": "force-actions-unsaved-work",
+      "zh": {
+        "title": "强制锁定、重启或关机会影响未保存文件吗？",
+        "description": "说明强制保护、重启和关机对未保存工作与正在使用文件的影响。",
+        "shortAnswer": "会。强制关闭、强制锁定或卸载、重启和关机都可能中断应用并造成未保存内容丢失，因此默认不应启用，只适合明确接受后果的高风险场景。",
+        "sections": [
+          { "heading": "高影响动作不能替代日常保存", "paragraphs": ["应用可能正在写入文档、数据库或保险箱中的文件。突然终止或移除存储会让未完成的写入丢失，个别文件还可能需要应用自身的恢复流程。", "优先使用隐藏窗口和 Windows 锁屏。如果确实需要更强动作，应缩小适用场景、延长确认时间，并用可丢弃数据演练。重要数据必须有独立备份。"], "bullets": ["默认关闭强制动作", "先保存并关闭正在使用的文件", "用可丢弃数据测试", "保持独立备份"] }
+        ]
+      },
+      "en": {
+        "title": "Can force-lock, restart, or shutdown affect unsaved files?",
+        "description": "Understand how forceful protection, restart, and shutdown affect unsaved work and open files.",
+        "shortAnswer": "Yes. Force-close, force-lock or unmount, restart, and shutdown can interrupt applications and lose unsaved content. They should remain disabled by default and be used only when you accept the consequences.",
+        "sections": [
+          { "heading": "High-impact actions do not replace saving", "paragraphs": ["An application may be writing a document, database, or file inside the vault. Sudden termination or storage removal can discard incomplete writes, and some files may require the application's recovery process.", "Prefer window hiding and Windows lock. If a stronger action is truly needed, narrow its scenario, allow more confirmation time, and rehearse with disposable data. Maintain an independent backup for important data."], "bullets": ["Keep forceful actions disabled by default", "Save and close files in use", "Test with disposable data", "Maintain an independent backup"] }
+        ]
+      },
+      "related": [
+        { "path": "/terms.html", "zh": "重要风险提示", "en": "Important risk notices" },
+        { "path": "/emergency-file-protection.html", "zh": "低影响保护优先级", "en": "Low-impact protection priority" }
+      ]
+    },
+    {
+      "id": "forgot-vault-password",
+      "category": "troubleshooting",
+      "slug": "forgot-vault-password",
+      "zh": {
+        "title": "忘记保险箱密码后，应该怎么办？",
+        "description": "忘记 BitLocker 保险箱密码时，使用恢复材料并避免破坏原保险箱的处理原则。",
+        "shortAnswer": "先停止反复尝试和任何可能覆盖原保险箱的操作，找到创建时保存的恢复材料并按恢复流程处理。没有密码或有效恢复材料时，不应承诺能够解密数据。",
+        "sections": [
+          { "heading": "保护原件，再尝试恢复", "paragraphs": ["先确认手中的保险箱文件没有被移动到不可靠介质，也不要新建同名文件覆盖它。检查您单独保管的恢复材料、密码管理器和备份记录。", "联系支持时只提供页面要求的错误码和非敏感环境信息，不要发送密码、恢复密钥、保险箱内部文件名或内容。保险箱恢复不等于数据备份，恢复前应保留原件副本。"], "bullets": ["不要覆盖或删除原保险箱", "寻找单独保管的恢复材料", "保留原件和独立备份", "不要向任何人发送密码或恢复密钥"] }
+        ]
+      },
+      "en": {
+        "title": "What should I do if I forget the vault password?",
+        "description": "Use recovery material and preserve the original vault when a BitLocker vault password is forgotten.",
+        "shortAnswer": "Stop repeated guesses and any operation that could overwrite the original vault. Locate the recovery material saved during creation and follow the recovery flow. Decryption should not be promised without the password or valid recovery material.",
+        "sections": [
+          { "heading": "Preserve the original before recovery", "paragraphs": ["Confirm that the vault file has not been moved to unreliable storage, and do not create a same-named file over it. Check separately stored recovery material, password-manager entries, and backup records.", "When contacting support, provide only requested error codes and non-sensitive environment information. Do not send the password, recovery key, names of files inside the vault, or file contents. Keep an original copy before attempting recovery."], "bullets": ["Do not overwrite or delete the original vault", "Find separately stored recovery material", "Keep the original and an independent backup", "Never send passwords or recovery keys to anyone"] }
+        ]
+      },
+      "related": [
+        { "path": "/contact.html", "zh": "恢复与支持入口", "en": "Recovery and support" },
+        { "path": "/contact.html", "zh": "联系支持", "en": "Contact support" }
+      ]
+    }
+  ]
+}
