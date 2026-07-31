@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-31T23:30:00+08:00",
+  "updatedAt": "2026-08-01T00:22:36+08:00",
   "categories": [
     {
       "id": "emergency",
       "slug": "emergency",
-      "zh": { "title": "紧急屏幕隐私", "description": "有人突然靠近、暂时无法操作电脑或需要快速收起当前内容时，先判断最合适的保护动作。" },
-      "en": { "title": "Emergency screen privacy", "description": "Choose a practical first action when someone approaches, you cannot reach the computer, or current content must be covered quickly." }
+      "zh": { "title": "紧急屏幕隐私", "description": "老板、家人或陌生人突然靠近，以及投屏、共享屏幕等情况下，怎样快速收起当前内容。" },
+      "en": { "title": "Emergency screen privacy", "description": "Cover current content quickly when a supervisor, family member, or stranger approaches, or before presenting and sharing a screen." }
     },
     {
       "id": "triggers",
@@ -17,8 +17,8 @@
     {
       "id": "file-privacy",
       "slug": "file-privacy",
-      "zh": { "title": "私密文件保护", "description": "从屏幕遮挡延伸到文件保护、借机送修和保险箱访问边界。" },
-      "en": { "title": "Private file protection", "description": "Go beyond covering the screen to file protection, lending or repairing a PC, and vault access boundaries." }
+      "zh": { "title": "私密文件保护", "description": "处理借电脑、送修、客户资料和合同资料等场景，区分临时遮挡与长期文件保护。" },
+      "en": { "title": "Private file protection", "description": "Handle lending, repairs, client records, and contracts while separating temporary screen cover from long-term file protection." }
     },
     {
       "id": "setup",
@@ -39,16 +39,16 @@
       "category": "emergency",
       "slug": "someone-approaches-pc",
       "zh": {
-        "title": "有人突然靠近电脑时，应该先做什么？",
-        "description": "有人突然靠近 Windows 电脑时，如何按距离和紧急程度选择隐藏窗口、锁屏或文件保护。",
+        "title": "有人突然走到电脑旁，怎样快速保护当前内容？",
+        "description": "有人突然走到 Windows 电脑旁时，怎样快速隐藏当前内容、锁屏并保护私密文件。",
         "shortAnswer": "先执行最容易成功、对当前工作影响最小的动作：人在电脑前可用快捷键隐藏或锁屏；已经离开电脑时，再依赖事先配置好的设备或摄像头触发。",
         "sections": [
           { "heading": "先按距离选择动作", "paragraphs": ["如果手还在键盘附近，快捷键通常最直接。只是需要暂时遮住内容时，可先隐藏或最小化窗口；对方可能接触电脑时，应优先锁定 Windows。", "如果您已经离开座位，临时再设置触发来不及。U 盘拔出、蓝牙断开或离席检测都需要提前配置和试用，不能把第一次使用留到紧急时刻。"], "bullets": ["短暂遮挡：隐藏或最小化当前窗口", "阻止继续操作：锁定 Windows", "涉及私密文件：同时使用已锁定的保险箱"] }
         ]
       },
       "en": {
-        "title": "What should I do first when someone suddenly approaches my PC?",
-        "description": "Choose between hiding windows, locking Windows, and protecting files when someone approaches a PC.",
+        "title": "How can I quickly protect my screen when someone walks up to my PC?",
+        "description": "Quickly choose between hiding current content, locking Windows, and protecting private files when someone walks up to a PC.",
         "shortAnswer": "Use the fastest reliable action with the least impact: hide windows or lock Windows when you are at the keyboard; rely on a preconfigured device or camera trigger only after you have stepped away.",
         "sections": [
           { "heading": "Choose by distance first", "paragraphs": ["A shortcut is usually the quickest option while your hand is near the keyboard. Hide or minimize windows for brief visual cover; lock Windows if the other person may touch the PC.", "Once you are away, it is too late to configure a trigger. USB removal, Bluetooth disconnect, and away detection should be set up and tried before an urgent moment."], "bullets": ["Brief visual cover: hide or minimize current windows", "Prevent further use: lock Windows", "Sensitive files: keep them in a locked vault as well"] }
@@ -132,6 +132,206 @@
       "related": [
         { "path": "/emergency-file-protection.html", "zh": "紧急保护的风险与准备", "en": "Emergency protection risks and preparation" },
         { "path": "/terms.html", "zh": "使用条款与重要提示", "en": "Terms and important notices" }
+      ]
+    },
+    {
+      "id": "supervisor-approaches-office-pc",
+      "category": "emergency",
+      "slug": "supervisor-approaches-office-pc",
+      "zh": {
+        "title": "老板或主管突然走到电脑旁，怎样保护办公隐私？",
+        "description": "老板或主管突然靠近办公电脑时，怎样快速处理屏幕上的私人内容、客户资料和未保存工作。",
+        "shortAnswer": "先按内容敏感程度选择隐藏窗口或锁定 Windows，不要在慌乱中强制关闭应用。超级看门狗不判断您正在保护什么，是否触发以及执行哪些动作都由您提前决定。",
+        "sections": [
+          { "heading": "把办公隐私和工作连续性一起考虑", "paragraphs": ["如果只是临时避免旁人看到当前窗口，可使用事先设置的快捷触发隐藏目标窗口；如果对方可能操作电脑，锁定 Windows 更合适。客户信息、合同或报价单还应遵守公司制度和访问权限要求。", "软件不会识别内容属于工作、私人还是其他类别，也不会替用户判断现场关系。用户自行选择要处理的窗口、触发方式和动作，并应只用于合法合规的个人隐私与资料保护。"], "bullets": ["短暂遮挡：隐藏事先选定的窗口", "可能离开座位：锁定 Windows", "重要资料：同时遵守单位的数据管理制度"] }
+        ]
+      },
+      "en": {
+        "title": "How can I protect office privacy when a manager suddenly walks over?",
+        "description": "Handle private content, client records, and unsaved work when a manager or supervisor suddenly approaches an office PC.",
+        "shortAnswer": "Choose window hiding or Windows lock according to the sensitivity and avoid force-closing applications in a panic. SuperWatchDog does not decide what you are protecting; you choose the trigger and actions in advance.",
+        "sections": [
+          { "heading": "Balance office privacy with work continuity", "paragraphs": ["For brief visual privacy, use a configured trigger to hide selected windows. Lock Windows if someone may use the PC. Client records, contracts, and quotations must also follow workplace policies and access rules.", "The software does not classify content as work, personal, or anything else, and it does not judge the people nearby. Users choose the target windows, trigger, and actions, and should use them only for lawful personal privacy and information protection."], "bullets": ["Brief cover: hide selected windows", "Leaving or possible access: lock Windows", "Important records: also follow organizational data rules"] }
+        ]
+      },
+      "related": [
+        { "path": "/emergency-file-protection.html", "zh": "办公场景的紧急保护", "en": "Emergency protection at work" },
+        { "path": "/terms.html", "zh": "合法合规使用说明", "en": "Lawful-use terms" }
+      ]
+    },
+    {
+      "id": "screen-sharing-private-content",
+      "category": "emergency",
+      "slug": "screen-sharing-private-content",
+      "zh": {
+        "title": "临时投屏或共享屏幕前，私人窗口来不及整理怎么办？",
+        "description": "临时投屏、远程会议或共享 Windows 屏幕前，怎样快速收起私人窗口并减少误展示。",
+        "shortAnswer": "能提前准备时优先只共享单个应用，并关闭通知；已经临时开始投屏时，可用预设动作隐藏不应展示的窗口。隐藏窗口只是应急措施，不能替代会前检查。",
+        "sections": [
+          { "heading": "先缩小共享范围，再准备应急动作", "paragraphs": ["会议软件允许时，只共享需要演示的应用，而不是整个桌面；同时检查桌面、任务栏、浏览器标签页和通知预览。共享前先做一次预览，通常比临场补救可靠。", "如果会议临时开始，可触发隐藏事先选定的私人窗口，再确认共享画面。软件不会自动理解哪个窗口适合公开，目标窗口和保护动作需要由用户自行设置。"], "bullets": ["优先共享单个应用", "关闭消息和邮件通知预览", "共享前检查实际输出画面"] }
+        ]
+      },
+      "en": {
+        "title": "What if I have no time to organize private windows before screen sharing?",
+        "description": "Quickly cover private windows and reduce accidental exposure before presenting or sharing a Windows screen.",
+        "shortAnswer": "When possible, share one application and disable notifications. If an ad-hoc presentation has already started, use a configured action to hide windows that should not be shown. This is a fallback, not a replacement for a pre-meeting check.",
+        "sections": [
+          { "heading": "Limit the shared area before relying on an emergency action", "paragraphs": ["Share only the presentation application rather than the full desktop when the meeting tool allows it. Check the desktop, taskbar, browser tabs, and notification previews, then preview the output before others join.", "For an unexpected meeting, hide previously selected private windows and verify the shared view. The software cannot infer which window is appropriate to show; users choose the target windows and protection actions."], "bullets": ["Prefer sharing one application", "Disable message and email previews", "Check the actual shared output"] }
+        ]
+      },
+      "related": [
+        { "path": "/emergency-file-protection.html", "zh": "快速隐藏当前内容", "en": "Cover current content quickly" },
+        { "path": "/product-facts.html", "zh": "窗口处理能力与边界", "en": "Window handling and limits" }
+      ]
+    },
+    {
+      "id": "family-dorm-public-computer-privacy",
+      "category": "emergency",
+      "slug": "family-dorm-public-computer-privacy",
+      "zh": {
+        "title": "在家、宿舍或公共场所用电脑，怎样避免私人内容突然被看到？",
+        "description": "在家庭、宿舍、共享空间和公共场所使用 Windows 电脑时，怎样减少私人内容被旁人突然看到。",
+        "shortAnswer": "把屏幕摆放、通知隐藏和 Windows 锁屏作为基础，再准备一个熟悉的快速触发。多人环境中不要只依赖临时关窗口，离开设备时应锁屏。",
+        "sections": [
+          { "heading": "环境习惯比单个动作更重要", "paragraphs": ["先调整屏幕角度，关闭锁屏和桌面上的敏感通知预览，并为不同使用者准备独立的 Windows 账户。宿舍和公共空间人员流动较多，短暂离开也应锁定电脑。", "快速隐藏可以处理有人突然靠近的瞬间，但电脑仍可能处于可操作状态。私人文件应放在合适的受保护位置，并遵守所在场所和设备的使用规定。"], "bullets": ["关闭敏感通知预览", "离开座位就锁定 Windows", "共享电脑使用独立账户"] }
+        ]
+      },
+      "en": {
+        "title": "How can I stop private content being seen at home, in a dorm, or in public?",
+        "description": "Reduce accidental viewing of private content when using a Windows PC at home, in a dorm, shared space, or public place.",
+        "shortAnswer": "Start with screen placement, hidden notification previews, and Windows lock, then prepare one familiar quick trigger. In shared environments, do not rely only on closing a window; lock the PC whenever you step away.",
+        "sections": [
+          { "heading": "Everyday environment habits matter more than one action", "paragraphs": ["Adjust the screen angle, remove sensitive previews from the lock screen and desktop, and use separate Windows accounts for different people. In dorms and public spaces, lock the computer even for a short absence.", "Quick hiding can cover the moment when someone approaches, but the PC may remain usable. Store private files in an appropriate protected location and follow the rules of the device and location."], "bullets": ["Disable sensitive notification previews", "Lock Windows whenever you leave", "Use separate accounts on a shared PC"] }
+        ]
+      },
+      "related": [
+        { "path": "/emergency-file-protection.html", "zh": "有人靠近时的保护方法", "en": "Protection when someone approaches" },
+        { "path": "/windows-file-vault.html", "zh": "私人文件长期保护", "en": "Long-term private file protection" }
+      ]
+    },
+    {
+      "id": "game-video-private-content",
+      "category": "emergency",
+      "slug": "game-video-private-content",
+      "zh": {
+        "title": "玩游戏、看视频或处理私人内容时，有人突然靠近怎么办？",
+        "description": "玩游戏、看视频或查看私人内容时有人突然靠近，怎样快速遮挡 Windows 屏幕并减少误操作。",
+        "shortAnswer": "先使用不会结束程序的隐藏或锁屏动作，避免为了遮挡内容而强制关闭游戏、播放器或文档。具体保护哪些内容由用户决定，软件不评价内容类型。",
+        "sections": [
+          { "heading": "优先选择可恢复的处理方式", "paragraphs": ["全屏游戏和视频可能会占用快捷键或改变窗口切换行为，应提前确认触发在常用程序中是否有效。只想短暂遮挡时可隐藏目标窗口；对方可能使用电脑时直接锁屏更稳妥。", "不要把普通娱乐、私人通信或工作内容固定成某种标签。超级看门狗只执行用户配置的触发和动作，不判断用户为什么需要隐私；使用时应尊重他人权益并遵守法律。"], "bullets": ["在常用全屏程序中提前试用", "避免强制结束未保存内容", "可能有人操作电脑时使用锁屏"] }
+        ]
+      },
+      "en": {
+        "title": "What should I do if someone approaches while I am gaming or viewing private content?",
+        "description": "Cover a Windows screen quickly and avoid mistakes when someone approaches during a game, video, or other private activity.",
+        "shortAnswer": "Use hiding or Windows lock without terminating applications, rather than force-closing a game, player, or document. Users decide what to protect; the software does not evaluate the type of content.",
+        "sections": [
+          { "heading": "Prefer an action that is easy to recover from", "paragraphs": ["Full-screen games and video can capture shortcuts or change window switching, so test the trigger with applications you actually use. Hide a selected window for brief cover, or lock Windows if someone may use the PC.", "Entertainment, private communication, and work do not need to be forced into a label. SuperWatchDog executes the user's configured trigger and actions without judging why privacy is needed. Use it lawfully and respect the rights of others."], "bullets": ["Test with commonly used full-screen applications", "Avoid force-closing unsaved content", "Use Windows lock if someone may touch the PC"] }
+        ]
+      },
+      "related": [
+        { "path": "/emergency-file-protection.html", "zh": "紧急遮挡与锁屏", "en": "Emergency cover and lock" },
+        { "path": "/terms.html", "zh": "正确使用与责任边界", "en": "Responsible use and limits" }
+      ]
+    },
+    {
+      "id": "win-l-vs-superwatchdog",
+      "category": "emergency",
+      "slug": "win-l-vs-superwatchdog",
+      "zh": {
+        "title": "Win+L 和超级看门狗有什么区别？",
+        "description": "比较 Win+L 锁定 Windows 与超级看门狗的自定义触发和保护动作，判断紧急隐私场景怎样选择。",
+        "shortAnswer": "Win+L 是 Windows 自带且直接的锁屏快捷键，适合手能碰到键盘时立即阻止他人使用当前会话。超级看门狗解决的是用户希望用其他触发方式，并按自己的选择组合窗口、锁屏和保险箱动作的场景。",
+        "sections": [
+          { "heading": "Win+L 是基础，扩展触发解决够不到键盘的问题", "paragraphs": ["如果手就在键盘旁，Win+L 通常已经足够快，而且无需额外配置。它会锁定当前 Windows 会话，但不会替用户决定哪些窗口要处理，也不等于锁定仍处于打开状态的私密文件容器。", "超级看门狗可让用户预先选择快捷键、设备或摄像头触发，并决定执行隐藏窗口、锁屏或保险箱保护等动作。它不是 Win+L 的强制替代品，选择取决于距离、环境和用户愿意承担的影响。"], "bullets": ["能碰到键盘：优先记住 Win+L", "需要免接触或设备触发：提前配置并试用", "文件保护：单独确认保险箱状态"] }
+        ]
+      },
+      "en": {
+        "title": "What is the difference between Win+L and SuperWatchDog?",
+        "description": "Compare the built-in Win+L Windows lock with SuperWatchDog triggers and user-selected protection actions.",
+        "shortAnswer": "Win+L is the direct built-in shortcut for locking Windows and works well when you can reach the keyboard. SuperWatchDog is for users who want other trigger methods and their own combination of window, lock-screen, and vault actions.",
+        "sections": [
+          { "heading": "Win+L is the baseline; alternative triggers help beyond keyboard reach", "paragraphs": ["When your hand is near the keyboard, Win+L is often fast enough and needs no extra setup. It locks the current Windows session, but does not decide which windows to handle or necessarily lock a private file container that remains open.", "SuperWatchDog lets users configure a shortcut, device, or camera trigger and choose actions such as hiding windows, locking Windows, or protecting a vault. It is not a mandatory replacement for Win+L; the right choice depends on distance, environment, and acceptable impact."], "bullets": ["At the keyboard: remember Win+L", "For touch-free or device triggers: configure and test first", "For files: verify the vault state separately"] }
+        ]
+      },
+      "related": [
+        { "path": "/emergency-file-protection.html", "zh": "紧急保护动作分层", "en": "Layers of emergency protection" },
+        { "path": "/trigger-method-comparison.html", "zh": "触发方式对比", "en": "Trigger method comparison" }
+      ]
+    },
+    {
+      "id": "alt-tab-close-window-limit",
+      "category": "emergency",
+      "slug": "alt-tab-close-window-limit",
+      "zh": {
+        "title": "Alt+Tab 或直接关窗口，为什么不一定能解决紧急隐私问题？",
+        "description": "说明 Alt+Tab、最小化和关闭窗口在有人突然靠近时的用途，以及它们不能覆盖的紧急隐私场景。",
+        "shortAnswer": "只有一个窗口且手能操作时，切换或关闭当然可用；窗口较多、全屏程序占用按键、文件未保存或他人可能继续操作电脑时，这些方法就不够稳定。",
+        "sections": [
+          { "heading": "临时切换窗口不等于完成保护", "paragraphs": ["Alt+Tab 可能显示窗口缩略图，直接关闭可能触发保存提示或丢失未保存内容，最小化后窗口也仍可从任务栏重新打开。它们适合有时间处理单个窗口的情况，不适合假设所有紧急场景都一样。", "预设触发的价值是把用户已经决定的窗口和动作一次执行；如果他人可能触碰电脑，仍应锁定 Windows。软件不会扫描内容并自动替用户选择要隐藏什么。"], "bullets": ["单个窗口且有时间：手动切换或关闭即可", "多个目标窗口：提前设置并验证", "需要阻止继续操作：锁定 Windows"] }
+        ]
+      },
+      "en": {
+        "title": "Why do Alt+Tab or closing a window not solve every privacy emergency?",
+        "description": "Understand when Alt+Tab, minimizing, and closing windows help and what urgent privacy situations they do not cover.",
+        "shortAnswer": "Switching or closing can work for one window when your hands are free. It is less dependable with many windows, full-screen shortcuts, unsaved files, or a person who may continue using the PC.",
+        "sections": [
+          { "heading": "Switching one window is not the same as completing protection", "paragraphs": ["Alt+Tab can reveal window previews, closing may show a save prompt or lose unsaved work, and minimized windows can be reopened from the taskbar. These methods suit a single window when there is time, not every urgent situation.", "A configured trigger executes the windows and actions that the user already selected. Lock Windows if someone may touch the PC. The software does not scan content and choose what to hide on the user's behalf."], "bullets": ["One window and enough time: switch or close manually", "Several target windows: configure and verify first", "Prevent further use: lock Windows"] }
+        ]
+      },
+      "related": [
+        { "path": "/emergency-file-protection.html", "zh": "快速隐藏和锁屏的区别", "en": "Quick hiding versus Windows lock" },
+        { "path": "/product-facts.html", "zh": "产品能力边界", "en": "Product capability limits" }
+      ]
+    },
+    {
+      "id": "boss-key-vs-superwatchdog",
+      "category": "emergency",
+      "slug": "boss-key-vs-superwatchdog",
+      "zh": {
+        "title": "老板键和超级看门狗有什么区别？",
+        "description": "比较传统老板键的窗口隐藏方式与超级看门狗的用户自定义触发、锁屏和文件保护动作。",
+        "shortAnswer": "传统老板键通常用于按键后隐藏或恢复特定窗口；超级看门狗允许用户选择更多触发方式，并自行组合窗口处理、Windows 锁屏和保险箱保护。两者都不判断内容，使用时仍需遵守单位制度。",
+        "sections": [
+          { "heading": "区别在触发范围和动作层级", "paragraphs": ["老板键适合人在键盘前快速隐藏窗口，优点是路径简单；它通常不会阻止别人继续操作电脑，也不保护磁盘上的文件。不同软件对老板键的实现可能不同，应以实际行为为准。", "超级看门狗面向更广的紧急隐私场景，用户可以选择快捷键、设备或摄像头触发，再决定执行哪些保护动作。它不评价或识别内容，使用者仍需遵守法律、工作制度和设备管理要求。"], "bullets": ["只需隐藏窗口：老板键可能已经够用", "需要其他触发或锁屏：提前配置相应动作", "需要保护文件：使用独立的文件保护方案"] }
+        ]
+      },
+      "en": {
+        "title": "What is the difference between a boss key and SuperWatchDog?",
+        "description": "Compare traditional boss-key window hiding with SuperWatchDog user-selected triggers, Windows lock, and file protection actions.",
+        "shortAnswer": "A traditional boss key usually hides and restores selected windows with a keystroke. SuperWatchDog offers more trigger choices and lets users combine window handling, Windows lock, and vault protection. Neither judges content or overrides workplace rules.",
+        "sections": [
+          { "heading": "The difference is the trigger range and action layers", "paragraphs": ["A boss key is useful for quickly hiding a window while at the keyboard. It normally does not prevent someone from using the PC or protect files on disk, although behavior varies by application.", "SuperWatchDog covers broader emergency privacy situations: users select a shortcut, device, or camera trigger and then choose the protection actions. It does not evaluate or identify content, and users must still follow the law, workplace policies, and device-management rules."], "bullets": ["Only hiding windows: a boss key may be enough", "Other triggers or Windows lock: configure the relevant actions", "Protecting files: use a separate file-protection layer"] }
+        ]
+      },
+      "related": [
+        { "path": "/trigger-method-comparison.html", "zh": "紧急触发方式对比", "en": "Emergency trigger comparison" },
+        { "path": "/terms.html", "zh": "使用规则与责任", "en": "Use rules and responsibility" }
+      ]
+    },
+    {
+      "id": "file-encryption-vs-emergency-privacy",
+      "category": "emergency",
+      "slug": "file-encryption-vs-emergency-privacy",
+      "zh": {
+        "title": "文件加密和紧急隐私保护有什么区别？",
+        "description": "比较文件加密与紧急屏幕隐私保护，理解它们分别解决存储访问和突发旁观问题。",
+        "shortAnswer": "文件加密主要保护未解锁状态下的存储数据，紧急隐私保护主要处理当前屏幕、登录会话和已打开窗口。两者互补，任何一项都不能自动代替另一项。",
+        "sections": [
+          { "heading": "一个保护存储，一个处理正在发生的现场", "paragraphs": ["加密文件如果已经解锁并显示在屏幕上，旁边的人仍可能看到；快速隐藏或锁屏可以遮挡当前内容，却不会把普通文件自动变成加密存储。因此应按风险分别准备。", "需要长期保存的私人文件可放入受保护的保险箱，并在不用时锁定；有人突然靠近时，再使用合适的窗口或锁屏动作。用户自行决定保护对象和时机，软件不判断文件内容。"], "bullets": ["存储访问：依靠合适的文件加密", "当前屏幕：依靠隐藏窗口或锁屏", "离开电脑：同时检查会话和保险箱状态"] }
+        ]
+      },
+      "en": {
+        "title": "What is the difference between file encryption and emergency privacy protection?",
+        "description": "Compare file encryption with emergency screen privacy and separate storage access from sudden shoulder-surfing risks.",
+        "shortAnswer": "File encryption mainly protects stored data while it is locked. Emergency privacy protection handles the current screen, signed-in session, and open windows. They complement each other; neither automatically replaces the other.",
+        "sections": [
+          { "heading": "One protects storage; the other handles the live situation", "paragraphs": ["If an encrypted file is already unlocked and visible, a nearby person can still see it. Hiding or locking the screen covers current content but does not turn ordinary files into encrypted storage. Prepare each layer for its own risk.", "Keep long-term private files in an appropriate protected vault and lock it when not in use. When someone approaches, use a suitable window or Windows-lock action. Users choose what and when to protect; the software does not judge file contents."], "bullets": ["Stored data access: use suitable file encryption", "Current screen: hide windows or lock Windows", "Leaving the PC: check both session and vault state"] }
+        ]
+      },
+      "related": [
+        { "path": "/windows-file-vault.html", "zh": "Windows 私密文件保护", "en": "Private file protection on Windows" },
+        { "path": "/emergency-file-protection.html", "zh": "当前屏幕紧急保护", "en": "Emergency protection for the current screen" }
       ]
     },
     {
@@ -257,6 +457,81 @@
       "related": [
         { "path": "/gesture-away-detection.html", "zh": "主动手势保护", "en": "Intentional gesture protection" },
         { "path": "/away-file-protection.html", "zh": "自动离席保护", "en": "Automatic away protection" }
+      ]
+    },
+    {
+      "id": "lend-computer-protect-privacy",
+      "category": "file-privacy",
+      "slug": "lend-computer-protect-privacy",
+      "zh": {
+        "title": "把电脑临时借给别人前，怎样保护私人文件和账号？",
+        "description": "临时把 Windows 电脑借给家人、同事或朋友前，怎样保护私人文件、浏览器账号和当前登录会话。",
+        "shortAnswer": "优先给对方使用独立的 Windows 账户或访客环境，退出不需要共享的账号，并锁定私人文件保险箱。不要只把文件拖到另一个文件夹或临时隐藏窗口。",
+        "sections": [
+          { "heading": "借用前先划清账户和文件边界", "paragraphs": ["检查浏览器同步、邮件、聊天软件、云盘、桌面和下载目录，关闭自动填充与敏感通知预览。条件允许时，新建权限受限的本地账户，让借用者不进入您的日常登录会话。", "需要保留在电脑上的私人文件应使用合适的加密保护，并确认保险箱已锁定。超级看门狗可以执行用户选择的保护动作，但不会自动识别哪些文件或账号属于隐私。"], "bullets": ["使用独立且受限的 Windows 账户", "退出无需共享的应用和网页账号", "锁定保险箱并保留重要资料备份"] }
+        ]
+      },
+      "en": {
+        "title": "How should I protect private files and accounts before lending my PC?",
+        "description": "Protect private files, browser accounts, and the signed-in Windows session before lending a PC to family, a colleague, or a friend.",
+        "shortAnswer": "Give the borrower a separate Windows account or guest environment, sign out of accounts they do not need, and lock the private-file vault. Do not rely only on moving files to another folder or hiding windows.",
+        "sections": [
+          { "heading": "Separate accounts and files before lending", "paragraphs": ["Review browser sync, email, chat, cloud storage, the desktop, and Downloads. Disable autofill and sensitive notification previews. When possible, create a restricted local account so the borrower does not enter your everyday session.", "Use appropriate encryption for private files that remain on the PC and verify that the vault is locked. SuperWatchDog can run user-selected protection actions, but it does not automatically identify private files or accounts."], "bullets": ["Use a separate restricted Windows account", "Sign out of applications and web accounts that are not needed", "Lock the vault and keep backups of important data"] }
+        ]
+      },
+      "related": [
+        { "path": "/windows-file-vault.html", "zh": "Windows 私人文件保护", "en": "Private file protection on Windows" },
+        { "path": "/product-facts.html", "zh": "保险箱访问边界", "en": "Vault access boundaries" }
+      ]
+    },
+    {
+      "id": "computer-repair-protect-privacy",
+      "category": "file-privacy",
+      "slug": "computer-repair-protect-privacy",
+      "zh": {
+        "title": "电脑送修前，怎样保护照片、账号和工作资料？",
+        "description": "Windows 电脑送修前，怎样备份并保护照片、浏览器账号、客户资料和合同等私人或工作数据。",
+        "shortAnswer": "先完整备份，再退出账号并删除维修不需要的本地副本；必须留在设备上的私人资料应保持加密和锁定。能取下的数据盘应在确认维修不需要后妥善保管。",
+        "sections": [
+          { "heading": "送修保护要在交出电脑前完成", "paragraphs": ["记录故障和维修所需的测试条件，避免提供与维修无关的登录密码。退出浏览器、邮箱、聊天和云盘账号，检查桌面、下载目录、回收站及应用缓存；删除前先验证备份可以读取。", "如果维修必须登录系统，可创建临时受限账户。客户资料、合同和单位数据还应遵守公司流程；不要仅依赖隐藏属性或改文件名。维修完成后，再检查账户登录和设备状态。"], "bullets": ["先验证备份，再清理本地副本", "不提供与维修无关的账号密码", "使用临时受限账户或移除不必要的数据盘"] }
+        ]
+      },
+      "en": {
+        "title": "How can I protect photos, accounts, and work files before PC repair?",
+        "description": "Back up and protect photos, browser accounts, client records, contracts, and other private or work data before Windows PC repair.",
+        "shortAnswer": "Make and verify a full backup, sign out of accounts, and remove local copies that are not needed for the repair. Keep any private data left on the device encrypted and locked, and remove data drives when the repair does not require them.",
+        "sections": [
+          { "heading": "Finish privacy preparation before handing over the PC", "paragraphs": ["Document the fault and the access needed for testing without giving unrelated sign-in passwords. Sign out of browsers, email, chat, and cloud storage, then review the desktop, Downloads, Recycle Bin, and application caches. Verify backups before deleting anything.", "Create a temporary restricted account if repair staff must sign in. Follow organizational procedures for client records, contracts, and company data; hidden attributes and renamed files are not protection. Review account and device status after the repair."], "bullets": ["Verify backups before removing local copies", "Do not provide unrelated account passwords", "Use a temporary restricted account or remove unnecessary data drives"] }
+        ]
+      },
+      "related": [
+        { "path": "/windows-file-vault.html", "zh": "私密文件加密保护", "en": "Encrypted protection for private files" },
+        { "path": "/contact.html", "zh": "数据保护支持", "en": "Data-protection support" }
+      ]
+    },
+    {
+      "id": "client-contract-office-files",
+      "category": "file-privacy",
+      "slug": "client-contract-office-files",
+      "zh": {
+        "title": "客户资料、合同和报价单，怎样兼顾日常使用和隐私保护？",
+        "description": "在 Windows 电脑上日常使用客户资料、合同和报价单时，怎样减少旁观、误传和未授权访问。",
+        "shortAnswer": "按单位制度控制访问权限和保存位置，日常使用时减少通知、预览和共享范围，离开电脑时锁屏，并对允许本地保存的敏感文件使用合适的加密保护。",
+        "sections": [
+          { "heading": "紧急遮挡不能代替资料管理", "paragraphs": ["先确认资料是否允许下载到本地、谁有权访问、应保存多久以及怎样备份。投屏或共享屏幕时只共享必要应用，关闭邮件和聊天通知，避免文件名、客户名称或合同金额出现在预览中。", "有人靠近时可按用户预设隐藏窗口或锁定 Windows，但这只能处理现场风险。长期保护仍依赖访问权限、加密、备份和单位流程；软件不会读取资料并判断其敏感级别。"], "bullets": ["遵守客户和单位的数据管理要求", "共享屏幕时缩小可见范围", "离开座位时锁屏并锁定不再使用的保险箱"] }
+        ]
+      },
+      "en": {
+        "title": "How can I use client records, contracts, and quotes while protecting privacy?",
+        "description": "Reduce shoulder surfing, accidental sharing, and unauthorized access while using client records, contracts, and quotations on Windows.",
+        "shortAnswer": "Follow organizational rules for access and storage, reduce notifications, previews, and sharing scope during use, lock Windows when leaving, and use appropriate encryption for sensitive files that may be stored locally.",
+        "sections": [
+          { "heading": "Emergency screen cover does not replace information governance", "paragraphs": ["Confirm whether the records may be downloaded, who may access them, how long they should be retained, and how they are backed up. Share only the necessary application during a presentation and disable email and chat notifications so filenames, client names, and contract amounts do not appear in previews.", "A configured action can hide windows or lock Windows when someone approaches, but that addresses only the immediate scene. Long-term protection still relies on permissions, encryption, backups, and organizational processes. The software does not read records and classify their sensitivity."], "bullets": ["Follow client and organizational data rules", "Limit visible content while screen sharing", "Lock Windows and any unused vault when leaving"] }
+        ]
+      },
+      "related": [
+        { "path": "/emergency-file-protection.html", "zh": "办公屏幕紧急保护", "en": "Emergency office screen protection" },
+        { "path": "/windows-file-vault.html", "zh": "本地资料加密保护", "en": "Encrypted protection for local records" }
       ]
     },
     {
