@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>保护 Windows 私密文件，为什么优先用 BitLocker 而不是自己写加密？ - 超级看门狗</title>
+  <meta name="description" content="解释 Windows 私密文件保护为什么优先采用 BitLocker，而不是自行设计磁盘加密格式和密钥系统。">
+  <link rel="canonical" href="https://superwatchdog.me/faq/setup/bitlocker-vs-custom-encryption.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://superwatchdog.me/faq/setup/bitlocker-vs-custom-encryption.html">
+  <link rel="alternate" hreflang="en-US" href="https://superwatchdog.me/faq/en/setup/bitlocker-vs-custom-encryption.html">
+  <link rel="alternate" hreflang="x-default" href="https://superwatchdog.me/faq/setup/bitlocker-vs-custom-encryption.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="保护 Windows 私密文件，为什么优先用 BitLocker 而不是自己写加密？">
+  <meta property="og:description" content="解释 Windows 私密文件保护为什么优先采用 BitLocker，而不是自行设计磁盘加密格式和密钥系统。">
+  <meta property="og:url" content="https://superwatchdog.me/faq/setup/bitlocker-vs-custom-encryption.html">
+  <meta property="og:image" content="https://superwatchdog.me/assets/og-cover.png">
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/guide.css">
+  <link rel="stylesheet" href="/faq/faq.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"保护 Windows 私密文件，为什么优先用 BitLocker 而不是自己写加密？","description":"解释 Windows 私密文件保护为什么优先采用 BitLocker，而不是自行设计磁盘加密格式和密钥系统。","url":"https://superwatchdog.me/faq/setup/bitlocker-vs-custom-encryption.html","mainEntityOfPage":"https://superwatchdog.me/faq/setup/bitlocker-vs-custom-encryption.html","inLanguage":"zh-CN","datePublished":"2026-08-02","dateModified":"2026-08-02","author":{"@type":"Organization","name":"SuperWatchDog","url":"https://superwatchdog.me/"},"publisher":{"@type":"Organization","name":"SuperWatchDog","url":"https://superwatchdog.me/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"常见问题","item":"https://superwatchdog.me/faq/"},{"@type":"ListItem","position":2,"name":"安装与设备条件","item":"https://superwatchdog.me/faq/setup/"},{"@type":"ListItem","position":3,"name":"保护 Windows 私密文件，为什么优先用 BitLocker 而不是自己写加密？","item":"https://superwatchdog.me/faq/setup/bitlocker-vs-custom-encryption.html"}]}]}</script>
+</head>
+<body>
+  <header>
+    <div class="top wrap">
+      <a class="brand" href="/"><img src="/assets/logo.png" alt="超级看门狗 logo"><span>超级看门狗</span></a>
+      <nav class="links" aria-label="页面链接">
+        <a href="/">首页</a>
+        <a href="/emergency-file-protection.html">核心场景</a>
+        <a href="/product-facts.html">产品资料</a>
+        <a href="/faq/" aria-current="page">常见问题</a>
+        <a href="/faq/en/setup/bitlocker-vs-custom-encryption.html" data-language-choice="en">EN</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap faq-main">
+    <nav class="faq-breadcrumb" aria-label="面包屑"><a href="/faq/">常见问题</a><span>›</span><a href="/faq/setup/">安装与设备条件</a><span>›</span><span>保护 Windows 私密文件，为什么优先用 BitLocker 而不是自己写加密？</span></nav>
+    <article class="faq-article">
+      <header class="faq-hero">
+        <p class="eyebrow">安装与设备条件</p>
+        <h1>保护 Windows 私密文件，为什么优先用 BitLocker 而不是自己写加密？</h1>
+        <div class="faq-direct-answer"><strong>简短回答</strong><p>因为可靠的磁盘加密不只是选择一种算法，还要长期处理密钥、磁盘格式、异常断电、系统更新和数据恢复。优先复用 Windows 提供的 BitLocker，通常比自行设计整套加密系统更容易验证和维护。</p></div>
+      </header>
+      <section class="faq-answer-section">
+        <h2>真正困难的是完整生命周期</h2>
+        <p>自行实现加密时，算法只是很小的一部分。还要保证密钥生成和保存方式合理、磁盘读写一致、异常断电后仍可恢复，并持续适配 Windows 更新、驱动和存储设备变化。任何一个环节处理不当，都可能让数据无法打开或失去预期保护。</p>
+        <p>BitLocker 是 Windows 提供的卷加密能力，具备成熟的系统集成和恢复机制。采用它不代表加密绝对不会出问题，也不能替代备份、强密码和恢复材料保管；它的价值是减少自建加密格式和密钥体系带来的额外风险。</p>
+        <ul>
+          <li>加密安全取决于算法之外的密钥与恢复流程</li>
+          <li>系统更新和异常断电也必须纳入设计</li>
+          <li>重要文件仍需独立备份</li>
+          <li>密码与恢复材料应分别妥善保管</li>
+        </ul>
+      </section>
+      <section class="faq-answer-section">
+        <h2>紧急保护和文件加密解决不同问题</h2>
+        <p>BitLocker 保护的是存储中的文件数据；锁屏、收起窗口或设备触发处理的是有人突然靠近、临时投屏或离开电脑时的即时暴露。两者不能互相替代。</p>
+        <p>超级看门狗组合使用 Windows 的 BitLocker 能力和用户自行选择的紧急保护动作。软件不判断用户要保护什么内容，用户应只在合法合规的个人隐私、办公资料和客户资料保护场景中使用，并自行决定保护内容、触发方式和动作。</p>
+        <ul>
+          <li>文件加密负责长期存储保护</li>
+          <li>紧急动作负责减少当前内容暴露</li>
+          <li>由用户决定保护对象和执行动作</li>
+        </ul>
+      </section>
+      <section class="faq-related">
+        <h2>继续了解</h2>
+        <div class="faq-related-links">
+        <a href="/windows-file-vault.html">Windows 文件保险箱怎样保护私密文件<span>→</span></a>
+        <a href="/product-facts.html">产品与系统条件<span>→</span></a>
+        </div>
+      </section>
+      <footer class="faq-article-footer">最后复核：2026-08-02 · 适用于超级看门狗 1.0.0 与页面所述 Windows 条件</footer>
+    </article>
+  </main>
+  <footer class="faq-footer">
+    <div class="wrap faq-footer-inner">
+      <a href="/privacy.html">隐私说明</a>
+      <a href="/terms.html">使用条款</a>
+      <a href="/contact.html">联系我们</a>
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026102063号-1</a>
+      <span>© 2026 深圳市意隆电子科技有限公司</span>
+    </div>
+  </footer>
+  <script src="/language.js"></script>
+  <script src="/analytics.js"></script>
+</body>
+</html>

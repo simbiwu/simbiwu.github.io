@@ -123,372 +123,392 @@
   <!-- FAQ-GENERATED-START -->
   <url>
     <loc>https://superwatchdog.me/faq/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/emergency/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/emergency/someone-approaches-pc.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/emergency/cannot-reach-keyboard.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/emergency/lock-screen-or-hide-windows.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/emergency/protect-unsaved-work.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/emergency/supervisor-approaches-office-pc.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/emergency/screen-sharing-private-content.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/emergency/family-dorm-public-computer-privacy.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/emergency/game-video-private-content.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/emergency/win-l-vs-superwatchdog.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/emergency/alt-tab-close-window-limit.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/emergency/boss-key-vs-superwatchdog.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/emergency/file-encryption-vs-emergency-privacy.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/triggers/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/triggers/choose-trigger-method.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/triggers/shortcut-or-gesture.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/triggers/usb-removal-trigger.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/triggers/bluetooth-disconnect-trigger.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/triggers/gesture-or-away-detection.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/faq/triggers/bluetooth-connected-vs-nearby.html</loc>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/file-privacy/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/file-privacy/lend-computer-protect-privacy.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/file-privacy/computer-repair-protect-privacy.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/file-privacy/client-contract-office-files.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/file-privacy/screen-hiding-vs-file-protection.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/file-privacy/photos-and-id-scans.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/file-privacy/lending-or-repairing-pc.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/file-privacy/trusted-device-and-password.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/setup/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/setup/supported-windows-versions.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/setup/bitlocker-unavailable.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/faq/setup/bitlocker-vs-custom-encryption.html</loc>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/setup/camera-privacy.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/troubleshooting/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/troubleshooting/trigger-did-not-work.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/troubleshooting/bluetooth-false-disconnect.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/troubleshooting/force-actions-unsaved-work.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/troubleshooting/forgot-vault-password.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/emergency/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/emergency/someone-approaches-pc.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/emergency/cannot-reach-keyboard.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/emergency/lock-screen-or-hide-windows.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/emergency/protect-unsaved-work.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/emergency/supervisor-approaches-office-pc.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/emergency/screen-sharing-private-content.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/emergency/family-dorm-public-computer-privacy.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/emergency/game-video-private-content.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/emergency/win-l-vs-superwatchdog.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/emergency/alt-tab-close-window-limit.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/emergency/boss-key-vs-superwatchdog.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/emergency/file-encryption-vs-emergency-privacy.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/triggers/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/triggers/choose-trigger-method.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/triggers/shortcut-or-gesture.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/triggers/usb-removal-trigger.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/triggers/bluetooth-disconnect-trigger.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/triggers/gesture-or-away-detection.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/faq/en/triggers/bluetooth-connected-vs-nearby.html</loc>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/file-privacy/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/file-privacy/lend-computer-protect-privacy.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/file-privacy/computer-repair-protect-privacy.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/file-privacy/client-contract-office-files.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/file-privacy/screen-hiding-vs-file-protection.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/file-privacy/photos-and-id-scans.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/file-privacy/lending-or-repairing-pc.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/file-privacy/trusted-device-and-password.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/setup/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/setup/supported-windows-versions.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/setup/bitlocker-unavailable.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/faq/en/setup/bitlocker-vs-custom-encryption.html</loc>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/setup/camera-privacy.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/troubleshooting/</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/troubleshooting/trigger-did-not-work.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/troubleshooting/bluetooth-false-disconnect.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/troubleshooting/force-actions-unsaved-work.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/troubleshooting/forgot-vault-password.html</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-02</lastmod>
     <priority>0.7</priority>
   </url>
   <!-- FAQ-GENERATED-END -->

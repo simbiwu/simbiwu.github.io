@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>蓝牙显示已连接，为什么不能直接判断设备就在电脑旁？ - 超级看门狗</title>
+  <meta name="description" content="解释蓝牙配对、连接、广播和信号强度为什么不能单独证明设备就在 Windows 电脑旁。">
+  <link rel="canonical" href="https://superwatchdog.me/faq/triggers/bluetooth-connected-vs-nearby.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://superwatchdog.me/faq/triggers/bluetooth-connected-vs-nearby.html">
+  <link rel="alternate" hreflang="en-US" href="https://superwatchdog.me/faq/en/triggers/bluetooth-connected-vs-nearby.html">
+  <link rel="alternate" hreflang="x-default" href="https://superwatchdog.me/faq/triggers/bluetooth-connected-vs-nearby.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="蓝牙显示已连接，为什么不能直接判断设备就在电脑旁？">
+  <meta property="og:description" content="解释蓝牙配对、连接、广播和信号强度为什么不能单独证明设备就在 Windows 电脑旁。">
+  <meta property="og:url" content="https://superwatchdog.me/faq/triggers/bluetooth-connected-vs-nearby.html">
+  <meta property="og:image" content="https://superwatchdog.me/assets/og-cover.png">
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="stylesheet" href="/guide.css">
+  <link rel="stylesheet" href="/faq/faq.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"蓝牙显示已连接，为什么不能直接判断设备就在电脑旁？","description":"解释蓝牙配对、连接、广播和信号强度为什么不能单独证明设备就在 Windows 电脑旁。","url":"https://superwatchdog.me/faq/triggers/bluetooth-connected-vs-nearby.html","mainEntityOfPage":"https://superwatchdog.me/faq/triggers/bluetooth-connected-vs-nearby.html","inLanguage":"zh-CN","datePublished":"2026-08-02","dateModified":"2026-08-02","author":{"@type":"Organization","name":"SuperWatchDog","url":"https://superwatchdog.me/"},"publisher":{"@type":"Organization","name":"SuperWatchDog","url":"https://superwatchdog.me/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"常见问题","item":"https://superwatchdog.me/faq/"},{"@type":"ListItem","position":2,"name":"触发方式选择","item":"https://superwatchdog.me/faq/triggers/"},{"@type":"ListItem","position":3,"name":"蓝牙显示已连接，为什么不能直接判断设备就在电脑旁？","item":"https://superwatchdog.me/faq/triggers/bluetooth-connected-vs-nearby.html"}]}]}</script>
+</head>
+<body>
+  <header>
+    <div class="top wrap">
+      <a class="brand" href="/"><img src="/assets/logo.png" alt="超级看门狗 logo"><span>超级看门狗</span></a>
+      <nav class="links" aria-label="页面链接">
+        <a href="/">首页</a>
+        <a href="/emergency-file-protection.html">核心场景</a>
+        <a href="/product-facts.html">产品资料</a>
+        <a href="/faq/" aria-current="page">常见问题</a>
+        <a href="/faq/en/triggers/bluetooth-connected-vs-nearby.html" data-language-choice="en">EN</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap faq-main">
+    <nav class="faq-breadcrumb" aria-label="面包屑"><a href="/faq/">常见问题</a><span>›</span><a href="/faq/triggers/">触发方式选择</a><span>›</span><span>蓝牙显示已连接，为什么不能直接判断设备就在电脑旁？</span></nav>
+    <article class="faq-article">
+      <header class="faq-hero">
+        <p class="eyebrow">触发方式选择</p>
+        <h1>蓝牙显示已连接，为什么不能直接判断设备就在电脑旁？</h1>
+        <div class="faq-direct-answer"><strong>简短回答</strong><p>“已连接”只说明设备之间存在逻辑连接，不等于设备处于某个准确距离。墙体、人体遮挡、发射功率、省电策略和无线干扰都会改变蓝牙状态与信号强度。</p></div>
+      </header>
+      <section class="faq-answer-section">
+        <h2>不同蓝牙信号表达的是不同事实</h2>
+        <p>配对表示两台设备建立过信任关系；连接表示当前存在可用的逻辑链路；广播表示设备正在对外发送可发现信息；信号强度只反映当时接收到的无线能量。它们都不能单独换算成可靠的物理距离。</p>
+        <p>例如，隔着一面墙的设备仍可能保持连接，放在电脑旁的耳机也可能因休眠暂时停止活动。人体遮挡、设备朝向、电量和同频干扰还会让信号强度在设备没有移动时发生波动。</p>
+        <ul>
+          <li>已配对不等于当前在场</li>
+          <li>已连接不等于距离很近</li>
+          <li>信号强度不是精确测距</li>
+          <li>耳机休眠可能改变连接表现</li>
+        </ul>
+      </section>
+      <section class="faq-answer-section">
+        <h2>隐私触发应采用保守判断</h2>
+        <p>如果把蓝牙用于隐私保护，不应因为某一次状态变化或某一个信号值就立即执行高影响动作。更稳妥的做法是观察短时间内的连续变化、允许短暂恢复，并先选择锁屏等容易恢复的结果。</p>
+        <p>蓝牙环境长期不稳定时，应改用快捷键、手动保护或 U 盘拔出等更明确的触发方式。软件不判断用户正在保护什么，用户自行决定合法合规的保护内容、触发方式和动作。</p>
+        <ul>
+          <li>不要依赖单次采样</li>
+          <li>为短暂波动保留确认时间</li>
+          <li>先使用容易恢复的保护动作</li>
+          <li>不稳定时更换触发方式</li>
+        </ul>
+      </section>
+      <section class="faq-related">
+        <h2>继续了解</h2>
+        <div class="faq-related-links">
+        <a href="/bluetooth-disconnect-protection.html">蓝牙断开保护适合什么场景<span>→</span></a>
+        <a href="/trigger-method-comparison.html">比较快捷键、USB、蓝牙和摄像头触发<span>→</span></a>
+        </div>
+      </section>
+      <footer class="faq-article-footer">最后复核：2026-08-02 · 适用于超级看门狗 1.0.0 与页面所述 Windows 条件</footer>
+    </article>
+  </main>
+  <footer class="faq-footer">
+    <div class="wrap faq-footer-inner">
+      <a href="/privacy.html">隐私说明</a>
+      <a href="/terms.html">使用条款</a>
+      <a href="/contact.html">联系我们</a>
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026102063号-1</a>
+      <span>© 2026 深圳市意隆电子科技有限公司</span>
+    </div>
+  </footer>
+  <script src="/language.js"></script>
+  <script src="/analytics.js"></script>
+</body>
+</html>

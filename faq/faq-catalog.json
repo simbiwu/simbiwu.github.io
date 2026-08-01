@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-08-01T00:22:36+08:00",
+  "updatedAt": "2026-08-02T01:10:00+08:00",
   "categories": [
     {
       "id": "emergency",
@@ -685,6 +685,33 @@
       ]
     },
     {
+      "id": "bitlocker-vs-custom-encryption",
+      "category": "setup",
+      "slug": "bitlocker-vs-custom-encryption",
+      "zh": {
+        "title": "保护 Windows 私密文件，为什么优先用 BitLocker 而不是自己写加密？",
+        "description": "解释 Windows 私密文件保护为什么优先采用 BitLocker，而不是自行设计磁盘加密格式和密钥系统。",
+        "shortAnswer": "因为可靠的磁盘加密不只是选择一种算法，还要长期处理密钥、磁盘格式、异常断电、系统更新和数据恢复。优先复用 Windows 提供的 BitLocker，通常比自行设计整套加密系统更容易验证和维护。",
+        "sections": [
+          { "heading": "真正困难的是完整生命周期", "paragraphs": ["自行实现加密时，算法只是很小的一部分。还要保证密钥生成和保存方式合理、磁盘读写一致、异常断电后仍可恢复，并持续适配 Windows 更新、驱动和存储设备变化。任何一个环节处理不当，都可能让数据无法打开或失去预期保护。", "BitLocker 是 Windows 提供的卷加密能力，具备成熟的系统集成和恢复机制。采用它不代表加密绝对不会出问题，也不能替代备份、强密码和恢复材料保管；它的价值是减少自建加密格式和密钥体系带来的额外风险。"], "bullets": ["加密安全取决于算法之外的密钥与恢复流程", "系统更新和异常断电也必须纳入设计", "重要文件仍需独立备份", "密码与恢复材料应分别妥善保管"] },
+          { "heading": "紧急保护和文件加密解决不同问题", "paragraphs": ["BitLocker 保护的是存储中的文件数据；锁屏、收起窗口或设备触发处理的是有人突然靠近、临时投屏或离开电脑时的即时暴露。两者不能互相替代。", "超级看门狗组合使用 Windows 的 BitLocker 能力和用户自行选择的紧急保护动作。软件不判断用户要保护什么内容，用户应只在合法合规的个人隐私、办公资料和客户资料保护场景中使用，并自行决定保护内容、触发方式和动作。"], "bullets": ["文件加密负责长期存储保护", "紧急动作负责减少当前内容暴露", "由用户决定保护对象和执行动作"] }
+        ]
+      },
+      "en": {
+        "title": "Why use BitLocker instead of writing custom encryption for private Windows files?",
+        "description": "Why private file protection on Windows favors BitLocker over a custom disk format and key system.",
+        "shortAnswer": "Reliable disk encryption involves much more than choosing an algorithm. It must handle keys, disk formats, power loss, Windows updates, and recovery for years. Reusing Windows BitLocker is generally easier to validate and maintain than designing an entire encryption system.",
+        "sections": [
+          { "heading": "The full lifecycle is the difficult part", "paragraphs": ["The algorithm is only a small part of custom encryption. A design must also generate and protect keys, keep disk writes consistent, recover after power loss, and remain compatible with Windows updates, drivers, and changing storage devices. A mistake in any layer can make data inaccessible or undermine the expected protection.", "BitLocker provides volume encryption integrated with Windows and includes established recovery mechanisms. This does not make failures impossible or replace backups, strong passwords, and careful recovery-key storage. It reduces the extra risk of inventing a new encrypted format and key system."], "bullets": ["Security depends on key and recovery handling as well as the algorithm", "Windows updates and power loss belong in the threat model", "Keep an independent backup of important files", "Store passwords and recovery material carefully and separately"] },
+          { "heading": "Emergency privacy and file encryption solve different problems", "paragraphs": ["BitLocker protects file data at rest. Windows lock, window handling, and device triggers address immediate exposure when someone approaches, a screen must be shared, or the user walks away. Neither replaces the other.", "SuperWatchDog combines Windows BitLocker capabilities with emergency actions chosen by the user. The software does not decide what the user should protect. Users choose the content, trigger, and action and should use them only for lawful personal privacy, workplace records, and client-data protection."], "bullets": ["File encryption protects long-term storage", "Emergency actions reduce immediate on-screen exposure", "The user chooses the protected content and actions"] }
+        ]
+      },
+      "related": [
+        { "path": "/windows-file-vault.html", "zh": "Windows 文件保险箱怎样保护私密文件", "en": "How a Windows file vault protects private files" },
+        { "path": "/product-facts.html", "zh": "产品与系统条件", "en": "Product and system requirements" }
+      ]
+    },
+    {
       "id": "camera-privacy",
       "category": "setup",
       "slug": "camera-privacy",
@@ -757,6 +784,33 @@
       "related": [
         { "path": "/bluetooth-disconnect-protection.html", "zh": "蓝牙保护设置指南", "en": "Bluetooth protection setup guide" },
         { "path": "/contact.html", "zh": "常见问题支持", "en": "Common issue support" }
+      ]
+    },
+    {
+      "id": "bluetooth-connected-vs-nearby",
+      "category": "triggers",
+      "slug": "bluetooth-connected-vs-nearby",
+      "zh": {
+        "title": "蓝牙显示已连接，为什么不能直接判断设备就在电脑旁？",
+        "description": "解释蓝牙配对、连接、广播和信号强度为什么不能单独证明设备就在 Windows 电脑旁。",
+        "shortAnswer": "“已连接”只说明设备之间存在逻辑连接，不等于设备处于某个准确距离。墙体、人体遮挡、发射功率、省电策略和无线干扰都会改变蓝牙状态与信号强度。",
+        "sections": [
+          { "heading": "不同蓝牙信号表达的是不同事实", "paragraphs": ["配对表示两台设备建立过信任关系；连接表示当前存在可用的逻辑链路；广播表示设备正在对外发送可发现信息；信号强度只反映当时接收到的无线能量。它们都不能单独换算成可靠的物理距离。", "例如，隔着一面墙的设备仍可能保持连接，放在电脑旁的耳机也可能因休眠暂时停止活动。人体遮挡、设备朝向、电量和同频干扰还会让信号强度在设备没有移动时发生波动。"], "bullets": ["已配对不等于当前在场", "已连接不等于距离很近", "信号强度不是精确测距", "耳机休眠可能改变连接表现"] },
+          { "heading": "隐私触发应采用保守判断", "paragraphs": ["如果把蓝牙用于隐私保护，不应因为某一次状态变化或某一个信号值就立即执行高影响动作。更稳妥的做法是观察短时间内的连续变化、允许短暂恢复，并先选择锁屏等容易恢复的结果。", "蓝牙环境长期不稳定时，应改用快捷键、手动保护或 U 盘拔出等更明确的触发方式。软件不判断用户正在保护什么，用户自行决定合法合规的保护内容、触发方式和动作。"], "bullets": ["不要依赖单次采样", "为短暂波动保留确认时间", "先使用容易恢复的保护动作", "不稳定时更换触发方式"] }
+        ]
+      },
+      "en": {
+        "title": "Why does Bluetooth 'connected' not prove a device is next to the PC?",
+        "description": "Why pairing, connection, advertising, and signal strength cannot independently prove that a Bluetooth device is next to a Windows PC.",
+        "shortAnswer": "Connected means that a logical link exists; it does not prove an exact physical distance. Walls, the human body, transmit power, power-saving behavior, and radio interference all affect connection state and signal strength.",
+        "sections": [
+          { "heading": "Each Bluetooth signal represents a different fact", "paragraphs": ["Pairing means the devices established trust before. Connection means a usable logical link currently exists. Advertising means a device is transmitting discovery information. Signal strength represents received radio energy at that moment. None of these alone provides reliable physical distance.", "A device behind a wall may remain connected, while headphones next to the PC may sleep and briefly stop activity. Body obstruction, device orientation, battery level, and radio interference can also change signal strength without any movement."], "bullets": ["Paired does not mean currently present", "Connected does not mean very close", "Signal strength is not precise ranging", "Headphone sleep can change connection behavior"] },
+          { "heading": "Use conservative decisions for privacy triggers", "paragraphs": ["A Bluetooth privacy trigger should not perform a high-impact action because of one state change or one signal reading. A safer approach observes a short sequence of changes, allows brief recovery, and starts with an easily reversible result such as Windows lock.", "If Bluetooth remains unstable in the real environment, choose a clearer trigger such as a shortcut, manual protection, or USB removal. The software does not decide what the user is protecting; the user chooses lawful content, triggers, and actions."], "bullets": ["Do not depend on one sample", "Allow confirmation time for brief fluctuations", "Start with reversible protection actions", "Change the trigger when the environment is unstable"] }
+        ]
+      },
+      "related": [
+        { "path": "/bluetooth-disconnect-protection.html", "zh": "蓝牙断开保护适合什么场景", "en": "When Bluetooth disconnect protection fits" },
+        { "path": "/trigger-method-comparison.html", "zh": "比较快捷键、USB、蓝牙和摄像头触发", "en": "Compare shortcut, USB, Bluetooth, and camera triggers" }
       ]
     },
     {
