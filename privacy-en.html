@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Notice - SuperWatchDog</title>
-  <meta name="description" content="SuperWatchDog privacy notice: local processing; no upload of user files, file lists, vault contents, passwords, recovery keys, or camera frames; diagnostic reports require confirmation.">
+  <meta name="description" content="SuperWatchDog and Super Recovery privacy notice: local processing; no upload of user files, file lists, recovered content, vault contents, passwords, recovery keys, or camera frames; diagnostic reports require confirmation.">
   <link rel="canonical" href="https://superwatchdog.me/privacy-en.html">
   <link rel="alternate" hreflang="zh-CN" href="https://superwatchdog.me/privacy.html">
   <link rel="alternate" hreflang="en-US" href="https://superwatchdog.me/privacy-en.html">
@@ -47,15 +47,15 @@
   <main class="wrap">
     <article>
       <h1>Privacy Notice</h1>
-      <p class="meta">Last updated: July 28, 2026</p>
-      <p>SuperWatchDog is a personal privacy protection tool for Windows PCs. This notice explains how the website, installer, and Windows client handle data related to you.</p>
+      <p class="meta">Last updated: August 3, 2026</p>
+      <p>SuperWatchDog and Super Recovery are local tools for Windows PCs. This notice explains how the website, installers, and Windows clients handle data related to you.</p>
 
       <h2>Scope</h2>
-      <p>This notice applies to the SuperWatchDog website, installer, and Windows client. We will update it if related services or data-handling practices change.</p>
+      <p>This notice applies to the shared SuperWatchDog and Super Recovery website and to each product's installer and Windows client. We will update it if related services or data-handling practices change.</p>
 
       <h2>What We Do Not Collect</h2>
       <ul>
-        <li>We do not upload your files, file lists, vault contents, passwords, recovery keys, or personal documents.</li>
+        <li>We do not upload your files, file lists, recovered results, preview content, vault contents, passwords, recovery keys, or personal documents.</li>
         <li>We do not save plaintext BitLocker passwords or store your recovery materials for you.</li>
         <li>We do not upload camera frames, screen captures, window contents, or local file path lists.</li>
         <li>The website does not embed third-party analytics, advertising scripts, tracking scripts, or remote fonts.</li>
@@ -63,13 +63,14 @@
 
       <h2>Local Processing</h2>
       <p>Vault operations, trusted device state, and protection actions are processed on your Windows PC. Basic protection features do not depend on a remote account or cloud service.</p>
+      <p>Super Recovery reads only the disk or image you select and saves attempted recovery content to the destination you choose. Discovered names, paths, sector data, file contents, and preview content are not sent to the website or licensing service. Recovered results are written to disk only after you explicitly confirm.</p>
 
       <h2>Local Logs and Diagnostics</h2>
       <p>The software may write essential local status, error, and diagnostic logs. After an unexpected exit, it may also save an error code, app version, redacted logs, and a limited number of small crash dumps locally.</p>
       <p>A diagnostic report is sent or exported only after you confirm. Small crash dumps are excluded by default and require a separate selection; a dump may contain a small amount of memory near the failing thread. Reports do not collect vault contents, file lists, passwords, recovery keys, camera frames, screenshots, or window contents.</p>
 
       <h2>Website Analytics</h2>
-      <p>The official website uses first-party anonymous analytics to measure page views, raw visitors, browser-confirmed activity, candidate visitors, popular pages, first-visit sources, campaigns, landing pages, browser and device categories, interface language, and country- or province-level geography. The website sets a random first-party identifier containing no identity, account, device, or IP information, and the server stores only its hash. Browser and device categories are derived from browser information. Sources are retained only as categories such as direct, search engine, GitHub, or a supported content platform. Campaign reporting stores only controlled <code>utm_source</code> and <code>utm_campaign</code> markers from the URL; full referring URLs and other query parameters are not stored. After a page has been visible in the foreground for at least 10 seconds, or after a click, key press, touch, or scroll, the website sends one browser-activity confirmation for the same anonymous identifier. The confirmation stores only the public page path, receipt time, and identifier hash; it does not store the interaction type, content, coordinates, or key. Browser-confirmed activity, or at least two page views on the same Beijing calendar day, is used only to derive a candidate visitor and does not confirm a human identity. Operational classification does not delete or rewrite raw visitor and page-view records within the same data baseline; anonymous operations data may be cleared under disclosed retention or system-maintenance policies without affecting diagnostic reports. The request IP is converted locally on the server into country- and province-level geography and then discarded. Raw IP addresses, cities, and precise locations are not written to the operations database. Recognized crawlers are excluded from website visitors and page views. Analytics failures do not affect website use, and no third-party analytics, advertising, or tracking service is used.</p>
+      <p>The official website uses first-party anonymous analytics to measure page views, raw visitors, browser-confirmed activity, candidate visitors, popular pages, first-visit sources, campaigns, landing pages, browser and device categories, interface language, and country- or province-level geography. The website sets a random first-party identifier containing no identity, account, device, or IP information, and the server stores only its hash. Browser and device categories are derived from browser information. Sources are retained only as categories such as direct, search engine, GitHub, or a supported content platform. Campaign reporting stores only controlled <code>utm_source</code> and <code>utm_campaign</code> markers from the URL; full referring URLs and other query parameters are not stored. The browser may keep those two controlled markers for the current session so page views and download entry points in the same visit can use the same attribution. After a page has been visible in the foreground for at least 10 seconds, or after a click, key press, touch, or scroll, the website sends one browser-activity confirmation for the same anonymous identifier. The confirmation stores only the public page path, receipt time, and identifier hash; it does not store the interaction type, content, coordinates, or key. Browser-confirmed activity, or at least two page views on the same Beijing calendar day, is used only to derive a candidate visitor and does not confirm a human identity. Operational classification does not delete or rewrite raw visitor and page-view records within the same data baseline; anonymous operations data may be cleared under disclosed retention or system-maintenance policies without affecting diagnostic reports. The request IP is converted locally on the server into country- and province-level geography and then discarded. Raw IP addresses, cities, and precise locations are not written to the operations database. Recognized crawlers are excluded from website visitors and page views. Analytics failures do not affect website use, and no third-party analytics, advertising, or tracking service is used.</p>
 
       <h2>Downloads and Updates</h2>
       <p>The website may provide installer download links. The download endpoint reuses or sets the same type of first-party random identifier containing no identity, account, device, or IP information. It distinguishes download starts, completed transfers, and repeated requests by browser, Beijing calendar day, version, and channel, and links first-visit source, campaign, and landing page to download conversion; only a hash of the identifier is stored, and it is not used to identify a person. A download is counted as completed only after the installer has been fully transferred, while interrupted or cancelled transfers are excluded. English pages use an external GitHub Release mirror. The website can record the download start but cannot confirm whether an off-site transfer finishes, so it is not counted as a completed download. Entry-request counts are retained only for traffic and fault diagnostics. Recognized search crawlers are excluded from unique download starts and completed downloads. Your language choice is stored only in the current browser. Updates verify the installer before it runs, and the website does not embed third-party analytics, advertising, or tracking scripts.</p>
@@ -88,7 +89,7 @@
     </article>
   </main>
   <footer>
-    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026102063号-1</a>
+    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026102063号-1</a> · <a href="https://beian.mps.gov.cn/#/query/webSearch?code=44030002015311" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px"><img src="/assets/gongan-beian.png" alt="" width="16" height="16" style="vertical-align:middle">粤公网安备44030002015311号</a>
     <span> · Copyright © 2026 Shenzhen Yilong Electronic Technology Co., Ltd.</span>
   </footer>
 </body>

@@ -11,16 +11,79 @@
     return;
   }
 
-  var parameters = new URLSearchParams(window.location.search);
-  var source = (parameters.get("utm_source") || "").trim().toLowerCase();
-  var campaign = (parameters.get("utm_campaign") || "").trim().toLowerCase();
   var knownSources = /^(baidu|360|sogou|bing|google|github|csdn|zhihu|jianshu|juejin|oschina|tencent-cloud|aliyun|sohu|smzdm|51cto|eefocus|sina)$/;
-  if (!knownSources.test(source)) {
-    source = "";
+  var campaignPattern = /^[a-z0-9][a-z0-9._-]{0,63}$/;
+  var storagePrefix = "swd-attribution-v1:";
+  var parameters = new URLSearchParams(window.location.search);
+
+  function cleanSource(value) {
+    var text = (value || "").trim().toLowerCase();
+    return knownSources.test(text) ? text : "";
   }
-  if (!/^[a-z0-9][a-z0-9._-]{0,63}$/.test(campaign)) {
-    campaign = "";
+
+  function cleanCampaign(value) {
+    var text = (value || "").trim().toLowerCase();
+    return campaignPattern.test(text) ? text : "";
   }
+
+  function readStored(name, cleaner) {
+    try {
+      return cleaner(window.sessionStorage.getItem(storagePrefix + name) || "");
+    } catch (_) {
+      return "";
+    }
+  }
+
+  function storeValue(name, value) {
+    if (!value) {
+      return;
+    }
+    try {
+      window.sessionStorage.setItem(storagePrefix + name, value);
+    } catch (_) {
+      // Attribution must never affect page use.
+    }
+  }
+
+  var source = cleanSource(parameters.get("utm_source")) || readStored("source", cleanSource);
+  var campaign = cleanCampaign(parameters.get("utm_campaign")) || readStored("campaign", cleanCampaign);
+  storeValue("source", source);
+  storeValue("campaign", campaign);
+
+  function downloadSource(existingSource) {
+    var existing = (existingSource || "").trim().toLowerCase();
+    if (source) {
+      return source;
+    }
+    return existing || (/\/en(?:\.html)?$/i.test(window.location.pathname) ? "website-en" : "website-zh");
+  }
+
+  function enrichDownloadLinks() {
+    var links = document.querySelectorAll('a[href*="/download/1.0.0/stable"], a[href*="/downloads/SuperWatchDogSetup.exe"]');
+    links.forEach(function (link) {
+      var href = link.getAttribute("href") || "";
+      var url;
+      try {
+        url = new URL(href, window.location.href);
+      } catch (_) {
+        return;
+      }
+      if (!/^(www\.)?superwatchdog\.me$/i.test(url.hostname)) {
+        return;
+      }
+      var effectiveSource = downloadSource(url.searchParams.get("source"));
+      if (effectiveSource) {
+        url.searchParams.set("source", effectiveSource);
+        url.searchParams.set("utm_source", effectiveSource);
+      }
+      if (campaign) {
+        url.searchParams.set("utm_campaign", campaign);
+      }
+      url.searchParams.set("utm_landing", window.location.pathname || "/");
+      link.setAttribute("href", url.toString());
+    });
+  }
+  enrichDownloadLinks();
 
   var basePayload = {
     schemaVersion: 2,
