@@ -38,10 +38,16 @@ h1 span { color: var(--green-dark); }
 .scene-icon img { max-width: 82px; max-height: 82px; filter: drop-shadow(0 10px 10px rgba(12,85,53,.12)); }
 .scene-grid h3 { margin: 0; font-size: 19px; }
 .scene-grid p { margin: 8px 0 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.site-footer { padding: 28px 0 32px; color: #6d7781; background: #fff; border-top: 1px solid #e5f0eb; font-size: 13px; }
+.site-footer-inner { width: min(100% - 112px, 1480px); margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
+.site-footer-inner a:hover { color: var(--green-dark); }
+.site-footer-inner span + span::before { content: ""; width: 1px; height: 14px; display: inline-block; margin-right: 26px; background: #d8e5df; vertical-align: -2px; }
 footer { margin-top: 25px; border-top: 1px solid var(--line); background: #f8fbf9; }
 .footer-row { min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 30px; color: #7c8982; font-size: 12px; }
 .footer-row div { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 19px; }
 .footer-row a:hover { color: var(--green-dark); }
+.beian-police-link { display: inline-flex; align-items: center; gap: 4px; vertical-align: text-bottom; }
+.beian-police-icon { width: 16px; height: 16px; flex: 0 0 auto; }
 @media (max-width: 980px) {
   .hero-grid { grid-template-columns: 1fr; gap: 46px; text-align: center; }
   .hero-copy { display: flex; flex-direction: column; align-items: center; }
@@ -68,4 +74,6 @@ footer { margin-top: 25px; border-top: 1px solid var(--line); background: #f8fbf
   .scene-icon img { max-width: 67px; max-height: 67px; }
   .footer-row { align-items: flex-start; flex-direction: column; padding: 24px 0; }
   .footer-row div { justify-content: flex-start; }
+  .site-footer-inner { width: min(100% - 44px, 980px); gap: 12px; }
+  .site-footer-inner span + span::before { display: none; }
 }

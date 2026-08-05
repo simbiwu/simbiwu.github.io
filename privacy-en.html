@@ -30,6 +30,13 @@
     ul { margin: 0; padding-left: 22px; }
     footer { padding: 26px 0; color: #7a858f; text-align: center; font-size: 13px; }
     @media (max-width: 640px) { .top { align-items: flex-start; flex-direction: column; padding: 14px 0; } article { padding: 24px; } }
+      .site-footer { padding: 28px 0 32px; color: #6d7781; background: #fff; border-top: 1px solid #e5f0eb; font-size: 13px; }
+    .site-footer-inner { width: min(100% - 112px, 1480px); margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
+    .site-footer-inner a:hover { color: #079653; }
+    .site-footer-inner span + span::before { content: ""; width: 1px; height: 14px; display: inline-block; margin-right: 26px; background: #d8e5df; vertical-align: -2px; }
+    .beian-police-link { display: inline-flex; align-items: center; gap: 4px; vertical-align: text-bottom; }
+    .beian-police-icon { width: 16px; height: 16px; flex: 0 0 auto; }
+    @media (max-width: 760px) { .site-footer-inner { width: min(100% - 44px, 980px); gap: 12px; } .site-footer-inner span + span::before { display: none; } }
   </style>
   <script src="language.js"></script>
   <script src="analytics.js" defer></script>
@@ -88,9 +95,19 @@
       <p>For privacy questions, contact <a href="mailto:support@superwatchdog.me">support@superwatchdog.me</a>.</p>
     </article>
   </main>
-  <footer>
-    <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">粤ICP备2026102063号-1</a> · <a href="https://beian.mps.gov.cn/#/query/webSearch?code=44030002015311" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:4px"><img src="/assets/gongan-beian.png" alt="" width="16" height="16" style="vertical-align:middle">粤公网安备44030002015311号</a>
-    <span> · Copyright © 2026 Shenzhen Yilong Electronic Technology Co., Ltd.</span>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <span><a href="/privacy-en.html">Privacy</a></span>
+      <span><a href="/terms-en.html">Terms</a></span>
+      <span><a href="/about-en.html">About Us</a></span>
+      <span><a href="/contact-en.html">Contact</a></span>
+      <span><a href="/product-facts-en.html">Product facts</a></span>
+      <span><a href="/faq/en/">FAQ</a></span>
+      <span><a href="mailto:support@superwatchdog.me">support@superwatchdog.me</a></span>
+      <span><a href="/" data-language-choice="zh">&#20013;&#25991;</a></span>
+      <span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">&#31908;ICP&#22791;2026102063&#21495;-1</a> 路 <a class="beian-police-link" href="https://beian.mps.gov.cn/#/query/webSearch?code=44030002015311" target="_blank" rel="noopener noreferrer"><img class="beian-police-icon" src="/assets/gongan-beian.png" alt="">&#31908;&#20844;&#32593;&#23433;&#22791;44030002015311&#21495;</a></span>
+      <span>Copyright 漏 2026 Shenzhen Yilong Electronic Technology Co., Ltd.</span>
+    </div>
   </footer>
 </body>
 </html>

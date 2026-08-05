@@ -181,8 +181,40 @@
   padding: 16px 2px 0;
 }
 
+.site-footer,
 .faq-footer {
   border-top: 1px solid var(--line);
+}
+
+.site-footer {
+  padding: 28px 0 32px;
+  color: var(--muted);
+  background: #fff;
+  font-size: 13px;
+}
+
+.site-footer-inner {
+  width: min(100% - 112px, 1480px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.site-footer-inner a:hover {
+  color: var(--green-dark);
+}
+
+.site-footer-inner span + span::before {
+  content: "";
+  width: 1px;
+  height: 14px;
+  display: inline-block;
+  margin-right: 26px;
+  background: #d8e5df;
+  vertical-align: -2px;
 }
 
 .faq-footer-inner {
@@ -193,6 +225,19 @@
   padding-bottom: 34px;
   color: var(--muted);
   font-size: 13px;
+}
+
+.beian-police-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  vertical-align: text-bottom;
+}
+
+.beian-police-icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
 }
 
 @media (max-width: 760px) {
@@ -216,5 +261,14 @@
   .faq-related,
   .faq-question-card {
     padding: 22px;
+  }
+
+  .site-footer-inner {
+    width: min(100% - 44px, 980px);
+    gap: 12px;
+  }
+
+  .site-footer-inner span + span::before {
+    display: none;
   }
 }
