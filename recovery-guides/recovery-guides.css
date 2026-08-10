@@ -1,0 +1,107 @@
+:root {
+  --green: #08784a;
+  --green-soft: #eaf7f0;
+  --text: #17251e;
+  --muted: #5e6d64;
+  --line: #dce9e2;
+  --surface: #f7faf8;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: var(--text); background: #fff; font-family: "Segoe UI", "Microsoft YaHei UI", "Microsoft YaHei", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+.wrap { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
+
+.site-header { position: sticky; top: 0; z-index: 20; height: 68px; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.97); backdrop-filter: blur(12px); }
+.header-row { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-size: 19px; font-weight: 750; }
+.brand img { width: 36px; height: 36px; }
+.site-nav { display: flex; align-items: center; gap: 24px; color: #4c5d53; font-size: 14px; font-weight: 650; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--green); }
+.site-nav .language { padding: 7px 10px; border: 1px solid var(--line); border-radius: 6px; }
+
+.breadcrumb { display: flex; align-items: center; gap: 8px; padding-top: 28px; color: #6d7a72; font-size: 13px; }
+.breadcrumb a:hover { color: var(--green); }
+.guide-intro { display: grid; grid-template-columns: minmax(0, 1fr) 280px; align-items: center; gap: 56px; padding: 46px 0 48px; border-bottom: 1px solid var(--line); }
+.eyebrow { margin: 0 0 12px; color: var(--green); font-size: 13px; font-weight: 750; letter-spacing: 0; }
+h1 { max-width: 780px; margin: 0; font-size: 42px; line-height: 1.22; letter-spacing: 0; }
+.lead { max-width: 760px; margin: 20px 0 0; color: var(--muted); font-size: 18px; line-height: 1.8; }
+.reviewed { margin: 16px 0 0; color: #77847d; font-size: 12px; }
+.intro-image { width: 280px; height: 210px; display: grid; place-items: center; padding: 24px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+.intro-image img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+.answer-callout { margin: 38px 0 0; padding: 24px 28px; border-left: 4px solid var(--green); background: var(--green-soft); }
+.answer-callout strong { display: block; margin-bottom: 8px; font-size: 15px; }
+.answer-callout p { margin: 0; color: #354a3e; font-size: 16px; line-height: 1.75; }
+.article-layout { display: grid; grid-template-columns: minmax(0, 760px) 240px; align-items: start; gap: 72px; padding: 26px 0 76px; }
+.article-body section { padding: 26px 0; border-bottom: 1px solid #edf2ef; }
+.article-body h2 { margin: 0 0 14px; font-size: 26px; line-height: 1.35; letter-spacing: 0; }
+.article-body p { margin: 12px 0 0; color: #425248; font-size: 16px; line-height: 1.9; }
+.article-body ul { margin: 14px 0 0; padding-left: 22px; color: #425248; }
+.article-body li { margin: 9px 0; line-height: 1.75; }
+.guide-aside { position: sticky; top: 96px; padding-top: 26px; }
+.guide-aside h2 { margin: 0 0 12px; font-size: 15px; }
+.guide-aside a { display: block; padding: 10px 0; border-bottom: 1px solid var(--line); color: #4c5d53; font-size: 13px; line-height: 1.55; }
+.guide-aside a:hover { color: var(--green); }
+.faq-block { padding: 32px 0 6px; }
+.faq-block h2 { margin: 0 0 16px; font-size: 26px; }
+.faq-item { padding: 18px 0; border-top: 1px solid var(--line); }
+.faq-item h3 { margin: 0; font-size: 17px; }
+.faq-item p { margin: 9px 0 0; color: #4c5d53; line-height: 1.75; }
+
+.hub-intro { padding: 58px 0 36px; border-bottom: 1px solid var(--line); }
+.hub-intro h1 { max-width: 840px; }
+.guide-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; margin: 38px 0 76px; border: 1px solid var(--line); background: var(--line); }
+.guide-card { min-height: 190px; padding: 26px; background: #fff; }
+.guide-card:hover { background: var(--surface); }
+.guide-card .number { color: var(--green); font-size: 12px; font-weight: 750; }
+.guide-card h2 { margin: 10px 0 8px; font-size: 21px; line-height: 1.4; }
+.guide-card p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+.guide-card strong { display: inline-block; margin-top: 16px; color: var(--green); font-size: 13px; }
+
+.product-cta { padding: 42px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface); }
+.cta-row { display: flex; align-items: center; justify-content: space-between; gap: 36px; }
+.product-cta h2 { margin: 0; font-size: 25px; }
+.product-cta p { margin: 8px 0 0; color: var(--muted); line-height: 1.65; }
+.cta-actions { display: flex; gap: 12px; flex: 0 0 auto; }
+.button { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; padding: 0 20px; border: 1px solid var(--green); border-radius: 6px; font-size: 14px; font-weight: 700; }
+.button.primary { color: #fff; background: var(--green); }
+.button.secondary { color: var(--green); background: #fff; }
+
+.site-footer { padding: 28px 0 32px; color: #6d7781; background: #fff; border-top: 1px solid #e5f0eb; font-size: 13px; }
+.site-footer-inner { width: min(100% - 112px, 1480px); margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
+.site-footer-inner a:hover { color: var(--green); }
+.site-footer-inner span + span::before { content: ""; width: 1px; height: 14px; display: inline-block; margin-right: 26px; background: #d8e5df; vertical-align: -2px; }
+.beian-police-link { display: inline-flex; align-items: center; gap: 4px; vertical-align: text-bottom; }
+.beian-police-icon { width: 16px; height: 16px; flex: 0 0 auto; }
+
+@media (max-width: 860px) {
+  .guide-intro { grid-template-columns: 1fr; gap: 28px; }
+  .intro-image { width: 100%; height: 220px; }
+  .article-layout { grid-template-columns: 1fr; gap: 0; }
+  .guide-aside { position: static; padding-top: 0; }
+  .cta-row { align-items: flex-start; flex-direction: column; }
+}
+
+@media (max-width: 640px) {
+  .wrap { width: calc(100% - 28px); }
+  .site-header { height: 62px; }
+  .brand { font-size: 17px; }
+  .brand img { width: 32px; height: 32px; }
+  .site-nav a { display: none; }
+  .site-nav .language { display: inline-flex; }
+  .breadcrumb { padding-top: 20px; }
+  .guide-intro, .hub-intro { padding-top: 34px; }
+  h1 { font-size: 32px; }
+  .lead { font-size: 16px; }
+  .intro-image { height: 180px; }
+  .guide-grid { grid-template-columns: 1fr; margin-bottom: 56px; }
+  .guide-card { min-height: 0; }
+  .article-body h2, .faq-block h2 { font-size: 23px; }
+  .cta-actions { width: 100%; flex-direction: column; }
+  .button { width: 100%; }
+  .site-footer-inner { width: min(100% - 44px, 980px); gap: 12px; }
+  .site-footer-inner span + span::before { display: none; }
+}

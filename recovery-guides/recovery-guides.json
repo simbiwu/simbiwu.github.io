@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-11",
+  "guides": [
+    {
+      "slug": "recover-deleted-files",
+      "image": "/assets/recovery-deleted.png",
+      "zh": {
+        "title": "Windows 误删文件怎么恢复",
+        "description": "Windows 文件误删后先停止向原磁盘写入，再用只读扫描查找并把可预览文件恢复到其他磁盘。",
+        "shortAnswer": "先停止下载、复制和安装软件，不要把恢复工具装到丢失文件所在盘。扫描原位置后先预览，再把需要的文件恢复到其他磁盘。",
+        "sections": [
+          { "heading": "误删后先做什么", "paragraphs": ["删除文件通常只是让原位置可以被重新使用，文件内容是否还能找回取决于后续有没有被覆盖。越早停止写入，保留下来的机会通常越高。"], "bullets": ["暂停下载、解压、同步和大型更新。", "不要在原磁盘安装恢复软件或保存扫描结果。", "如果文件仍在回收站，优先直接还原。"] },
+          { "heading": "用超级恢复查找", "paragraphs": ["打开超级恢复，选择文件原来所在的位置并开始分析。程序以只读方式扫描源位置；找到候选文件后，先按类型、大小和预览结果确认内容，再勾选需要恢复的项目。", "恢复位置必须选择其他磁盘或其他可用卷。这样可以避免恢复过程覆盖尚未找到的数据。"], "bullets": [] },
+          { "heading": "哪些情况可能找不回来", "paragraphs": ["如果原空间已经被新文件覆盖，或者文件位于已执行 TRIM 的 SSD，候选项可能无法预览或恢复后无法打开。扫描命中只表示发现了可能的数据，不等于文件一定完整。"], "bullets": [] }
+        ],
+        "faq": [{ "question": "恢复后的文件为什么不能打开？", "answer": "常见原因是部分内容已被覆盖，或深度扫描只能找到文件片段。请以预览和实际打开结果判断，不要只看文件名和大小。" }]
+      },
+      "en": {
+        "title": "How to recover accidentally deleted files on Windows",
+        "description": "Stop writing to the original drive, scan it read-only, preview candidates, and recover selected files to another drive.",
+        "shortAnswer": "Stop downloads, copies, and installations. Scan the original location, preview the candidates, and save recovered files to a different drive.",
+        "sections": [
+          { "heading": "What to do first", "paragraphs": ["Deletion usually marks space as reusable. Whether the content remains recoverable depends heavily on later writes, so stop using the affected drive as soon as possible."], "bullets": ["Pause downloads, extraction, synchronization, and large updates.", "Do not install recovery software or save scan data on the affected drive.", "If the file is still in the Recycle Bin, restore it there first."] },
+          { "heading": "Scan with Super Recovery", "paragraphs": ["Select the original location and start analysis. Super Recovery reads the source without writing to it. Use file type, size, and preview to identify useful candidates.", "Choose another drive or volume as the recovery destination so recovered data cannot overwrite files that have not been found yet."], "bullets": [] },
+          { "heading": "Why recovery may fail", "paragraphs": ["New data may have overwritten the original content, and SSD TRIM may make deleted blocks unavailable. A scan result is a candidate, not a guarantee that the whole file is intact."], "bullets": [] }
+        ],
+        "faq": [{ "question": "Why does a recovered file fail to open?", "answer": "Part of its content may have been overwritten, or a deep scan may have found only fragments. Judge the result by previewing and opening the file, not by its name alone." }]
+      }
+    },
+    {
+      "slug": "recover-emptied-recycle-bin",
+      "image": "/assets/recovery-recycle-bin.png",
+      "zh": {
+        "title": "回收站清空后怎么恢复文件",
+        "description": "回收站清空后不要继续使用原磁盘，可扫描文件原来所在卷并把可预览结果恢复到其他磁盘。",
+        "shortAnswer": "清空回收站后，系统不会再提供直接还原入口。立即减少原磁盘写入，扫描文件删除前所在的卷，并把结果保存到其他盘。",
+        "sections": [
+          { "heading": "先确认文件原来在哪里", "paragraphs": ["回收站只是删除流程中的临时位置。清空后，需要扫描文件删除前所在的磁盘，而不是扫描回收站图标。桌面和文档通常位于系统盘，其他文件则按原保存位置选择。"], "bullets": [] },
+          { "heading": "扫描和恢复步骤", "paragraphs": ["在超级恢复中选择原卷，先执行分析并查看可识别的目录或删除记录。找不到时再继续更深入的扫描。预览可打开的图片、文档或媒体文件后，只恢复真正需要的内容。", "恢复目标应放在另一块磁盘或另一个卷，不能写回正在扫描的源卷。"], "bullets": [] },
+          { "heading": "系统盘需要更谨慎", "paragraphs": ["Windows、浏览器、同步工具和后台更新都会持续写入系统盘。如果文件来自桌面或文档，应尽快停止不必要的操作。SSD 上的 TRIM 也可能降低清空回收站后的恢复机会。"], "bullets": [] }
+        ],
+        "faq": [{ "question": "应该扫描回收站还是原文件夹？", "answer": "应选择文件删除前所在的磁盘。回收站清空后，扫描对象仍是原卷。" }]
+      },
+      "en": {
+        "title": "How to recover files after emptying the Recycle Bin",
+        "description": "After the Recycle Bin is emptied, reduce writes to the original drive, scan that volume, and recover previewable files elsewhere.",
+        "shortAnswer": "Windows no longer offers direct restore after the Recycle Bin is emptied. Stop writing to the original drive, scan that volume, and save results elsewhere.",
+        "sections": [
+          { "heading": "Identify the original location", "paragraphs": ["The Recycle Bin is only an intermediate location. After it is emptied, scan the drive where the file existed before deletion, not the Recycle Bin icon. Desktop and Documents are commonly on the system drive."], "bullets": [] },
+          { "heading": "Scan and recover", "paragraphs": ["Select the original volume in Super Recovery and inspect recognizable folders or deleted records first. Continue with a deeper scan only when necessary. Preview useful candidates before selecting them.", "Save recovered files to another drive or volume. Writing them to the source may overwrite data that has not been found."], "bullets": [] },
+          { "heading": "Be careful with the system drive", "paragraphs": ["Windows, browsers, synchronization tools, and updates keep writing to the system drive. Act quickly when files came from Desktop or Documents. SSD TRIM can also reduce the chance of recovery."], "bullets": [] }
+        ],
+        "faq": [{ "question": "Should I scan the Recycle Bin or the old folder?", "answer": "Scan the volume where the file was stored before deletion. The source remains the original volume after the Recycle Bin is emptied." }]
+      }
+    },
+    {
+      "slug": "recover-usb-files",
+      "image": "/assets/recovery-usb-drive.png",
+      "zh": {
+        "title": "U盘文件删除或丢失后怎么恢复",
+        "description": "U盘文件丢失后停止写入和格式化，在设备稳定识别时只读扫描，并恢复到电脑上的其他磁盘。",
+        "shortAnswer": "先拔掉 U 盘，避免继续复制或格式化。确认设备能稳定识别后重新连接，扫描整个 U 盘，并把结果恢复到电脑硬盘。",
+        "sections": [
+          { "heading": "不要继续使用 U 盘", "paragraphs": ["新文件可能覆盖刚删除的数据。看到“需要格式化”提示时不要立即确认，也不要运行修复命令。先安全拔出，准备好恢复目标盘后再连接。"], "bullets": [] },
+          { "heading": "设备稳定时再扫描", "paragraphs": ["如果 Windows 能持续识别容量，超级恢复可以对 NTFS、FAT32、exFAT 或可读取的 RAW 设备进行只读分析。目录结构无法可靠解析时，深度扫描可能只能按文件特征找回内容，原文件名和目录可能丢失。", "恢复目标请选择电脑上的其他磁盘，不能保存回同一个 U 盘。"], "bullets": [] },
+          { "heading": "什么时候停止软件扫描", "paragraphs": ["U 盘频繁断开、容量忽大忽小、读取速度降为零或明显发热时，不应反复重连扫描。这类现象可能是硬件故障，继续读取可能让情况恶化，应考虑专业数据恢复。"], "bullets": [] }
+        ],
+        "faq": [{ "question": "提示格式化 U 盘时可以先格式化吗？", "answer": "不要为了恢复文件而先格式化。格式化会改变文件系统信息，应先在设备稳定可读时进行只读扫描。" }]
+      },
+      "en": {
+        "title": "How to recover deleted or missing files from a USB drive",
+        "description": "Stop writing or formatting, scan a stable USB device read-only, and recover selected files to another computer drive.",
+        "shortAnswer": "Disconnect the USB drive to prevent further writes. Reconnect it only when ready, scan the whole device, and recover files to a computer drive.",
+        "sections": [
+          { "heading": "Stop using the USB drive", "paragraphs": ["New files can overwrite deleted content. Do not accept a format prompt or run repair commands first. Safely disconnect the device until a separate recovery destination is ready."], "bullets": [] },
+          { "heading": "Scan only when the device is stable", "paragraphs": ["When Windows consistently recognizes its capacity, Super Recovery can read NTFS, FAT32, exFAT, or readable RAW media. If folders cannot be parsed, a deep scan may find content by file signatures without preserving names or paths.", "Save recovered files to another computer drive, never back to the USB source."], "bullets": [] },
+          { "heading": "When to stop software scanning", "paragraphs": ["Stop if the device repeatedly disconnects, reports changing capacity, stalls at zero throughput, or becomes unusually hot. These signs can indicate hardware failure and repeated reads may worsen it."], "bullets": [] }
+        ],
+        "faq": [{ "question": "Should I format a USB drive when Windows asks?", "answer": "Not before recovery. Formatting changes file-system information, so scan the stable device read-only first." }]
+      }
+    },
+    {
+      "slug": "recover-after-quick-format",
+      "image": "/assets/recovery-usb-drive.png",
+      "zh": {
+        "title": "磁盘快速格式化后怎么恢复文件",
+        "description": "快速格式化后立即停止使用原磁盘，通过只读元数据分析和深度扫描尝试找回文件。",
+        "shortAnswer": "不要再次格式化或写入新数据。扫描被格式化的整个卷，先查看可识别目录，再用深度扫描寻找文件内容，并恢复到其他磁盘。",
+        "sections": [
+          { "heading": "快速格式化不等于完整擦除", "paragraphs": ["快速格式化会重建部分文件系统信息，但不一定立即覆盖所有文件内容。因此仍可以尝试恢复，不过结果取决于格式化方式、后续写入、介质类型和原数据布局。"], "bullets": [] },
+          { "heading": "正确的扫描顺序", "paragraphs": ["选择被格式化的卷进行只读分析。先检查仍可识别的文件系统记录；目录不完整时，再进行全盘特征扫描。后者可能找到更多内容，但文件名、时间和原目录通常不完整。", "恢复目标必须是其他磁盘或卷。不要为了腾空间而删除源盘上的任何内容。"], "bullets": [] },
+          { "heading": "完整格式化和 SSD 的差异", "paragraphs": ["完整格式化、后续大量写入和 SSD TRIM 都会显著降低恢复可能性。软件不能还原已经被覆盖或设备不再提供的数据。"], "bullets": [] }
+        ],
+        "faq": [{ "question": "快速格式化后能保留原文件名吗？", "answer": "如果原文件系统记录仍可解析，部分名称和目录可能保留；深度扫描通常只能按内容特征识别，名称和路径可能缺失。" }]
+      },
+      "en": {
+        "title": "How to recover files after a quick format",
+        "description": "Stop using the formatted drive and try read-only metadata analysis followed by a deep scan when necessary.",
+        "shortAnswer": "Do not format again or write new data. Scan the whole formatted volume, inspect recognizable folders first, then use a deep scan and recover elsewhere.",
+        "sections": [
+          { "heading": "Quick format is not a full erase", "paragraphs": ["A quick format rebuilds parts of the file system but may not immediately overwrite all file content. Recovery may still be possible depending on the format operation, later writes, media type, and data layout."], "bullets": [] },
+          { "heading": "Use the right scan order", "paragraphs": ["Analyze the formatted volume read-only. Inspect any remaining file-system records first, then use a full signature scan if the directory is incomplete. Deep scans can find more content but often lose names, dates, and original folders.", "Recover to another drive or volume and do not delete source content to make room."], "bullets": [] },
+          { "heading": "Full format and SSD differences", "paragraphs": ["A full format, substantial later writes, and SSD TRIM can sharply reduce recoverability. Software cannot restore bytes that have been overwritten or are no longer exposed by the device."], "bullets": [] }
+        ],
+        "faq": [{ "question": "Can original file names survive a quick format?", "answer": "Some names and folders may remain when file-system records are readable. A deep signature scan usually cannot preserve the original path." }]
+      }
+    },
+    {
+      "slug": "recover-external-drive-files",
+      "image": "/assets/recovery-usb-drive.png",
+      "zh": {
+        "title": "移动硬盘文件丢失怎么办",
+        "description": "移动硬盘文件消失后先判断设备是否稳定，再选择只读扫描或停止操作并寻求专业恢复。",
+        "shortAnswer": "先停止复制和修复操作。容量稳定、读取正常时可只读扫描；反复掉盘、异响或卡死时应停止通电，不要用软件反复尝试。",
+        "sections": [
+          { "heading": "先区分逻辑问题和硬件问题", "paragraphs": ["误删、误格式化、目录损坏属于可能的软件恢复场景。反复断开、机械异响、无法稳定识别容量、读取时系统卡死，则更像硬件问题。两类情况不能用同一方法处理。"], "bullets": [] },
+          { "heading": "稳定设备的处理方法", "paragraphs": ["设备能稳定识别时，选择对应卷进行只读扫描。先从文件系统记录中查找，再按需要进行深度扫描。恢复结果写到电脑内置盘或另一块健康磁盘。", "不要运行会写入源盘的修复、整理或格式化操作。"], "bullets": [] },
+          { "heading": "异常设备应及时停手", "paragraphs": ["机械硬盘出现异响或持续掉线时，重复通电和全盘扫描可能增加损伤。重要数据应优先交给具备硬件处理能力的专业机构。超级恢复不提供硬件维修或阵列重建。"], "bullets": [] }
+        ],
+        "faq": [{ "question": "移动硬盘能识别盘符但打不开，可以扫描吗？", "answer": "只有在容量和连接稳定、没有异响时才适合尝试只读扫描。设备不稳定时应停止操作。" }]
+      },
+      "en": {
+        "title": "What to do when files disappear from an external drive",
+        "description": "Check whether the external drive is stable before choosing read-only scanning or stopping for professional recovery.",
+        "shortAnswer": "Stop copies and repair commands. Scan read-only only when capacity and reads are stable. Stop powering a drive that disconnects, clicks, or freezes the system.",
+        "sections": [
+          { "heading": "Separate logical and hardware problems", "paragraphs": ["Accidental deletion, formatting, and directory damage may be software-recovery cases. Repeated disconnects, mechanical noises, unstable capacity, or system freezes during reads point toward hardware trouble."], "bullets": [] },
+          { "heading": "Handle a stable device", "paragraphs": ["When the device is consistently recognized, scan the relevant volume read-only. Check file-system records first and use a deep scan only when needed. Recover to an internal drive or another healthy disk.", "Avoid repair, defragmentation, or formatting operations that write to the source."], "bullets": [] },
+          { "heading": "Stop when the device is abnormal", "paragraphs": ["Repeated power cycles and full scans can worsen a mechanically failing drive. Important data should go to a professional service with hardware capabilities. Super Recovery does not repair hardware or rebuild arrays."], "bullets": [] }
+        ],
+        "faq": [{ "question": "Can I scan a drive that has a letter but will not open?", "answer": "Only when its capacity and connection remain stable and there are no unusual noises. Stop if the device is unstable." }]
+      }
+    },
+    {
+      "slug": "recover-raw-drive-files",
+      "image": "/assets/recovery-usb-drive.png",
+      "zh": {
+        "title": "磁盘显示 RAW 怎么恢复文件",
+        "description": "磁盘显示 RAW 时不要先格式化或修复，在设备稳定的前提下只读扫描文件特征并恢复到其他磁盘。",
+        "shortAnswer": "RAW 表示 Windows 无法正常识别当前文件系统。不要先格式化，确认设备稳定后扫描整个卷，并把找到的文件保存到其他磁盘。",
+        "sections": [
+          { "heading": "RAW 代表什么", "paragraphs": ["RAW 不是一种日常使用的文件系统状态，通常表示关键结构损坏、类型无法识别或卷信息异常。它不直接说明文件内容已经全部消失，也不代表格式化后一定能恢复。"], "bullets": [] },
+          { "heading": "只读扫描的作用", "paragraphs": ["超级恢复会先尝试解析仍可读取的结构；无法可靠还原目录时，再按文件特征扫描内容。此时可能缺少原文件名、目录和时间信息，需要通过类型、大小和预览逐项判断。", "所有结果都应恢复到其他健康磁盘。扫描和预览在本机完成，不上传文件内容。"], "bullets": [] },
+          { "heading": "不要把硬件故障当成 RAW 修复", "paragraphs": ["如果磁盘同时反复掉线、容量异常、异响或读取停滞，应停止扫描。软件只适合稳定可读的介质，不能修复物理故障。"], "bullets": [] }
+        ],
+        "faq": [{ "question": "RAW 磁盘可以先运行系统修复吗？", "answer": "为了保留恢复机会，不建议先执行会修改源盘的修复。先做只读评估；重要数据且设备异常时应寻求专业帮助。" }]
+      },
+      "en": {
+        "title": "How to recover files from a drive shown as RAW",
+        "description": "Do not format or repair a RAW volume first. Scan a stable device read-only and save recovered files to another drive.",
+        "shortAnswer": "RAW means Windows cannot recognize the current file system. Do not format first; scan the stable volume and save candidates elsewhere.",
+        "sections": [
+          { "heading": "What RAW means", "paragraphs": ["RAW is not a normal working file-system state. It often means important structures are damaged or unrecognized. It does not prove that all file content is gone, and formatting does not guarantee recovery."], "bullets": [] },
+          { "heading": "What a read-only scan can do", "paragraphs": ["Super Recovery first tries to parse readable structures, then scans for file signatures when folders cannot be reconstructed. Original names, paths, and dates may be unavailable, so use type, size, and preview to judge results.", "Recover everything to another healthy drive. Scanning and preview stay on the local computer; file content is not uploaded."], "bullets": [] },
+          { "heading": "Do not mistake hardware failure for RAW damage", "paragraphs": ["Stop if the drive also disconnects, reports abnormal capacity, makes unusual noises, or stalls during reads. Software is for stable readable media and cannot repair physical faults."], "bullets": [] }
+        ],
+        "faq": [{ "question": "Should I run a system repair on a RAW volume first?", "answer": "Avoid operations that modify the source before recovery. Start with a read-only assessment, or seek professional help when important data is on an unstable device." }]
+      }
+    },
+    {
+      "slug": "ssd-trim-file-recovery",
+      "image": "/assets/recovery-deleted.png",
+      "zh": {
+        "title": "SSD TRIM 为什么会影响文件恢复",
+        "description": "了解 SSD TRIM 如何让已删除数据不可再读取，以及误删后应立即停止哪些操作。",
+        "shortAnswer": "TRIM 会通知 SSD 哪些数据块已经不用，控制器随后可能清理这些块。清理完成后，恢复软件无法读取原内容，因此 SSD 误删应尽快停止写入和后台任务。",
+        "sections": [
+          { "heading": "TRIM 与覆盖写入不同", "paragraphs": ["机械硬盘删除后，旧内容常会保留到被新数据覆盖。SSD 收到 TRIM 后，可以在后台回收对应闪存块；一旦设备不再返回原数据，软件扫描也无法还原。"], "bullets": [] },
+          { "heading": "误删后仍然可以做什么", "paragraphs": ["立即暂停下载、同步、更新和其他写入，检查回收站、云同步历史或备份。如果仍需扫描，应尽快进行，并把结果恢复到其他磁盘。", "不同 SSD、接口、系统设置和删除方式的行为不同，不能仅凭“使用 SSD”判断一定失败或一定成功。"], "bullets": [] },
+          { "heading": "怎样判断结果", "paragraphs": ["以能否预览和实际打开为准。显示文件名但无法预览，可能只剩目录记录；深度扫描没有结果，也可能是原数据已被 TRIM 清理。"], "bullets": [] }
+        ],
+        "faq": [{ "question": "关闭电脑能阻止 TRIM 吗？", "answer": "不能把关机视为可靠的补救方法。发现误删后，应优先停止不必要写入，并检查备份、同步历史和可用扫描结果。" }]
+      },
+      "en": {
+        "title": "Why SSD TRIM affects deleted-file recovery",
+        "description": "Learn how SSD TRIM can make deleted blocks unreadable and which activity to stop after accidental deletion.",
+        "shortAnswer": "TRIM tells an SSD that blocks are no longer needed. Once the controller clears them, recovery software cannot read the old content, so stop writes quickly.",
+        "sections": [
+          { "heading": "TRIM is different from ordinary overwriting", "paragraphs": ["Deleted data on a hard disk often remains until a later write replaces it. An SSD can reclaim trimmed flash blocks in the background; once the device stops returning the original bytes, scanning cannot reconstruct them."], "bullets": [] },
+          { "heading": "What you can still do", "paragraphs": ["Pause downloads, synchronization, updates, and other writes. Check the Recycle Bin, cloud version history, and backups. If a scan is needed, run it promptly and recover to another drive.", "Behavior varies by SSD, interface, operating-system settings, and deletion method. SSD use alone does not prove certain failure or success."], "bullets": [] },
+          { "heading": "How to judge results", "paragraphs": ["Use preview and actual file opening as the test. A visible name without preview may be only a directory record, while an empty deep scan may mean the old blocks are no longer readable."], "bullets": [] }
+        ],
+        "faq": [{ "question": "Does shutting down reliably stop TRIM?", "answer": "Do not rely on shutdown as a remedy. Stop unnecessary writes and check backups, sync history, and available scan results promptly." }]
+      }
+    },
+    {
+      "slug": "what-to-do-after-data-loss",
+      "image": "/assets/super-recovery-home-zh.png",
+      "zh": {
+        "title": "文件丢失后哪些操作不能做",
+        "description": "文件丢失后的优先处理清单：停止写入、不格式化、不修复源盘，并把恢复结果保存到其他磁盘。",
+        "shortAnswer": "不要继续使用原磁盘，不要格式化、修复、整理或把恢复软件装到原盘。先判断设备是否稳定，再只读扫描并恢复到其他磁盘。",
+        "sections": [
+          { "heading": "立即停止的操作", "paragraphs": ["新写入和修改源盘结构都会缩小可恢复范围。尤其不要下载大型文件、重新分区、格式化、运行磁盘修复、整理碎片或把恢复结果写回原位置。"], "bullets": ["系统盘文件丢失时，暂停同步、更新和大型软件安装。", "外接设备提示格式化时选择取消。", "设备反复掉线或异响时停止通电。"] },
+          { "heading": "先判断介质是否适合软件扫描", "paragraphs": ["容量稳定、能持续读取且没有硬件异常的磁盘，适合尝试只读扫描。无法稳定识别、读取卡死或有机械异响的设备不适合反复全盘扫描。重要数据应优先保护介质现状。"], "bullets": [] },
+          { "heading": "安排扫描和恢复目标", "paragraphs": ["准备一块容量足够的其他磁盘作为恢复目标，再扫描文件原来所在位置。先用预览缩小范围，只恢复需要的文件。扫描命中不代表完整，恢复后还要逐项打开验证。"], "bullets": [] }
+        ],
+        "faq": [{ "question": "为什么不能恢复到原磁盘？", "answer": "写回原磁盘可能覆盖尚未扫描或尚未恢复的数据，因此应选择其他磁盘或卷。" }]
+      },
+      "en": {
+        "title": "What not to do after losing files",
+        "description": "A first-response checklist: stop writes, avoid formatting or repair, assess device stability, and recover to another drive.",
+        "shortAnswer": "Do not keep using, format, repair, or defragment the source drive. Assess its stability, scan read-only, and recover to another drive.",
+        "sections": [
+          { "heading": "Stop these operations immediately", "paragraphs": ["New writes and changes to source structures reduce what can be recovered. Avoid large downloads, repartitioning, formatting, disk repair, defragmentation, and saving recovered files to the source."], "bullets": ["Pause synchronization, updates, and large installations when files were on the system drive.", "Cancel format prompts for external media.", "Stop powering a device that disconnects or makes unusual noises."] },
+          { "heading": "Decide whether software scanning is appropriate", "paragraphs": ["A drive with stable capacity, sustained reads, and no hardware warning signs can be assessed read-only. A device that disappears, freezes during reads, or clicks should not be subjected to repeated full scans."], "bullets": [] },
+          { "heading": "Prepare the scan and destination", "paragraphs": ["Prepare another drive with enough free space, then scan the original location. Use previews to narrow the selection and recover only what is needed. Open recovered files afterward because a scan hit does not prove completeness."], "bullets": [] }
+        ],
+        "faq": [{ "question": "Why can I not recover to the original drive?", "answer": "Writing to the source may overwrite data that has not been scanned or recovered, so choose another drive or volume." }]
+      }
+    }
+  ]
+}
