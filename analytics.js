@@ -59,7 +59,7 @@
   }
 
   function enrichDownloadLinks() {
-    var links = document.querySelectorAll('a[href*="/download/1.0.0/stable"], a[href*="/downloads/SuperWatchDogSetup.exe"]');
+    var links = document.querySelectorAll('a[href*="/downloads/SuperWatchDogSetup.exe"]');
     links.forEach(function (link) {
       var href = link.getAttribute("href") || "";
       var url;
