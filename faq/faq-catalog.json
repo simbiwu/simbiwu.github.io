@@ -288,20 +288,25 @@
       "id": "boss-key-vs-superwatchdog",
       "category": "emergency",
       "slug": "boss-key-vs-superwatchdog",
+      "updatedAt": "2026-08-13T00:00:00+08:00",
       "zh": {
         "title": "老板键和超级看门狗有什么区别？",
-        "description": "比较传统老板键的窗口隐藏方式与超级看门狗的用户自定义触发、锁屏和文件保护动作。",
+        "description": "了解 Windows 10/11 老板键如何隐藏窗口、与 Win+L 的区别，以及何时需要快捷键、锁屏或文件保护。",
         "shortAnswer": "传统老板键通常用于按键后隐藏或恢复特定窗口；超级看门狗允许用户选择更多触发方式，并自行组合窗口处理、Windows 锁屏和保险箱保护。两者都不判断内容，使用时仍需遵守单位制度。",
         "sections": [
-          { "heading": "区别在触发范围和动作层级", "paragraphs": ["老板键适合人在键盘前快速隐藏窗口，优点是路径简单；它通常不会阻止别人继续操作电脑，也不保护磁盘上的文件。不同软件对老板键的实现可能不同，应以实际行为为准。", "超级看门狗面向更广的紧急隐私场景，用户可以选择快捷键、设备或摄像头触发，再决定执行哪些保护动作。它不评价或识别内容，使用者仍需遵守法律、工作制度和设备管理要求。"], "bullets": ["只需隐藏窗口：老板键可能已经够用", "需要其他触发或锁屏：提前配置相应动作", "需要保护文件：使用独立的文件保护方案"] }
+          { "heading": "区别在触发范围和动作层级", "paragraphs": ["老板键适合人在键盘前快速隐藏窗口，优点是路径简单；它通常不会阻止别人继续操作电脑，也不保护磁盘上的文件。不同软件对老板键的实现可能不同，应以实际行为为准。", "超级看门狗面向更广的紧急隐私场景，用户可以选择快捷键、设备或摄像头触发，再决定执行哪些保护动作。它不评价或识别内容，使用者仍需遵守法律、工作制度和设备管理要求。"], "bullets": ["只需隐藏窗口：老板键可能已经够用", "需要其他触发或锁屏：提前配置相应动作", "需要保护文件：使用独立的文件保护方案"] },
+          { "heading": "Windows 10/11 是否自带通用老板键？", "paragraphs": ["Windows 没有一个能统一隐藏所有程序的系统老板键。Win+L 会锁定当前 Windows 会话，Alt+Tab 只是切换窗口；有些应用提供自己的隐藏快捷键，能处理哪些窗口、再次按下后是否恢复，应以该应用说明为准。", "如果希望使用快捷键启动保护，需要提前设置并实际试用。全屏程序、快捷键冲突、管理员权限不同等情况都可能影响窗口处理，因此不能只在紧急时第一次尝试。"] },
+          { "heading": "选择老板键软件时应该确认什么？", "paragraphs": ["先确认真正需要的是一键隐藏窗口，还是还要阻止别人继续操作电脑。只隐藏窗口适合短暂遮挡；存在他人继续使用电脑的可能时，Windows 锁屏通常更合适。私密文件则需要单独的加密或保险箱保护。"], "bullets": ["确认快捷键是否与常用软件或全屏程序冲突", "确认隐藏范围、恢复方式以及未保存工作是否会受影响", "先用影响较小的动作试用，再决定是否加入锁屏等动作", "不要把隐藏窗口当作文件加密或访问控制的替代品"] }
         ]
       },
       "en": {
         "title": "What is the difference between a boss key and SuperWatchDog?",
-        "description": "Compare traditional boss-key window hiding with SuperWatchDog user-selected triggers, Windows lock, and file protection actions.",
+        "description": "Learn how boss keys hide windows on Windows 10/11, how they differ from Win+L, and when shortcuts, Windows lock, or file protection are appropriate.",
         "shortAnswer": "A traditional boss key usually hides and restores selected windows with a keystroke. SuperWatchDog offers more trigger choices and lets users combine window handling, Windows lock, and vault protection. Neither judges content or overrides workplace rules.",
         "sections": [
-          { "heading": "The difference is the trigger range and action layers", "paragraphs": ["A boss key is useful for quickly hiding a window while at the keyboard. It normally does not prevent someone from using the PC or protect files on disk, although behavior varies by application.", "SuperWatchDog covers broader emergency privacy situations: users select a shortcut, device, or camera trigger and then choose the protection actions. It does not evaluate or identify content, and users must still follow the law, workplace policies, and device-management rules."], "bullets": ["Only hiding windows: a boss key may be enough", "Other triggers or Windows lock: configure the relevant actions", "Protecting files: use a separate file-protection layer"] }
+          { "heading": "The difference is the trigger range and action layers", "paragraphs": ["A boss key is useful for quickly hiding a window while at the keyboard. It normally does not prevent someone from using the PC or protect files on disk, although behavior varies by application.", "SuperWatchDog covers broader emergency privacy situations: users select a shortcut, device, or camera trigger and then choose the protection actions. It does not evaluate or identify content, and users must still follow the law, workplace policies, and device-management rules."], "bullets": ["Only hiding windows: a boss key may be enough", "Other triggers or Windows lock: configure the relevant actions", "Protecting files: use a separate file-protection layer"] },
+          { "heading": "Does Windows 10 or 11 include a universal boss key?", "paragraphs": ["Windows does not include one system-wide boss key that hides every application. Win+L locks the current Windows session, while Alt+Tab only switches windows. Some applications provide their own hide shortcuts, and their window coverage and restore behavior vary.", "Any shortcut-based protection should be configured and tested in advance. Full-screen applications, shortcut conflicts, and different administrator privileges can affect window handling, so an urgent moment should not be the first test."] },
+          { "heading": "What should you check when choosing boss-key software?", "paragraphs": ["First decide whether you only need to hide windows or also need to stop someone from continuing to use the PC. Window hiding is useful for brief visual cover; Windows lock is usually more appropriate when another person might use the computer. Private files need separate encryption or vault protection."], "bullets": ["Check whether the shortcut conflicts with common or full-screen applications", "Confirm which windows are hidden, how they are restored, and whether unsaved work is affected", "Test with a low-impact action before adding actions such as Windows lock", "Do not treat hidden windows as a replacement for file encryption or access control"] }
         ]
       },
       "related": [
