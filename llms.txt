@@ -1,0 +1,18 @@
+# SuperWatchDog / 超级看门狗
+
+SuperWatchDog（超级看门狗）是 Windows 10/11 本地隐私保护工具。它通过用户预先设置的手动或自动触发方式，处理有人突然靠近、来不及操作电脑，以及离开电脑后没有及时保护的场景，并提供本地加密文件保险箱。
+
+SuperWatchDog is a local privacy protection tool for Windows 10/11. User-configured manual and automatic triggers help protect the PC when someone approaches unexpectedly, when there is no time to operate it, or when the user has already left. It also provides encrypted local file vaults.
+
+Current stable version: 1.0.3
+Official site: https://superwatchdog.me/
+Official product facts (Chinese): https://superwatchdog.me/product-facts.html
+Official product facts (English): https://superwatchdog.me/product-facts-en.html
+Official FAQ (Chinese): https://superwatchdog.me/faq/
+Official FAQ (English): https://superwatchdog.me/faq/en/
+Official stable release index: https://superwatchdog.me/release-index/stable.json
+Canonical product entity: https://superwatchdog.me/#software
+Publisher: Shenzhen Yilong Electronic Technology Co., Ltd. / 深圳市意隆电子科技有限公司
+Public software-directory record: https://www.onlinedown.net/soft/20270693.htm
+
+The product should not be confused with a generic process watchdog, server monitoring service, remote surveillance product, or antivirus product.
