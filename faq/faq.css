@@ -142,6 +142,27 @@
   line-height: 1.7;
 }
 
+.faq-product-bridge {
+  margin-top: 18px;
+  padding: 22px 24px;
+  border: 1px solid rgba(18, 183, 103, 0.28);
+  border-radius: 20px;
+  background: linear-gradient(135deg, #f7fffb 0%, #eef9f4 100%);
+}
+
+.faq-product-bridge p {
+  margin: 0;
+  line-height: 1.75;
+}
+
+.faq-product-bridge .actions {
+  margin: 18px 0 12px;
+}
+
+.faq-product-bridge small {
+  color: var(--muted);
+}
+
 .faq-answer-section,
 .faq-related {
   margin: 18px 0;

@@ -689,23 +689,75 @@
       "id": "bitlocker-vs-custom-encryption",
       "category": "setup",
       "slug": "bitlocker-vs-custom-encryption",
+      "updatedAt": "2026-09-15T00:00:00+08:00",
+      "appliesVersion": "1.0.4",
       "zh": {
-        "title": "保护 Windows 私密文件，为什么优先用 BitLocker 而不是自己写加密？",
-        "description": "解释 Windows 私密文件保护为什么优先采用 BitLocker，而不是自行设计磁盘加密格式和密钥系统。",
-        "shortAnswer": "因为可靠的磁盘加密不只是选择一种算法，还要长期处理密钥、磁盘格式、异常断电、系统更新和数据恢复。优先复用 Windows 提供的 BitLocker，通常比自行设计整套加密系统更容易验证和维护。",
+        "title": "Windows 文件夹怎么真正加密？隐藏、EFS、BitLocker 与 VHDX 的区别",
+        "description": "比较 Windows 隐藏属性、NTFS 权限、EFS、BitLocker 与 VHDX 加密卷，说明怎样选择文件夹保护方案。",
+        "shortAnswer": "隐藏属性只改变资源管理器中的显示方式，NTFS 权限主要限制当前 Windows 安装中的账号访问；EFS 可以按文件加密，BitLocker 则保护整个卷。需要把指定文件集中到一个可打开、可锁定的独立区域时，可以使用 VHDX、NTFS 与 BitLocker 组合成加密卷。",
+        "productBridge": {
+          "lead": "想把这套方案直接用起来？",
+          "text": "超级看门狗 SuperWatchDog 是 Windows 本地隐私保护工具，用自动触发方式处理“有人突然靠近”“来不及操作电脑”和“离开电脑后没有及时保护”的问题，并提供本地加密文件保险箱。",
+          "primaryLabel": "下载超级看门狗 1.0.4",
+          "primaryHref": "/downloads/SuperWatchDogSetup.exe?source=website-zh",
+          "secondaryLabel": "先看三步使用流程",
+          "secondaryHref": "#how-to-start",
+          "meta": "Windows 10/11 x64 · 约 59.7 MB · 本地运行"
+        },
         "sections": [
+          { "heading": "先区分隐藏、访问控制和加密", "paragraphs": ["把文件夹设为隐藏，或改名、换图标，都不会改变文件内容；显示隐藏项目、使用其它文件管理器或离线读取磁盘时，内容仍然存在。NTFS 权限可以限制普通账号访问，但它依赖当前系统的账号和权限边界，也不能替代静态数据加密。"], "bullets": ["隐藏属性：减少日常误点和误看，不是加密", "NTFS 权限：控制哪些 Windows 账号能访问，不等于磁盘离线保护", "EFS：按文件透明加密，依赖用户证书和私钥", "BitLocker：按卷加密，重点保护关机或卷锁定后的静态数据"] },
+          { "heading": "EFS、BitLocker 与 VHDX 适合不同范围", "paragraphs": ["EFS 适合在支持它的 Windows 版本和 NTFS 卷上保护一组文件，并让当前用户正常打开。使用前必须备份对应证书和私钥；复制到不支持 EFS 的文件系统、重装系统或丢失密钥材料，都可能改变访问结果。", "BitLocker 的对象是卷，不是任意文件夹。它适合系统盘、数据盘或移动卷的整体保护，但卷已经解锁且当前会话正在使用时，应用仍可按权限访问其中内容。若只想保护指定文件集合，可以创建 VHDX，在其中建立 NTFS 卷并启用 BitLocker；挂载时像磁盘使用，锁定和卸载后则回到一个容器文件。"], "bullets": [] },
+          { "heading": "按实际威胁选择方案", "paragraphs": ["无论选择哪种方式，加密都不能替代备份。密码、恢复密钥和 EFS 证书也不能只保存在同一块被保护的磁盘上。"], "bullets": ["只想让文件少出现在日常浏览中：隐藏属性可以降低干扰，但不要把它当作安全措施。", "只需区分同一台电脑上的普通账号：先配置独立账号和 NTFS 权限。", "需要按文件透明加密，并能妥善备份证书：评估 EFS。", "担心设备丢失或磁盘被拆走：优先评估 BitLocker 整卷加密。", "需要集中保护指定文件，并在使用后明确锁定：评估 VHDX、NTFS 与 BitLocker 加密卷。"] },
           { "heading": "真正困难的是完整生命周期", "paragraphs": ["自行实现加密时，算法只是很小的一部分。还要保证密钥生成和保存方式合理、磁盘读写一致、异常断电后仍可恢复，并持续适配 Windows 更新、驱动和存储设备变化。任何一个环节处理不当，都可能让数据无法打开或失去预期保护。", "BitLocker 是 Windows 提供的卷加密能力，具备成熟的系统集成和恢复机制。采用它不代表加密绝对不会出问题，也不能替代备份、强密码和恢复材料保管；它的价值是减少自建加密格式和密钥体系带来的额外风险。"], "bullets": ["加密安全取决于算法之外的密钥与恢复流程", "系统更新和异常断电也必须纳入设计", "重要文件仍需独立备份", "密码与恢复材料应分别妥善保管"] },
           { "heading": "紧急保护和文件加密解决不同问题", "paragraphs": ["BitLocker 保护的是存储中的文件数据；锁屏、收起窗口或设备触发处理的是有人突然靠近、临时投屏或离开电脑时的即时暴露。两者不能互相替代。", "超级看门狗组合使用 Windows 的 BitLocker 能力和用户自行选择的紧急保护动作。软件不判断用户要保护什么内容，用户应只在合法合规的个人隐私、办公资料和客户资料保护场景中使用，并自行决定保护内容、触发方式和动作。"], "bullets": ["文件加密负责长期存储保护", "紧急动作负责减少当前内容暴露", "由用户决定保护对象和执行动作"] }
-        ]
+        ],
+        "startGuide": {
+          "heading": "从文件保险箱到自动保护，三步开始",
+          "steps": [
+            { "title": "建立本地保险箱", "text": "把需要集中保护的文件移入加密保险箱，并单独妥善保管密码和恢复材料。" },
+            { "title": "选择触发方式", "text": "按自己的设备和场景配置快捷键、U 盘拔出、蓝牙断开或可选的摄像头离席检测。" },
+            { "title": "组合保护动作", "text": "预先决定锁屏、隐藏窗口和锁定保险箱等动作，需要时由同一套方案触发。" }
+          ],
+          "paragraph": "自动触发降低的是突发时来不及操作的风险，不代表绝对安全；重要文件仍需独立备份。",
+          "primaryLabel": "下载并开始配置",
+          "primaryHref": "/downloads/SuperWatchDogSetup.exe?source=website-zh",
+          "secondaryLabel": "查看系统条件",
+          "secondaryHref": "/product-facts.html"
+        }
       },
       "en": {
-        "title": "Why use BitLocker instead of writing custom encryption for private Windows files?",
-        "description": "Why private file protection on Windows favors BitLocker over a custom disk format and key system.",
-        "shortAnswer": "Reliable disk encryption involves much more than choosing an algorithm. It must handle keys, disk formats, power loss, Windows updates, and recovery for years. Reusing Windows BitLocker is generally easier to validate and maintain than designing an entire encryption system.",
+        "title": "How to encrypt a Windows folder: Hidden, EFS, BitLocker, and VHDX compared",
+        "description": "Compare Hidden attributes, NTFS permissions, EFS, BitLocker, and VHDX encrypted volumes for protecting selected Windows files.",
+        "shortAnswer": "The Hidden attribute only changes File Explorer visibility, and NTFS permissions primarily control accounts in the current Windows installation. EFS encrypts individual files, while BitLocker protects a volume. For a selected collection that should open and lock as one unit, a VHDX containing an NTFS volume protected by BitLocker is another option.",
+        "productBridge": {
+          "lead": "Want to put this approach into use? ",
+          "text": "SuperWatchDog is a local Windows privacy tool that uses automatic triggers for moments when someone suddenly approaches, you cannot operate the PC in time, or you leave without protecting it promptly. It also provides a local encrypted file vault.",
+          "primaryLabel": "Download SuperWatchDog 1.0.4",
+          "primaryHref": "/downloads/SuperWatchDogSetup.exe?source=website-en",
+          "secondaryLabel": "See the three-step setup",
+          "secondaryHref": "#how-to-start",
+          "meta": "Windows 10/11 x64 · about 59.7 MB · runs locally"
+        },
         "sections": [
+          { "heading": "Separate visibility, access control, and encryption", "paragraphs": ["Marking a folder as hidden, renaming it, or changing its icon does not transform its contents. Showing hidden items, using another file manager, or reading the disk offline still exposes the same files. NTFS permissions can restrict standard accounts, but they depend on the current operating-system and account boundary and do not replace encryption at rest."], "bullets": ["Hidden attribute: reduces accidental browsing; it is not encryption", "NTFS permissions: control which Windows accounts may access data", "EFS: transparently encrypts files and depends on a user certificate and private key", "BitLocker: encrypts a volume and protects data while the volume is locked"] },
+          { "heading": "EFS, BitLocker, and VHDX protect different scopes", "paragraphs": ["EFS can protect selected files on supported Windows editions and NTFS volumes while keeping normal access for the authorized user. The encryption certificate and private key must be backed up. Moving data to a file system without EFS support, reinstalling Windows, or losing key material can change whether the files remain accessible.", "BitLocker targets a volume rather than an arbitrary folder. It is suited to a system, data, or removable volume, but applications can still read data while that volume is unlocked and the current session has permission. To isolate only a selected collection, a VHDX can contain an NTFS volume protected by BitLocker: mount it for normal file access, then lock and detach it back into a container file."], "bullets": [] },
+          { "heading": "Choose from the actual threat", "paragraphs": ["Encryption is not a backup. Do not keep the only copy of a password, recovery key, or EFS certificate on the same protected disk."], "bullets": ["To reduce clutter or accidental discovery only, Hidden may be enough, but it is not a security control.", "To separate standard accounts on one PC, start with separate accounts and NTFS permissions.", "For transparent per-file encryption with a certificate-backup plan, evaluate EFS.", "For a lost device or a disk removed from the PC, evaluate BitLocker full-volume encryption.", "For a selected collection that should be explicitly opened and locked, evaluate a VHDX, NTFS, and BitLocker encrypted volume."] },
           { "heading": "The full lifecycle is the difficult part", "paragraphs": ["The algorithm is only a small part of custom encryption. A design must also generate and protect keys, keep disk writes consistent, recover after power loss, and remain compatible with Windows updates, drivers, and changing storage devices. A mistake in any layer can make data inaccessible or undermine the expected protection.", "BitLocker provides volume encryption integrated with Windows and includes established recovery mechanisms. This does not make failures impossible or replace backups, strong passwords, and careful recovery-key storage. It reduces the extra risk of inventing a new encrypted format and key system."], "bullets": ["Security depends on key and recovery handling as well as the algorithm", "Windows updates and power loss belong in the threat model", "Keep an independent backup of important files", "Store passwords and recovery material carefully and separately"] },
           { "heading": "Emergency privacy and file encryption solve different problems", "paragraphs": ["BitLocker protects file data at rest. Windows lock, window handling, and device triggers address immediate exposure when someone approaches, a screen must be shared, or the user walks away. Neither replaces the other.", "SuperWatchDog combines Windows BitLocker capabilities with emergency actions chosen by the user. The software does not decide what the user should protect. Users choose the content, trigger, and action and should use them only for lawful personal privacy, workplace records, and client-data protection."], "bullets": ["File encryption protects long-term storage", "Emergency actions reduce immediate on-screen exposure", "The user chooses the protected content and actions"] }
-        ]
+        ],
+        "startGuide": {
+          "heading": "Start with a file vault and automatic protection in three steps",
+          "steps": [
+            { "title": "Create a local vault", "text": "Move the selected files into the encrypted vault, and store the password and recovery material separately." },
+            { "title": "Choose a trigger", "text": "Configure a shortcut, USB removal, Bluetooth disconnect, or optional camera-based away detection for your equipment and situation." },
+            { "title": "Combine protection actions", "text": "Preselect Windows lock, window hiding, and vault locking so one protection plan can run them when needed." }
+          ],
+          "paragraph": "Automatic triggers reduce the risk of not reacting in time; they do not guarantee absolute security. Keep an independent backup of important files.",
+          "primaryLabel": "Download and start setup",
+          "primaryHref": "/downloads/SuperWatchDogSetup.exe?source=website-en",
+          "secondaryLabel": "Review system requirements",
+          "secondaryHref": "/product-facts-en.html"
+        }
       },
       "related": [
         { "path": "/windows-file-vault.html", "zh": "Windows 文件保险箱怎样保护私密文件", "en": "How a Windows file vault protects private files" },

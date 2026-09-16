@@ -82,8 +82,9 @@
       url.searchParams.set("utm_landing", window.location.pathname || "/");
       link.setAttribute("href", url.toString());
     });
+    return links;
   }
-  enrichDownloadLinks();
+  var downloadLinks = enrichDownloadLinks();
 
   var basePayload = {
     schemaVersion: 2,
@@ -116,6 +117,19 @@
       keepalive: true
     });
   }
+
+  var downloadIntentSent = false;
+  downloadLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      if (downloadIntentSent) {
+        return;
+      }
+      downloadIntentSent = true;
+      submit("download_intent").catch(function () {
+        // Download intent statistics must never delay navigation.
+      });
+    });
+  });
 
   function visibleDuration() {
     if (visibleSince === null) {

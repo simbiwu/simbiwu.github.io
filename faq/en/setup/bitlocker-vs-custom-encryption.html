@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Why use BitLocker instead of writing custom encryption for private Windows files? - SuperWatchDog</title>
-  <meta name="description" content="Why private file protection on Windows favors BitLocker over a custom disk format and key system.">
+  <title>How to encrypt a Windows folder: Hidden, EFS, BitLocker, and VHDX compared - SuperWatchDog</title>
+  <meta name="description" content="Compare Hidden attributes, NTFS permissions, EFS, BitLocker, and VHDX encrypted volumes for protecting selected Windows files.">
   <link rel="canonical" href="https://superwatchdog.me/faq/en/setup/bitlocker-vs-custom-encryption.html">
   <link rel="alternate" hreflang="en-US" href="https://superwatchdog.me/faq/en/setup/bitlocker-vs-custom-encryption.html">
   <link rel="alternate" hreflang="zh-CN" href="https://superwatchdog.me/faq/setup/bitlocker-vs-custom-encryption.html">
   <link rel="alternate" hreflang="x-default" href="https://superwatchdog.me/faq/setup/bitlocker-vs-custom-encryption.html">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="Why use BitLocker instead of writing custom encryption for private Windows files?">
-  <meta property="og:description" content="Why private file protection on Windows favors BitLocker over a custom disk format and key system.">
+  <meta property="og:title" content="How to encrypt a Windows folder: Hidden, EFS, BitLocker, and VHDX compared">
+  <meta property="og:description" content="Compare Hidden attributes, NTFS permissions, EFS, BitLocker, and VHDX encrypted volumes for protecting selected Windows files.">
   <meta property="og:url" content="https://superwatchdog.me/faq/en/setup/bitlocker-vs-custom-encryption.html">
   <meta property="og:image" content="https://superwatchdog.me/assets/og-cover.png">
   <link rel="icon" href="/assets/favicon.ico">
   <link rel="stylesheet" href="/guide.css">
   <link rel="stylesheet" href="/faq/faq.css">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"Why use BitLocker instead of writing custom encryption for private Windows files?","description":"Why private file protection on Windows favors BitLocker over a custom disk format and key system.","url":"https://superwatchdog.me/faq/en/setup/bitlocker-vs-custom-encryption.html","mainEntityOfPage":"https://superwatchdog.me/faq/en/setup/bitlocker-vs-custom-encryption.html","inLanguage":"en-US","datePublished":"2026-08-06","dateModified":"2026-08-06","author":{"@type":"Organization","name":"SuperWatchDog","url":"https://superwatchdog.me/"},"publisher":{"@type":"Organization","name":"SuperWatchDog","url":"https://superwatchdog.me/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FAQ","item":"https://superwatchdog.me/faq/en/"},{"@type":"ListItem","position":2,"name":"Setup and device requirements","item":"https://superwatchdog.me/faq/en/setup/"},{"@type":"ListItem","position":3,"name":"Why use BitLocker instead of writing custom encryption for private Windows files?","item":"https://superwatchdog.me/faq/en/setup/bitlocker-vs-custom-encryption.html"}]}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Article","headline":"How to encrypt a Windows folder: Hidden, EFS, BitLocker, and VHDX compared","description":"Compare Hidden attributes, NTFS permissions, EFS, BitLocker, and VHDX encrypted volumes for protecting selected Windows files.","url":"https://superwatchdog.me/faq/en/setup/bitlocker-vs-custom-encryption.html","mainEntityOfPage":"https://superwatchdog.me/faq/en/setup/bitlocker-vs-custom-encryption.html","inLanguage":"en-US","datePublished":"2026-08-06","dateModified":"2026-09-15","author":{"@type":"Organization","name":"SuperWatchDog","url":"https://superwatchdog.me/"},"publisher":{"@type":"Organization","name":"SuperWatchDog","url":"https://superwatchdog.me/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"FAQ","item":"https://superwatchdog.me/faq/en/"},{"@type":"ListItem","position":2,"name":"Setup and device requirements","item":"https://superwatchdog.me/faq/en/setup/"},{"@type":"ListItem","position":3,"name":"How to encrypt a Windows folder: Hidden, EFS, BitLocker, and VHDX compared","item":"https://superwatchdog.me/faq/en/setup/bitlocker-vs-custom-encryption.html"}]}]}</script>
 </head>
 <body>
   <header>
@@ -33,13 +33,48 @@
     </div>
   </header>
   <main class="wrap faq-main">
-    <nav class="faq-breadcrumb" aria-label="Breadcrumb"><a href="/faq/en/">FAQ</a><span>›</span><a href="/faq/en/setup/">Setup and device requirements</a><span>›</span><span>Why use BitLocker instead of writing custom encryption for private Windows files?</span></nav>
+    <nav class="faq-breadcrumb" aria-label="Breadcrumb"><a href="/faq/en/">FAQ</a><span>›</span><a href="/faq/en/setup/">Setup and device requirements</a><span>›</span><span>How to encrypt a Windows folder: Hidden, EFS, BitLocker, and VHDX compared</span></nav>
     <article class="faq-article">
       <header class="faq-hero">
         <p class="eyebrow">Setup and device requirements</p>
-        <h1>Why use BitLocker instead of writing custom encryption for private Windows files?</h1>
-        <div class="faq-direct-answer"><strong>Short answer</strong><p>Reliable disk encryption involves much more than choosing an algorithm. It must handle keys, disk formats, power loss, Windows updates, and recovery for years. Reusing Windows BitLocker is generally easier to validate and maintain than designing an entire encryption system.</p></div>
+        <h1>How to encrypt a Windows folder: Hidden, EFS, BitLocker, and VHDX compared</h1>
+        <div class="faq-direct-answer"><strong>Short answer</strong><p>The Hidden attribute only changes File Explorer visibility, and NTFS permissions primarily control accounts in the current Windows installation. EFS encrypts individual files, while BitLocker protects a volume. For a selected collection that should open and lock as one unit, a VHDX containing an NTFS volume protected by BitLocker is another option.</p></div>
+        <div class="faq-product-bridge">
+          <p><strong>Want to put this approach into use? </strong>SuperWatchDog is a local Windows privacy tool that uses automatic triggers for moments when someone suddenly approaches, you cannot operate the PC in time, or you leave without protecting it promptly. It also provides a local encrypted file vault.</p>
+          <div class="actions">
+            <a class="button" href="/downloads/SuperWatchDogSetup.exe?source=website-en">Download SuperWatchDog 1.0.4</a>
+            <a class="button button-secondary" href="#how-to-start">See the three-step setup</a>
+          </div>
+          <small>Windows 10/11 x64 &#183; about 59.7 MB &#183; runs locally</small>
+        </div>
       </header>
+      <section class="faq-answer-section">
+        <h2>Separate visibility, access control, and encryption</h2>
+        <p>Marking a folder as hidden, renaming it, or changing its icon does not transform its contents. Showing hidden items, using another file manager, or reading the disk offline still exposes the same files. NTFS permissions can restrict standard accounts, but they depend on the current operating-system and account boundary and do not replace encryption at rest.</p>
+        <ul>
+          <li>Hidden attribute: reduces accidental browsing; it is not encryption</li>
+          <li>NTFS permissions: control which Windows accounts may access data</li>
+          <li>EFS: transparently encrypts files and depends on a user certificate and private key</li>
+          <li>BitLocker: encrypts a volume and protects data while the volume is locked</li>
+        </ul>
+      </section>
+      <section class="faq-answer-section">
+        <h2>EFS, BitLocker, and VHDX protect different scopes</h2>
+        <p>EFS can protect selected files on supported Windows editions and NTFS volumes while keeping normal access for the authorized user. The encryption certificate and private key must be backed up. Moving data to a file system without EFS support, reinstalling Windows, or losing key material can change whether the files remain accessible.</p>
+        <p>BitLocker targets a volume rather than an arbitrary folder. It is suited to a system, data, or removable volume, but applications can still read data while that volume is unlocked and the current session has permission. To isolate only a selected collection, a VHDX can contain an NTFS volume protected by BitLocker: mount it for normal file access, then lock and detach it back into a container file.</p>
+
+      </section>
+      <section class="faq-answer-section">
+        <h2>Choose from the actual threat</h2>
+        <p>Encryption is not a backup. Do not keep the only copy of a password, recovery key, or EFS certificate on the same protected disk.</p>
+        <ul>
+          <li>To reduce clutter or accidental discovery only, Hidden may be enough, but it is not a security control.</li>
+          <li>To separate standard accounts on one PC, start with separate accounts and NTFS permissions.</li>
+          <li>For transparent per-file encryption with a certificate-backup plan, evaluate EFS.</li>
+          <li>For a lost device or a disk removed from the PC, evaluate BitLocker full-volume encryption.</li>
+          <li>For a selected collection that should be explicitly opened and locked, evaluate a VHDX, NTFS, and BitLocker encrypted volume.</li>
+        </ul>
+      </section>
       <section class="faq-answer-section">
         <h2>The full lifecycle is the difficult part</h2>
         <p>The algorithm is only a small part of custom encryption. A design must also generate and protect keys, keep disk writes consistent, recover after power loss, and remain compatible with Windows updates, drivers, and changing storage devices. A mistake in any layer can make data inaccessible or undermine the expected protection.</p>
@@ -61,6 +96,16 @@
           <li>The user chooses the protected content and actions</li>
         </ul>
       </section>
+      <section class="faq-answer-section" id="how-to-start">
+        <h2>Start with a file vault and automatic protection in three steps</h2>
+        <ol class="prepare-steps">
+          <li><strong>Create a local vault</strong><span>Move the selected files into the encrypted vault, and store the password and recovery material separately.</span></li>
+          <li><strong>Choose a trigger</strong><span>Configure a shortcut, USB removal, Bluetooth disconnect, or optional camera-based away detection for your equipment and situation.</span></li>
+          <li><strong>Combine protection actions</strong><span>Preselect Windows lock, window hiding, and vault locking so one protection plan can run them when needed.</span></li>
+        </ol>
+        <p>Automatic triggers reduce the risk of not reacting in time; they do not guarantee absolute security. Keep an independent backup of important files.</p>
+        <div class="actions"><a class="button" href="/downloads/SuperWatchDogSetup.exe?source=website-en">Download and start setup</a><a class="button button-secondary" href="/product-facts-en.html">Review system requirements</a></div>
+      </section>
       <section class="faq-related">
         <h2>Related guides</h2>
         <div class="faq-related-links">
@@ -68,7 +113,7 @@
         <a href="/product-facts-en.html">Product and system requirements<span>→</span></a>
         </div>
       </section>
-      <footer class="faq-article-footer">Last reviewed：2026-08-06 · Applies to SuperWatchDog 1.0.0 and the Windows conditions described on this page</footer>
+      <footer class="faq-article-footer">Last reviewed：2026-09-15 · Applies to SuperWatchDog 1.0.4 and the Windows conditions described on this page</footer>
     </article>
   </main>
   <footer class="site-footer">

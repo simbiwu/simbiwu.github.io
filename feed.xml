@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>超级看门狗更新与隐私保护指南</title>
+    <link>https://superwatchdog.me/</link>
+    <atom:link href="https://superwatchdog.me/feed.xml" rel="self" type="application/rss+xml" />
+    <description>超级看门狗产品更新，以及 Windows 屏幕、窗口和本地文件隐私保护指南。</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 15 Sep 2026 00:00:00 +0800</lastBuildDate>
+    <item>
+      <title>超级看门狗 1.0.4 已成为稳定版本</title>
+      <link>https://superwatchdog.me/product-facts.html</link>
+      <guid isPermaLink="true">https://superwatchdog.me/product-facts.html</guid>
+      <pubDate>Thu, 03 Sep 2026 15:40:08 +0800</pubDate>
+      <description>超级看门狗 1.0.4 的当前版本、运行环境、隐私方式与官方下载入口。</description>
+    </item>
+    <item>
+      <title>电脑防窥怎么做：防窥膜、隐藏窗口、锁屏和自动保护的区别</title>
+      <link>https://superwatchdog.me/computer-anti-peeping.html</link>
+      <guid isPermaLink="true">https://superwatchdog.me/computer-anti-peeping.html</guid>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0800</pubDate>
+      <description>从侧面视角、当前窗口、登录会话和本地文件四个层面，梳理不同电脑隐私保护方式的适用场景。</description>
+    </item>
+    <item>
+      <title>Windows 文件夹怎么真正加密：隐藏、EFS、BitLocker 与 VHDX 的区别</title>
+      <link>https://superwatchdog.me/faq/setup/bitlocker-vs-custom-encryption.html</link>
+      <guid isPermaLink="true">https://superwatchdog.me/faq/setup/bitlocker-vs-custom-encryption.html</guid>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0800</pubDate>
+      <description>比较隐藏属性、NTFS 权限、EFS、BitLocker 与 VHDX 加密卷，说明如何选择本地文件保护方案。</description>
+    </item>
+    <item>
+      <title>老板键和自动隐私保护有什么区别</title>
+      <link>https://superwatchdog.me/faq/emergency/boss-key-vs-superwatchdog.html</link>
+      <guid isPermaLink="true">https://superwatchdog.me/faq/emergency/boss-key-vs-superwatchdog.html</guid>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 +0800</pubDate>
+      <description>老板键适合来得及操作键盘的情况；自动触发用于补足来不及操作或已经离开电脑的场景。</description>
+    </item>
+  </channel>
+</rss>

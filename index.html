@@ -13,6 +13,7 @@
   <link rel="canonical" href="https://superwatchdog.me/">
   <link rel="alternate" hreflang="zh-CN" href="https://superwatchdog.me/">
   <link rel="alternate" hreflang="en-US" href="https://superwatchdog.me/en.html">
+  <link rel="alternate" type="application/rss+xml" title="超级看门狗更新与隐私保护指南" href="https://superwatchdog.me/feed.xml">
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <meta property="og:type" content="website">
@@ -35,7 +36,7 @@
     "alternateName": "SuperWatchDog",
     "operatingSystem": "Windows 10/11 64-bit",
     "applicationCategory": "SecurityApplication",
-    "softwareVersion": "1.0.3",
+    "softwareVersion": "1.0.4",
     "url": "https://superwatchdog.me/",
     "description": "Windows 10/11 文件加密与隐私保护工具。从有人突然靠近到必须马上离开，帮助用户更快保护屏幕内容和本地私密文件，并支持手势、USB 设备拔出、蓝牙断开和摄像头离席检测。",
     "featureList": ["本地文件保险箱", "USB 设备拔出保护", "蓝牙断开保护", "一键守护", "离席自动保护", "手势触发保护"],
@@ -47,12 +48,7 @@
       "name": "深圳市意隆电子科技有限公司",
       "url": "https://superwatchdog.me/"
     },
-    "inLanguage": "zh-CN",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "CNY"
-    }
+    "inLanguage": "zh-CN"
   }
   </script>
   <style>
@@ -733,13 +729,19 @@
         transform: none;
       }
     }
+    .project-support { padding: 30px 0; color: #294137; background: var(--soft); border-top: 1px solid var(--line); }
+    .project-support-inner { width: min(100% - 112px, 1180px); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+    .project-support h2 { margin: 0 0 8px; color: var(--text); font-size: 24px; }
+    .project-support p { max-width: 880px; margin: 0; color: var(--muted); line-height: 1.75; }
+    .project-support-link { flex: 0 0 auto; padding: 11px 18px; border: 1px solid var(--green); border-radius: 10px; color: #fff; background: var(--green); font-weight: 700; }
+    .project-support-link:hover { background: var(--green-deep); }
       .site-footer { padding: 28px 0 32px; color: #6d7781; background: #fff; border-top: 1px solid #e5f0eb; font-size: 13px; }
     .site-footer-inner { width: min(100% - 112px, 1480px); margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
     .site-footer-inner a:hover { color: #079653; }
     .site-footer-inner span + span::before { content: ""; width: 1px; height: 14px; display: inline-block; margin-right: 26px; background: #d8e5df; vertical-align: -2px; }
     .beian-police-link { display: inline-flex; align-items: center; gap: 4px; vertical-align: text-bottom; }
     .beian-police-icon { width: 16px; height: 16px; flex: 0 0 auto; }
-    @media (max-width: 760px) { .site-footer-inner { width: min(100% - 44px, 980px); gap: 12px; } .site-footer-inner span + span::before { display: none; } }
+    @media (max-width: 760px) { .project-support-inner { width: min(100% - 44px, 980px); align-items: flex-start; flex-direction: column; gap: 18px; } .site-footer-inner { width: min(100% - 44px, 980px); gap: 12px; } .site-footer-inner span + span::before { display: none; } }
   </style>
   <script src="language.js"></script>
   <script src="analytics.js" defer></script>
@@ -810,7 +812,7 @@
             <h3>突然有人靠近</h3>
             <p>同事、室友或访客突然进入房间时，快速保护当前窗口。</p>
             <div class="scene-tags" aria-label="适用功能"><span class="scene-tag">一键守护</span><span class="scene-tag">手势触发</span></div>
-            <a class="scene-link" href="emergency-file-protection.html">查看紧急保护指南 →</a>
+            <a class="scene-link" href="computer-anti-peeping.html">查看电脑防窥指南 →</a>
           </article>
           <article class="scene-card">
             <div class="scene-card-top">
@@ -913,6 +915,16 @@
     </section>
 
   </main>
+
+  <section class="project-support" aria-labelledby="project-support-title">
+    <div class="project-support-inner">
+      <div>
+        <h2 id="project-support-title">在爱发电支持持续开发</h2>
+        <p>如果超级看门狗对你有帮助，可以自愿支持我们继续改进产品。月度支持不包含超级看门狗 Pro、超级恢复 Pro 或其他软件授权；授权商品将单独发布。</p>
+      </div>
+      <a class="project-support-link" href="https://afdian.com/a/superwatchdog" target="_blank" rel="noopener noreferrer">前往爱发电</a>
+    </div>
+  </section>
 
   <footer class="site-footer">
     <div class="site-footer-inner">

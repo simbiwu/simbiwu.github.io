@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://superwatchdog.me/</loc>
-    <lastmod>2026-08-16</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/en.html</loc>
-    <lastmod>2026-08-16</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
@@ -18,6 +18,16 @@
   <url>
     <loc>https://superwatchdog.me/emergency-file-protection-en.html</loc>
     <lastmod>2026-08-13</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/computer-anti-peeping.html</loc>
+    <lastmod>2026-09-15</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://superwatchdog.me/computer-anti-peeping-en.html</loc>
+    <lastmod>2026-09-15</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -32,12 +42,12 @@
   </url>
   <url>
     <loc>https://superwatchdog.me/product-facts.html</loc>
-    <lastmod>2026-08-16</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://superwatchdog.me/product-facts-en.html</loc>
-    <lastmod>2026-08-16</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
@@ -303,7 +313,7 @@
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/setup/bitlocker-vs-custom-encryption.html</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
@@ -498,7 +508,7 @@
   </url>
   <url>
     <loc>https://superwatchdog.me/faq/en/setup/bitlocker-vs-custom-encryption.html</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
